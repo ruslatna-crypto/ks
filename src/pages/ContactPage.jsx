@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { Phone, Mail, MapPin, Clock, Building2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const ContactPage = () => {
   const { lang } = useLanguage();
@@ -31,10 +31,6 @@ const ContactPage = () => {
         <Breadcrumbs items={breadcrumbs} />
         
         <div style={{ marginBottom: 28 }}>
-          <div className="tech-badge" style={{ marginBottom: 12 }}>
-            <Building2 size={13} />
-            <span>{lang === 'en' ? 'Corporate Office' : 'Корпоративный контакт'}</span>
-          </div>
           <h1 className="page-title-heading">{t.contactPage.title}</h1>
         </div>
 

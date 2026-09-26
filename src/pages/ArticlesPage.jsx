@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { getArticles } from '../utils/contentLoader';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
-import { BookOpen, Calendar, Tag, ArrowRight, User } from 'lucide-react';
+import { BookOpen, Calendar, ArrowRight, User } from 'lucide-react';
 
 const ArticlesPage = () => {
   const { lang } = useLanguage();
@@ -30,10 +30,6 @@ const ArticlesPage = () => {
         <Breadcrumbs currentTitle={lang === 'en' ? 'Articles & Publications' : 'Статьи и публикации'} />
 
         <div style={{ marginTop: '20px', marginBottom: '36px' }}>
-          <div className="tech-badge" style={{ marginBottom: 12 }}>
-            <BookOpen size={13} />
-            <span>{lang === 'en' ? 'Knowledge Base' : 'База знаний'}</span>
-          </div>
           <h1 className="page-title-heading" style={{ fontSize: '2.4rem', fontWeight: 800, color: 'var(--color-dark)', marginBottom: '12px' }}>
             {lang === 'en' ? 'Scientific & Technical Articles' : 'Научно-технические статьи и обзоры'}
           </h1>
@@ -83,12 +79,6 @@ const ArticlesPage = () => {
                 )}
                 <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                   <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '10px', marginBottom: '12px', fontSize: '0.84rem', color: 'var(--color-text-muted)' }}>
-                    {item.category && (
-                      <span className="tech-badge" style={{ padding: '2px 8px', fontSize: '0.78rem' }}>
-                        <Tag size={11} />
-                        <span>{item.category}</span>
-                      </span>
-                    )}
                     {item.date && (
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
                         <Calendar size={13} />

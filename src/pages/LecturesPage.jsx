@@ -4,7 +4,7 @@ import ArticleTable from '../components/ArticleTable';
 import SEO from '../components/SEO';
 import { siteDataBilingual } from '../data/siteContentBilingual';
 import { useLanguage } from '../context/LanguageContext';
-import { Youtube, ExternalLink, Activity, BookOpen } from 'lucide-react';
+import { Youtube, ExternalLink, Activity } from 'lucide-react';
 
 const LecturesPage = () => {
   const { lang } = useLanguage();
@@ -34,10 +34,6 @@ const LecturesPage = () => {
         <Breadcrumbs items={breadcrumbs} />
         
         <div style={{ marginBottom: 28 }}>
-          <div className="tech-badge" style={{ marginBottom: 12 }}>
-            <BookOpen size={13} />
-            <span>{lang === 'en' ? 'Scientific Methodology' : 'Научные материалы и лекции'}</span>
-          </div>
           <h1 className="page-title-heading">{pageData.title}</h1>
         </div>
 

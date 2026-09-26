@@ -28,28 +28,9 @@ function getCardsColumns(screenW) {
   return 1;
 }
 
-function getSliderStageBehavior(screenW) {
-  if (screenW >= 768) {
-    const cWidth = getContainerWidth(screenW);
-    const sideMargin = Math.max(0, (screenW - cWidth) / 2);
-    return {
-      width: cWidth,
-      sideMargin: sideMargin,
-      isFramed: true,
-      borderRadius: 'var(--radius-lg)'
-    };
-  }
-  return {
-    width: screenW,
-    sideMargin: 0,
-    isFramed: false,
-    borderRadius: '0px'
-  };
-}
-
-console.log('='.repeat(90));
-console.log('BREAKPOINTS AND RESPONSIVE CONTAINER VERIFICATION (Keramika Sintez)');
-console.log('='.repeat(90));
+console.log('='.repeat(95));
+console.log('BREAKPOINTS AND FULL-WIDTH SLIDER VERIFICATION (Keramika Sintez)');
+console.log('='.repeat(95));
 
 const results = [];
 
@@ -57,7 +38,6 @@ breakpoints.forEach((bw) => {
   const containerW = getContainerWidth(bw);
   const sideMargin = bw < 768 ? 0 : Math.round((bw - containerW) / 2);
   const cardCols = getCardsColumns(bw);
-  const slider = getSliderStageBehavior(bw);
   const estCardWidth = cardCols === 1 
     ? (bw - 28) 
     : Math.round((Math.min(bw, containerW) - (cardCols - 1) * 28) / cardCols);
@@ -65,16 +45,16 @@ breakpoints.forEach((bw) => {
   results.push({
     breakpoint: `${bw}px`,
     containerWidth: `${containerW}px`,
-    sideMargins: `${sideMargin}px each`,
-    sliderWidth: `${slider.width}px`,
+    containerMargins: `${sideMargin}px each`,
+    sliderWidth: `${bw}px (100% Full-Width)`,
     cardsColumns: `${cardCols} col${cardCols > 1 ? 's' : ''} (~${estCardWidth}px/card)`,
-    mobileOrDesktop: bw < 768 ? 'Mobile' : bw < 1200 ? 'Tablet' : 'Desktop'
+    deviceTier: bw < 768 ? 'Mobile' : bw < 1200 ? 'Tablet' : 'Desktop'
   });
 });
 
 console.table(results);
 
-// Check CSS media queries presence
+// Check CSS media queries and architectural presence
 const requiredSnippets = [
   '--container-width: 1880px',
   '--container-width: 1600px',
@@ -88,7 +68,10 @@ const requiredSnippets = [
   'grid-template-columns: repeat(4, 1fr)',
   'grid-template-columns: repeat(3, 1fr)',
   'grid-template-columns: repeat(2, 1fr)',
-  'grid-template-columns: 1fr'
+  'grid-template-columns: 1fr',
+  '.tech-badge',
+  'display: none !important',
+  'max-width: 100%'
 ];
 
 let allPassed = true;

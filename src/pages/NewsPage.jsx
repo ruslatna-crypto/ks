@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { getNews } from '../utils/contentLoader';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
-import { Calendar, Tag, ArrowRight, Newspaper } from 'lucide-react';
+import { Calendar, ArrowRight, Newspaper } from 'lucide-react';
 
 const NewsPage = () => {
   const { lang } = useLanguage();
@@ -30,10 +30,6 @@ const NewsPage = () => {
         <Breadcrumbs currentTitle={lang === 'en' ? 'News' : 'Новости'} />
 
         <div style={{ marginTop: '20px', marginBottom: '36px' }}>
-          <div className="tech-badge" style={{ marginBottom: 12 }}>
-            <Newspaper size={13} />
-            <span>{lang === 'en' ? 'Press & Updates' : 'Пресс-центр'}</span>
-          </div>
           <h1 className="page-title-heading" style={{ fontSize: '2.4rem', fontWeight: 800, color: 'var(--color-dark)', marginBottom: '12px' }}>
             {lang === 'en' ? 'Company News & Events' : 'Новости и события компании'}
           </h1>
@@ -83,12 +79,6 @@ const NewsPage = () => {
                 )}
                 <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px', fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
-                    {item.category && (
-                      <span className="tech-badge" style={{ padding: '2px 8px', fontSize: '0.78rem' }}>
-                        <Tag size={11} />
-                        <span>{item.category}</span>
-                      </span>
-                    )}
                     {item.date && (
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
                         <Calendar size={13} />

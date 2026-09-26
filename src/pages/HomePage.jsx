@@ -5,8 +5,7 @@ import MapWidget from '../components/MapWidget';
 import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { Phone, Mail, MapPin, ArrowRight, Layers, Newspaper, Calendar } from 'lucide-react';
-import { getNews } from '../utils/contentLoader';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const cardsData = [
   {
@@ -112,7 +111,6 @@ const cardsData = [
 const HomePage = () => {
   const { lang } = useLanguage();
   const t = translations[lang];
-  const latestNews = getNews(lang).slice(0, 3);
 
   const getTargetRoute = (route) => {
     return lang === 'en' ? `/en${route}` : route;
@@ -130,17 +128,13 @@ const HomePage = () => {
         enPath="/en"
         lang={lang}
       />
-      {/* 1. Hero Slider (7-slide technological panoramic banner immediately under header menu) */}
+      {/* 1. Full-Width Hero Slider immediately under header menu */}
       <HeroSlider />
 
-      {/* 3. Developments Grid Section */}
+      {/* 2. Developments Grid Section */}
       <section className="home-cards-section" id="developments-grid">
         <div className="container">
           <div className="home-section-header">
-            <div className="tech-badge" style={{ marginBottom: 12 }}>
-              <Layers size={13} />
-              <span>{t.home.devTitle}</span>
-            </div>
             <h2 className="home-section-title">
               {lang === 'en' ? 'Core Scientific Developments' : 'Ключевые направления разработок'}
             </h2>
@@ -161,11 +155,6 @@ const HomePage = () => {
                     <img src={card.icon} alt={data.title} loading="lazy" />
                   </div>
                   <div className="ks-card-content infraks-card-content">
-                    {data.category && (
-                      <span className="tech-badge" style={{ width: 'fit-content', marginBottom: 10 }}>
-                        {data.category}
-                      </span>
-                    )}
                     <h3 className="ks-card-title infraks-card-title">{data.title}</h3>
                     <p className="ks-card-descr infraks-card-descr">{data.descr}</p>
                   </div>
@@ -185,85 +174,12 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 3.5. Latest News & Announcements (Dynamic CMS Content) */}
-      {latestNews.length > 0 && (
-        <section style={{ padding: '64px 0', backgroundColor: 'var(--color-background-alt)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
-          <div className="container">
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '32px', flexWrap: 'wrap', gap: '16px' }}>
-              <div>
-                <div className="tech-badge" style={{ marginBottom: 10 }}>
-                  <Newspaper size={13} />
-                  <span>{lang === 'en' ? 'Company News' : 'Новости компании'}</span>
-                </div>
-                <h2 style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--color-dark)', margin: 0 }}>
-                  {lang === 'en' ? 'Latest Events & Updates' : 'Актуальные события и новости'}
-                </h2>
-              </div>
-              <Link 
-                to={lang === 'en' ? '/en/news' : '/news'}
-                className="hero-btn-secondary"
-                style={{ padding: '8px 18px', fontSize: '0.88rem' }}
-              >
-                <span>{lang === 'en' ? 'All news' : 'Все новости'}</span>
-                <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '22px' }}>
-              {latestNews.map((item, idx) => (
-                <div 
-                  key={idx}
-                  style={{
-                    background: '#ffffff',
-                    borderRadius: 'var(--radius-md)',
-                    border: '1px solid var(--color-border)',
-                    padding: '24px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    boxShadow: 'var(--shadow-sm)'
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px', fontSize: '0.82rem', color: 'var(--color-text-muted)' }}>
-                    {item.category && <span className="tech-badge" style={{ padding: '2px 8px' }}>{item.category}</span>}
-                    {item.date && (
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                        <Calendar size={12} />
-                        <span>{item.date}</span>
-                      </span>
-                    )}
-                  </div>
-                  <h3 style={{ fontSize: '1.18rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: '10px', lineHeight: 1.35 }}>
-                    <Link to={lang === 'en' ? `/en/news/${item.slug}` : `/news/${item.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
-                      {item.title}
-                    </Link>
-                  </h3>
-                  <p style={{ fontSize: '0.91rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, flexGrow: 1, marginBottom: '16px' }}>
-                    {item.excerpt}
-                  </p>
-                  <Link 
-                    to={lang === 'en' ? `/en/news/${item.slug}` : `/news/${item.slug}`}
-                    style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.88rem' }}
-                  >
-                    <span>{lang === 'en' ? 'Read more' : 'Подробнее'}</span>
-                    <ArrowRight size={13} />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* 4. Contact & Map Section (Clean Corporate Layout) */}
+      {/* 3. Contact & Map Section (Clean Corporate Layout) */}
       <section className="home-contact-section">
         <div className="container">
           <div className="home-contact-grid">
             <div className="contact-text-box">
               <div>
-                <div className="tech-badge" style={{ marginBottom: 12 }}>
-                  <MapPin size={13} />
-                  <span>{t.home.contactsTitle}</span>
-                </div>
                 <h3>{t.home.companyName}</h3>
                 <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.96rem', lineHeight: 1.6, marginBottom: 20 }}>
                   {t.footer.aboutText}

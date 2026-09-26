@@ -5,7 +5,7 @@ import { getArticleBySlug } from '../utils/contentLoader';
 import { renderMarkdownBody } from '../utils/markdownRenderer';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
-import { Calendar, Tag, ArrowLeft, User, FileQuestion } from 'lucide-react';
+import { Calendar, ArrowLeft, User, FileQuestion } from 'lucide-react';
 
 const ArticleDetailPage = () => {
   const { slug } = useParams();
@@ -58,12 +58,6 @@ const ArticleDetailPage = () => {
 
         <article style={{ maxWidth: 'var(--content-max-width, 1080px)', margin: '30px auto 0' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px', marginBottom: '16px', fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>
-            {item.category && (
-              <span className="tech-badge">
-                <Tag size={12} />
-                <span>{item.category}</span>
-              </span>
-            )}
             {item.date && (
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                 <Calendar size={14} />

@@ -4,7 +4,7 @@ import ArticleTable from '../components/ArticleTable';
 import SEO from '../components/SEO';
 import { siteDataBilingual } from '../data/siteContentBilingual';
 import { useLanguage } from '../context/LanguageContext';
-import { Activity, FileText } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 const ClinicalPage = () => {
   const { lang } = useLanguage();
@@ -34,10 +34,6 @@ const ClinicalPage = () => {
         <Breadcrumbs items={breadcrumbs} />
         
         <div style={{ marginBottom: 28 }}>
-          <div className="tech-badge" style={{ marginBottom: 12 }}>
-            <Activity size={13} />
-            <span>{lang === 'en' ? 'Clinical Research' : 'Клинические исследования'}</span>
-          </div>
           <h1 className="page-title-heading">{pageData.title}</h1>
         </div>
 

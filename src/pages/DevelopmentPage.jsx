@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 import { siteDataBilingual } from '../data/siteContentBilingual';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { ArrowRight, Layers, FileCheck, ZoomIn, Sparkles, Shield, Cpu } from 'lucide-react';
+import { ArrowRight, Layers, FileCheck, ZoomIn, Sparkles, Shield } from 'lucide-react';
 
 const relatedDevelopmentsList = [
   { id: 'sushka', route: '/sushka', ru: 'Сушка овощей и фруктов', en: 'Drying of vegetables and fruits' },
@@ -86,10 +86,6 @@ const DevelopmentPage = ({ pageId }) => {
         <Breadcrumbs items={breadcrumbs} />
         
         <div style={{ marginBottom: 28 }}>
-          <div className="tech-badge" style={{ marginBottom: 12 }}>
-            <Cpu size={13} />
-            <span>{pageData.menu_section || (lang === 'en' ? 'Technology' : 'Научная разработка')}</span>
-          </div>
           <h1 className="page-title-heading">{pageData.title}</h1>
         </div>
 

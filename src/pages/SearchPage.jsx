@@ -4,7 +4,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
 import siteData from '../data/siteContent';
 import { getNews, getArticles } from '../utils/contentLoader';
-import { Search, FileText, ArrowRight, Tag } from 'lucide-react';
+import { Search, FileText, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const SearchPage = () => {
@@ -226,11 +226,7 @@ const SearchPage = () => {
                 transition: 'all 0.15s ease'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
-                <span className="tech-badge">
-                  <Tag size={13} />
-                  <span>{page.menu_section || (lang === 'en' ? 'Section' : 'Раздел')}</span>
-                </span>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginBottom: 10 }}>
                 <Link to={getTargetRoute(page.route)} className="hero-btn-secondary" style={{ padding: '6px 14px', fontSize: '0.85rem' }}>
                   <span>{lang === 'en' ? 'View' : 'Перейти'}</span>
                   <ArrowRight size={13} />
