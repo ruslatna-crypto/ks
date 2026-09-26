@@ -1,0 +1,132 @@
+backend:
+  name: github
+  repo: ruslatna-crypto/ks
+  branch: main
+  base_url: https://ks.loc
+  auth_endpoint: api/auth
+
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+display_url: "https://ruslatna-crypto.github.io/ks"
+logo_url: "/images/logo/logo1.svg"
+
+locale: "ru"
+
+collections:
+  # 1. Новости (RU)
+  - name: "news_ru"
+    label: "Новости (RU)"
+    label_singular: "Новость (RU)"
+    folder: "content/ru/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата публикации", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "URL Slug", name: "slug", widget: "string" }
+      - { label: "Краткий анонс", name: "excerpt", widget: "text" }
+      - { label: "Главное изображение", name: "image", widget: "image", required: false }
+      - { label: "Категория", name: "category", widget: "select", options: ["События", "Производство", "Выставки", "Партнёрство", "Новости"], default: "События" }
+      - { label: "Автор", name: "author", widget: "string", required: false }
+      - { label: "Опубликовано", name: "published", widget: "boolean", default: true }
+      - { label: "Текст новости", name: "body", widget: "markdown" }
+
+  # 2. Новости (EN)
+  - name: "news_en"
+    label: "News (EN)"
+    label_singular: "News item (EN)"
+    folder: "content/en/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "URL Slug", name: "slug", widget: "string" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Category", name: "category", widget: "select", options: ["Events", "Production", "Exhibitions", "Partnership", "News"], default: "Events" }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 3. Статьи (RU)
+  - name: "articles_ru"
+    label: "Статьи (RU)"
+    label_singular: "Статья (RU)"
+    folder: "content/ru/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Заголовок статьи", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "URL Slug", name: "slug", widget: "string" }
+      - { label: "Автор / Отдел", name: "author", widget: "string", required: false }
+      - { label: "Категория", name: "category", widget: "select", options: ["Исследования", "Технологии", "Сельское хозяйство", "Медицина", "Промышленность"], default: "Исследования" }
+      - { label: "Изображение", name: "image", widget: "image", required: false }
+      - { label: "Краткое описание", name: "excerpt", widget: "text" }
+      - { label: "Опубликовано", name: "published", widget: "boolean", default: true }
+      - { label: "Текст статьи", name: "body", widget: "markdown" }
+
+  # 4. Статьи (EN)
+  - name: "articles_en"
+    label: "Articles (EN)"
+    label_singular: "Article (EN)"
+    folder: "content/en/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "URL Slug", name: "slug", widget: "string" }
+      - { label: "Author / Division", name: "author", widget: "string", required: false }
+      - { label: "Category", name: "category", widget: "select", options: ["Research", "Technologies", "Agriculture", "Medicine", "Industry"], default: "Research" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Article Body", name: "body", widget: "markdown" }
+
+  # 5. Настройки сайта (JSON)
+  - name: "settings"
+    label: "Настройки"
+    files:
+      - name: "site_info"
+        label: "Основная информация о компании"
+        file: "content/data/site.json"
+        fields:
+          - { label: "Название (RU)", name: "company_ru", widget: "string" }
+          - { label: "Название (EN)", name: "company_en", widget: "string" }
+          - { label: "Краткое имя", name: "short_name", widget: "string" }
+          - { label: "Слоган (RU)", name: "tagline_ru", widget: "string" }
+          - { label: "Слоган (EN)", name: "tagline_en", widget: "string" }
+          - { label: "Описание для мета-тегов (RU)", name: "description_ru", widget: "text" }
+          - { label: "Описание для мета-тегов (EN)", name: "description_en", widget: "text" }
+
+      - name: "contacts_info"
+        label: "Контакты и социальные сети"
+        file: "content/data/contacts.json"
+        fields:
+          - { label: "Телефон", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Адрес (RU)", name: "address_ru", widget: "string" }
+          - { label: "Адрес (EN)", name: "address_en", widget: "string" }
+          - { label: "Ссылка 2GIS", name: "twogis_url", widget: "string" }
+          - label: "Социальные сети и каналы"
+            name: "social_links"
+            widget: "object"
+            fields:
+              - { label: "WhatsApp URL", name: "whatsapp", widget: "string" }
+              - { label: "Telegram URL", name: "telegram", widget: "string" }
+              - { label: "MAX URL", name: "max", widget: "string" }
+              - { label: "YouTube URL", name: "youtube", widget: "string" }
+              - { label: "Сайт автора (Рахимов)", name: "author_site", widget: "string" }

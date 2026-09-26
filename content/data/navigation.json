@@ -1,0 +1,63 @@
+{
+  "menu_items": [
+    {
+      "id": "home",
+      "route": "/",
+      "route_en": "/en",
+      "label_ru": "Главная",
+      "label_en": "Home"
+    },
+    {
+      "id": "developments",
+      "route": "/sushka",
+      "route_en": "/en/sushka",
+      "label_ru": "Разработки",
+      "label_en": "Developments",
+      "children": [
+        { "id": "sushka", "route": "/sushka", "label_ru": "Сушилки овощей и фруктов", "label_en": "Fruit & vegetable dryers" },
+        { "id": "sush-ustanovka", "route": "/sush-ustanovka", "label_ru": "Сушильные установки серии «Узбекистан»", "label_en": "Drying units \"Uzbekistan\"" },
+        { "id": "metodikasushka", "route": "/metodikasushka", "label_ru": "Методика и расчеты сушилок", "label_en": "Drying calculations and methods" },
+        { "id": "plenka", "route": "/plenka", "label_ru": "Пленка для теплиц и парников", "label_en": "Greenhouse composite film" },
+        { "id": "steril", "route": "/steril", "label_ru": "Стерилизация мед. инструментов", "label_en": "Instrument sterilization" },
+        { "id": "gril", "route": "/gril", "label_ru": "Грили, жарочные шкафы, выпечка", "label_en": "Grills and baking conveyors" },
+        { "id": "lamp", "route": "/lamp", "label_ru": "Лечебные импульсные лампы", "label_en": "Therapeutic pulsed lamps" },
+        { "id": "cotton", "route": "/cotton", "label_ru": "Сушка хлопка и стимуляция семян", "label_en": "Cotton drying & seed stimulation" },
+        { "id": "paint", "route": "/paint", "label_ru": "Сушка и полимеризация краски", "label_en": "Paint and varnish curing" }
+      ]
+    },
+    {
+      "id": "medicine",
+      "route": "/metod",
+      "route_en": "/en/metod",
+      "label_ru": "Медицина",
+      "label_en": "Medicine",
+      "children": [
+        { "id": "metod", "route": "/metod", "label_ru": "Метод профессора Р. Рахимова", "label_en": "Prof. Rakhimov Method" },
+        { "id": "virus", "route": "/virus", "label_ru": "Терапия вирусных заболеваний", "label_en": "Viral infections therapy" },
+        { "id": "metodika", "route": "/metodika", "label_ru": "Курс лекций и основы методики", "label_en": "Course of lectures & methodology" },
+        { "id": "klinik", "route": "/klinik", "label_ru": "Клинические протоколы и наблюдения", "label_en": "Clinical protocols & trials" }
+      ]
+    },
+    {
+      "id": "news",
+      "route": "/news",
+      "route_en": "/en/news",
+      "label_ru": "Новости",
+      "label_en": "News"
+    },
+    {
+      "id": "articles",
+      "route": "/articles",
+      "route_en": "/en/articles",
+      "label_ru": "Статьи",
+      "label_en": "Articles"
+    },
+    {
+      "id": "contact",
+      "route": "/contact",
+      "route_en": "/en/contact",
+      "label_ru": "Контакты",
+      "label_en": "Contacts"
+    }
+  ]
+}

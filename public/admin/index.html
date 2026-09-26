@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Управление контентом — ООО «KERAMIKA SINTEZ»</title>
+  <link rel="icon" type="image/svg+xml" href="/images/logo/logo1.svg" />
+  <!-- Explicit Decap CMS config URL -->
+  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+  <script>
+    if (window.location.pathname === '/admin') {
+      window.location.replace('/admin/' + window.location.search + window.location.hash);
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Decap CMS official script -->
+  <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+</body>
+</html>

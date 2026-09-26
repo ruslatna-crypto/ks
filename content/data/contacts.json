@@ -1,0 +1,19 @@
+{
+  "phone": "+998 99 8336783",
+  "phone_clean": "+998998336783",
+  "email": "ruslat@yandex.ru",
+  "address_ru": "Республика Узбекистан, 100084, г. Ташкент, ул. Чингиза Айтматова 2 “Б”",
+  "address_en": "Republic of Uzbekistan, 100084, Tashkent, Chingiz Aitmatov St. 2 “B”",
+  "coordinates": {
+    "lat": 41.328495,
+    "lon": 69.293988
+  },
+  "twogis_url": "http://2gis.uz/tashkent/firm/70000001074420592/center/69.293988,41.328495/zoom/16",
+  "social_links": {
+    "whatsapp": "https://wa.me/998998336783",
+    "telegram": "https://t.me/Rus_Lat",
+    "max": "https://max.ru/u/+998998336783",
+    "youtube": "https://www.youtube.com/@Rahimovrx",
+    "author_site": "https://www.dr-rakhimov.com/"
+  }
+}
