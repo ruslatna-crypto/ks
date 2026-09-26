@@ -288,17 +288,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Subtle, dignified pulse animation for social icons */
-@keyframes socialPulse {
-  0%, 100% {
+/* Smooth corporate hover pulse animation for social icons */
+@keyframes socialHoverPulse {
+  0% {
     transform: scale(1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-    border-color: var(--color-border);
   }
   50% {
-    transform: scale(1.045);
-    box-shadow: 0 3px 8px rgba(62, 64, 149, 0.08);
-    border-color: rgba(62, 64, 149, 0.28);
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Subtle corporate hover pulse animation for RU/ENG language buttons */
+@keyframes langHoverPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -308,51 +320,36 @@ h1, h2, h3, h4, h5, h6 {
   gap: 8px;
 }
 
+/* Round social buttons (+40% size: 52px, border-radius: 50%, no square border) */
 .social-icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-sm);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   background: var(--color-background-alt);
-  border: 1px solid var(--color-border);
-  transition: transform 200ms ease, background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
-  animation: socialPulse 3s ease-in-out infinite;
+  border: none;
+  box-shadow: none;
+  transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
   will-change: transform;
 }
 
-/* Staggered animation delays for gentle asynchronous pulse */
-.header-socials .social-icon-btn:nth-child(1) {
-  animation-delay: 0s;
-}
-.header-socials .social-icon-btn:nth-child(2) {
-  animation-delay: 0.35s;
-}
-.header-socials .social-icon-btn:nth-child(3) {
-  animation-delay: 0.7s;
-}
-.header-socials .social-icon-btn:nth-child(4) {
-  animation-delay: 1.05s;
-}
-
-/* Hover: pauses breathing and applies refined interactive scale */
+/* Static in normal state. Pulse activates ONLY on :hover */
 .social-icon-btn:hover {
-  animation-play-state: paused;
-  transform: scale(1.07);
+  animation: socialHoverPulse 800ms ease-in-out infinite;
   background: #ffffff;
-  border-color: var(--color-primary-light);
-  box-shadow: 0 4px 10px rgba(62, 64, 149, 0.12);
+  box-shadow: 0 4px 12px rgba(62, 64, 149, 0.12);
 }
 
 .social-icon-btn img {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   transition: transform 200ms ease;
 }
 
 .social-icon-btn:hover img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 /* Language Switcher */
@@ -376,6 +373,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   color: var(--color-text-secondary);
   transition: all var(--transition-fast);
+  will-change: transform;
+}
+
+/* RU/ENG hover triggers gentle pulsation, preserving rectangular form */
+.lang-btn:hover {
+  animation: langHoverPulse 850ms ease-in-out infinite;
+  color: var(--color-primary);
 }
 
 .lang-btn img {
@@ -2042,12 +2046,13 @@ h1, h2, h3, h4, h5, h6 {
     gap: 8px 10px;
   }
   .social-icon-btn {
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
   }
   .social-icon-btn img {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
   }
   .header-phone {
     font-size: 0.88rem;
@@ -2064,8 +2069,12 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .social-icon-btn {
+  .social-icon-btn,
+  .social-icon-btn:hover,
+  .lang-btn,
+  .lang-btn:hover {
     animation: none !important;
+    transform: none !important;
   }
 }
 

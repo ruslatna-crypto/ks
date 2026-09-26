@@ -13,8 +13,8 @@ export const translations = {
     },
     menu: {
       sushka: "Сушка овощей и фруктов",
-      sushUstanovka: "↳ Сушильная установка",
-      metodikaSushka: "↳ Методика сушки",
+      sushUstanovka: "Сушильная установка",
+      metodikaSushka: "Методика сушки",
       plenka: "Пленка для теплиц и парников",
       steril: "Стерилизация инструментов",
       gril: "Грили, выпечка",
@@ -24,7 +24,7 @@ export const translations = {
       metod: "О методе Р. Рахимова",
       virus: "Метод лечения от вирусов",
       lectures: "Лекции (YouTube) ↗",
-      metodika: "↳ Лекции и таблицы",
+      metodika: "Таблицы и методики",
       klinik: "Клинические случаи"
     },
     home: {
@@ -70,8 +70,8 @@ export const translations = {
     },
     menu: {
       sushka: "Drying of vegetables and fruits",
-      sushUstanovka: "↳ Drying installation",
-      metodikaSushka: "↳ Drying methodology",
+      sushUstanovka: "Drying installation",
+      metodikaSushka: "Drying methodology",
       plenka: "Film for greenhouses and hothouses",
       steril: "Sterilization of instruments",
       gril: "Grills, baking",
@@ -81,7 +81,7 @@ export const translations = {
       metod: "About the method of R. Rakhimov",
       virus: "Method of treatment against viruses",
       lectures: "Lectures (YouTube) ↗",
-      metodika: "↳ Research tables and lectures",
+      metodika: "Research tables and methodology",
       klinik: "Clinical cases"
     },
     home: {

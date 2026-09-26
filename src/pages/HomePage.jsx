@@ -135,10 +135,6 @@ const HomePage = () => {
         <div className="container">
           <div className="hero-intro-grid">
             <div className="hero-intro-left">
-              <div className="tech-badge">
-                <Sparkles size={13} />
-                <span>{lang === 'en' ? 'Research & Production Center' : 'Научно-производственный центр'}</span>
-              </div>
               <h1 className="hero-intro-title">
                 {lang === 'en' ? (
                   <>Scientific Developments <br /><span className="accent-title">Based on Functional Ceramics</span></>

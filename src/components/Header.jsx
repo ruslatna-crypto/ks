@@ -209,73 +209,33 @@ const Header = () => {
                 </Link>
               </li>
 
-              {/* Mega Menu Dropdown: Разработки / Developments */}
+              {/* Dropdown: Разработки / Developments */}
               <li className="nav-item-wrap">
                 <span className={`nav-item-link ${isDevActive() ? 'active' : ''}`} role="button">
                   {t.header.developments} <ChevronDown size={14} />
                 </span>
-                <div className="nav-dropdown mega-menu">
-                  <div>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '0.06em', padding: '6px 12px 10px' }}>
-                      {lang === 'en' ? 'Core Directions' : 'Основные направления'}
-                    </div>
-                    <Link to={getPath('/sushka')} className="dropdown-card-item">
-                      <span className="dropdown-card-title">{t.menu.sushka}</span>
-                      <span className="dropdown-card-desc">
-                        {lang === 'en' ? 'Vegetables & fruit drying tech' : 'Сушка овощей и фруктов'}
-                      </span>
-                    </Link>
-                    <div style={{ paddingLeft: '16px', display: 'flex', flexDirection: 'column', gap: '2px', marginBottom: '6px' }}>
-                      <Link to={getPath('/sush-ustanovka')} className="dropdown-item" style={{ fontSize: '0.84rem', padding: '5px 8px' }}>
-                        {t.menu.sushUstanovka}
-                      </Link>
-                      <Link to={getPath('/metodikasushka')} className="dropdown-item" style={{ fontSize: '0.84rem', padding: '5px 8px' }}>
-                        {t.menu.metodikaSushka}
-                      </Link>
-                    </div>
-                    <Link to={getPath('/plenka')} className="dropdown-card-item">
-                      <span className="dropdown-card-title">{t.menu.plenka}</span>
-                      <span className="dropdown-card-desc">
-                        {lang === 'en' ? 'Functional film for greenhouses' : 'Пленка для теплиц и парников'}
-                      </span>
-                    </Link>
-                    <Link to={getPath('/steril')} className="dropdown-card-item">
-                      <span className="dropdown-card-title">{t.menu.steril}</span>
-                      <span className="dropdown-card-desc">
-                        {lang === 'en' ? 'Medical instrument sterilization' : 'Стерилизация инструментов'}
-                      </span>
-                    </Link>
-                  </div>
-
-                  <div>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '0.06em', padding: '6px 12px 10px' }}>
-                      {lang === 'en' ? 'Industrial & Medical' : 'Промышленные и медицинские'}
-                    </div>
-                    <Link to={getPath('/lamp')} className="dropdown-card-item">
-                      <span className="dropdown-card-title">{t.menu.lamp}</span>
-                      <span className="dropdown-card-desc">
-                        {lang === 'en' ? 'Pulsed IR therapeutic lamps' : 'Лечебные импульсные лампы'}
-                      </span>
-                    </Link>
-                    <Link to={getPath('/gril')} className="dropdown-card-item">
-                      <span className="dropdown-card-title">{t.menu.gril}</span>
-                      <span className="dropdown-card-desc">
-                        {lang === 'en' ? 'Grills and baking equipment' : 'Грили, выпечка, жарочные шкафы'}
-                      </span>
-                    </Link>
-                    <Link to={getPath('/cotton')} className="dropdown-card-item">
-                      <span className="dropdown-card-title">{t.menu.cotton}</span>
-                      <span className="dropdown-card-desc">
-                        {lang === 'en' ? 'Raw cotton drying & seed stimulation' : 'Сушка хлопка и стимуляция'}
-                      </span>
-                    </Link>
-                    <Link to={getPath('/paint')} className="dropdown-card-item">
-                      <span className="dropdown-card-title">{t.menu.paint}</span>
-                      <span className="dropdown-card-desc">
-                        {lang === 'en' ? 'Paint and varnish polymerization' : 'Сушка краски и лаков'}
-                      </span>
-                    </Link>
-                  </div>
+                <div className="nav-dropdown" style={{ minWidth: '320px' }}>
+                  <Link to={getPath('/sushka')} className="dropdown-item">
+                    {t.menu.sushka}
+                  </Link>
+                  <Link to={getPath('/plenka')} className="dropdown-item">
+                    {t.menu.plenka}
+                  </Link>
+                  <Link to={getPath('/steril')} className="dropdown-item">
+                    {t.menu.steril}
+                  </Link>
+                  <Link to={getPath('/gril')} className="dropdown-item">
+                    {t.menu.gril}
+                  </Link>
+                  <Link to={getPath('/lamp')} className="dropdown-item">
+                    {t.menu.lamp}
+                  </Link>
+                  <Link to={getPath('/cotton')} className="dropdown-item">
+                    {t.menu.cotton}
+                  </Link>
+                  <Link to={getPath('/paint')} className="dropdown-item">
+                    {t.menu.paint}
+                  </Link>
                 </div>
               </li>
 
@@ -462,8 +422,6 @@ const Header = () => {
                 {devOpen && (
                   <div style={{ paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
                     <Link to={getPath('/sushka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.sushka}</Link>
-                    <Link to={getPath('/sush-ustanovka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item" style={{ fontSize: '0.85rem' }}>{t.menu.sushUstanovka}</Link>
-                    <Link to={getPath('/metodikasushka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item" style={{ fontSize: '0.85rem' }}>{t.menu.metodikaSushka}</Link>
                     <Link to={getPath('/plenka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.plenka}</Link>
                     <Link to={getPath('/steril')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.steril}</Link>
                     <Link to={getPath('/gril')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.gril}</Link>
