@@ -133,11 +133,6 @@ const Header = () => {
           <div className="header-top">
             <Link to={getPath('/')} className="logo-wrap" title="ООО KERAMIKA SINTEZ">
               <img src="/images/logo/logo1.svg" alt="KERAMIKA SINTEZ" />
-              <div className="logo-brand-meta">
-                <span className="logo-brand-sub">
-                  {lang === 'en' ? 'Research & Production Center' : 'научно-производственный центр'}
-                </span>
-              </div>
             </Link>
 
             <div className="header-top-right">
