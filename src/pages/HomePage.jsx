@@ -180,10 +180,7 @@ const HomePage = () => {
           <div className="home-contact-grid">
             <div className="contact-text-box">
               <div>
-                <h3>{t.home.companyName}</h3>
-                <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.96rem', lineHeight: 1.6, marginBottom: 20 }}>
-                  {t.footer.aboutText}
-                </p>
+                <h3 style={{ marginBottom: 18 }}>{t.home.companyName}</h3>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>

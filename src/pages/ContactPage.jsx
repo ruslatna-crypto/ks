@@ -43,12 +43,9 @@ const ContactPage = () => {
             padding: '32px',
             boxShadow: 'var(--shadow-sm)'
           }}>
-            <h2 style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 10 }}>
+            <h2 style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 20 }}>
               {t.home.companyName}
             </h2>
-            <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.94rem', lineHeight: 1.6, marginBottom: 24 }}>
-              {t.footer.aboutText}
-            </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginBottom: 26 }}>
               <div style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>

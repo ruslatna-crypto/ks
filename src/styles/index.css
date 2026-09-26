@@ -1790,163 +1790,24 @@ h1, h2, h3, h4, h5, h6 {
 .lightbox-nav-btn.next { right: -60px; }
 
 /* ==========================================================
-   Corporate Footer
+   Minimalist Centered Footer
    ========================================================== */
 .site-footer-corporate {
   background-color: #12141a;
   color: #94A3B8;
   border-top: 1px solid #1E232F;
-  padding: 64px 0 0;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.footer-copyright-single {
+  margin: 0 auto;
   font-size: 0.92rem;
-}
-
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-  gap: clamp(32px, 3.2vw, 64px);
-  padding-bottom: 50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer-col-brand .footer-logo-img {
-  height: 52px;
-  width: auto;
-  margin-bottom: 16px;
-  filter: brightness(1.05);
-}
-
-.footer-brand-title {
-  color: #ffffff;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.footer-brand-subtitle {
-  color: var(--color-primary-light);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 14px;
-}
-
-.footer-brand-desc {
-  color: #8A94A6;
-  font-size: 0.88rem;
   line-height: 1.6;
-}
-
-.footer-col-title {
-  color: #ffffff;
-  font-size: 0.98rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.footer-col-title::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 24px;
-  height: 2px;
-  background: var(--color-primary-light);
-}
-
-.footer-nav-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-nav-list a {
   color: #94A3B8;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-  display: inline-block;
-  font-size: 0.88rem;
-}
-
-.footer-nav-list a:hover {
-  color: #ffffff;
-  transform: translateX(3px);
-}
-
-.footer-contacts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.footer-contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.88rem;
-  color: #94A3B8;
-}
-
-.footer-contact-item svg {
-  color: var(--color-primary-light);
-  flex-shrink: 0;
-  margin-top: 3px;
-}
-
-.footer-contact-item a {
-  color: #CBD5E1;
-}
-
-.footer-contact-item a:hover {
-  color: #ffffff;
-}
-
-.footer-socials-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.footer-social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all var(--transition-fast);
-}
-
-.footer-social-btn:hover {
-  background: var(--color-primary);
-  border-color: var(--color-primary-light);
-  transform: translateY(-2px);
-}
-
-.footer-social-btn img {
-  width: 20px;
-  height: 20px;
-}
-
-.footer-bottom-bar {
-  padding: 24px 0 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-size: 0.84rem;
-  color: #64748B;
-}
-
-.footer-bottom-bar a:hover {
-  color: #CBD5E1;
+  text-align: center;
+  max-width: 680px;
+  word-wrap: break-word;
 }
 
 /* ==========================================================
@@ -1983,12 +1844,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================
    Responsive Breakpoints
    ========================================================== */
-@media (max-width: 1080px) {
-  .footer-top-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
-  }
-}
 
 @media (max-width: 960px) {
   .home-cards-grid {
@@ -2043,10 +1898,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .home-cards-grid {
     grid-template-columns: 1fr;
-  }
-  .footer-top-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
   }
   /* Hero Slider on Mobile: edge-to-edge max usable area */
   .hero-slider-wrap {
