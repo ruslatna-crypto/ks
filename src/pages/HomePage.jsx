@@ -138,11 +138,6 @@ const HomePage = () => {
             <h2 className="home-section-title">
               {lang === 'en' ? 'Core Scientific Developments' : 'Ключевые направления разработок'}
             </h2>
-            <p className="home-section-subtitle">
-              {lang === 'en'
-                ? 'High-performance engineering solutions and equipment based on functional ceramic emitters.'
-                : 'Высокоэффективные инженерные комплексы и методики на основе импульсных керамических излучателей.'}
-            </p>
           </div>
 
           <div className="home-cards-grid">

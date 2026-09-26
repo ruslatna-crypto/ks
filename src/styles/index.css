@@ -1194,6 +1194,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
 }
 
+.home-section-title:last-child {
+  margin-bottom: 0;
+}
+
 .home-section-subtitle {
   font-size: 1.08rem;
   color: var(--color-text-secondary);

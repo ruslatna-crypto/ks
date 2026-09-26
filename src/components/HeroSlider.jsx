@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slidesData = [
   {
@@ -136,10 +136,7 @@ const HeroSlider = () => {
                     decoding={index === 0 ? 'sync' : 'async'}
                   />
                   <div className={`slide-caption-badge pos-${slide.position}`}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                      <span>{caption}</span>
-                      <ArrowUpRight size={18} style={{ opacity: 0.8 }} />
-                    </span>
+                    <span>{caption}</span>
                   </div>
                 </Link>
               </div>
