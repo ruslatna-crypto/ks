@@ -8,13 +8,14 @@
 | Параметр | Значение |
 | :--- | :--- |
 | **Организация / Бренд** | ООО «KERAMIKA SINTEZ» |
+| **Production URL** | `https://ks-gray.vercel.app` |
 | **GitHub репозиторий** | `ruslatna-crypto/ks` |
 | **Основная ветка** | `main` |
 | **Git Remote Origin** | `https://github.com/ruslatna-crypto/ks.git` |
 | **Статус ветки** | `up to date with 'origin/main'`, рабочее дерево чистое |
 | **Архитектура** | React + Vite + Decap CMS + Markdown/JSON + Vercel (Flat-File, **NO DATABASE**) |
 | **Команда сборки** | `npm run build` (`vite build`) |
-| **Результат сборки** | **Exit Code: 0** (1.87 сек, 1508 модулей, без ошибок) |
+| **Результат сборки** | **Exit Code: 0** (1.65 сек, 1508 модулей, без ошибок) |
 | **Каталог сборки** | `dist` |
 
 ---
@@ -105,9 +106,9 @@ GITHUB_CLIENT_SECRET = <REQUIRES USER CONFIGURATION>
 1. Перейдите в GitHub: **Settings → Developer settings → OAuth Apps → New OAuth App**.
 2. Заполните поля:
    * **Application name:** `KERAMIKA SINTEZ CMS`
-   * **Homepage URL:** `https://<ВАШ-VERCEL-ПРОЕКТ>.vercel.app`
+   * **Homepage URL:** `https://ks-gray.vercel.app`
    * **Application description:** `Decap CMS GitHub Authentication for LLC KERAMIKA SINTEZ`
-   * **Authorization callback URL:** `https://<ВАШ-VERCEL-ПРОЕКТ>.vercel.app/api/callback`
+   * **Authorization callback URL:** `https://ks-gray.vercel.app/api/callback`
 3. Нажмите **Register application**.
 4. Скопируйте **Client ID** → вставьте в переменную `GITHUB_CLIENT_ID` на Vercel.
 5. Нажмите **Generate a new client secret** → скопируйте **Client Secret** → вставьте в `GITHUB_CLIENT_SECRET` на Vercel.

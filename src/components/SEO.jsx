@@ -22,7 +22,7 @@ export default function SEO({
     // 1. Determine site origin dynamically or from VITE_SITE_URL
     const origin = (typeof window !== 'undefined' && window.location && window.location.origin)
       ? window.location.origin
-      : 'https://ks.vercel.app';
+      : 'https://ks-gray.vercel.app';
 
     // 2. Set document title
     const brandName = 'KERAMIKA SINTEZ';
