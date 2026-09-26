@@ -56,7 +56,7 @@ const ArticleDetailPage = () => {
       <div className="container" style={{ paddingTop: '24px' }}>
         <Breadcrumbs currentTitle={item.title} parentTitle={lang === 'en' ? 'Articles' : 'Статьи'} parentRoute={backRoute} />
 
-        <article style={{ maxWidth: '1080px', margin: '30px auto 0' }}>
+        <article style={{ maxWidth: 'var(--content-max-width, 1080px)', margin: '30px auto 0' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px', marginBottom: '16px', fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>
             {item.category && (
               <span className="tech-badge">

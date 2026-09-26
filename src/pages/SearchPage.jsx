@@ -171,7 +171,7 @@ const SearchPage = () => {
         enPath="/en/search"
         lang={lang}
       />
-      <div className="container" style={{ maxWidth: 1200 }}>
+      <div className="container">
         <Breadcrumbs items={breadcrumbs} />
         
         <div style={{ marginBottom: 28 }}>
