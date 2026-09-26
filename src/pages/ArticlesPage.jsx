@@ -56,16 +56,6 @@ const ArticlesPage = () => {
               <article 
                 key={idx}
                 className="ks-dev-card"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  background: '#ffffff',
-                  borderRadius: 'var(--radius-md)',
-                  border: '1px solid var(--color-border)',
-                  overflow: 'hidden',
-                  boxShadow: 'var(--shadow-sm)',
-                  transition: 'all 0.2s ease'
-                }}
               >
                 {item.image && (
                   <div className="card-icon-container card-image" style={{ height: '210px' }}>
@@ -77,7 +67,7 @@ const ArticlesPage = () => {
                     />
                   </div>
                 )}
-                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                <div className="ks-card-content">
                   <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '10px', marginBottom: '12px', fontSize: '0.84rem', color: 'var(--color-text-muted)' }}>
                     {item.date && (
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
