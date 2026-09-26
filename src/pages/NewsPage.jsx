@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { getNews } from '../utils/contentLoader';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import { Calendar, Tag, ArrowRight, Newspaper } from 'lucide-react';
 
 const NewsPage = () => {
@@ -15,6 +16,16 @@ const NewsPage = () => {
 
   return (
     <div style={{ backgroundColor: 'var(--color-background)', minHeight: '80vh', paddingBottom: '70px' }}>
+      <SEO
+        title={lang === 'en' ? 'Company News & Events' : 'Новости и события компании'}
+        description={lang === 'en'
+          ? 'Official announcements, production updates and scientific exhibitions of KERAMIKA SINTEZ LLC.'
+          : 'Официальные сообщения, новости производства и научные выставки ООО «KERAMIKA SINTEZ».'}
+        canonicalPath={lang === 'en' ? '/en/news' : '/news'}
+        ruPath="/news"
+        enPath="/en/news"
+        lang={lang}
+      />
       <div className="container" style={{ paddingTop: '24px' }}>
         <Breadcrumbs currentTitle={lang === 'en' ? 'News' : 'Новости'} />
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
+import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 
 const NotFoundPage = () => {
@@ -10,6 +11,14 @@ const NotFoundPage = () => {
 
   return (
     <div style={{ padding: '90px 20px', textAlign: 'center', backgroundColor: 'var(--color-background-alt)' }}>
+      <SEO
+        title={lang === 'en' ? 'Page Not Found (404)' : 'Страница не найдена (404)'}
+        description={lang === 'en'
+          ? 'The requested page has been moved, renamed, or is temporarily unavailable.'
+          : 'Запрашиваемая страница перемещена, удалена или указан неверный адрес.'}
+        canonicalPath="/404"
+        lang={lang}
+      />
       <div className="container" style={{ maxWidth: 620 }}>
         <div style={{
           display: 'inline-block',

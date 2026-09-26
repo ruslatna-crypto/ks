@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
-Sitemap: https://infraks.ru/sitemap.xml
+Sitemap: https://ks.vercel.app/sitemap.xml

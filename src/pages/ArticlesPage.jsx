@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { getArticles } from '../utils/contentLoader';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import { BookOpen, Calendar, Tag, ArrowRight, User } from 'lucide-react';
 
 const ArticlesPage = () => {
@@ -15,6 +16,16 @@ const ArticlesPage = () => {
 
   return (
     <div style={{ backgroundColor: 'var(--color-background)', minHeight: '80vh', paddingBottom: '70px' }}>
+      <SEO
+        title={lang === 'en' ? 'Scientific Articles & Publications' : 'Научные статьи и публикации'}
+        description={lang === 'en'
+          ? 'Scientific publications, monographs and engineering overviews on pulsed functional ceramics technology.'
+          : 'Научные публикации, монографии и инженерные обзоры по технологии импульсной функциональной керамики.'}
+        canonicalPath={lang === 'en' ? '/en/articles' : '/articles'}
+        ruPath="/articles"
+        enPath="/en/articles"
+        lang={lang}
+      />
       <div className="container" style={{ paddingTop: '24px' }}>
         <Breadcrumbs currentTitle={lang === 'en' ? 'Articles & Publications' : 'Статьи и публикации'} />
 

@@ -2,15 +2,12 @@ backend:
   name: github
   repo: ruslatna-crypto/ks
   branch: main
-  base_url: https://ks.loc
   auth_endpoint: api/auth
-
-local_backend: true
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
-display_url: "https://ruslatna-crypto.github.io/ks"
+display_url: "/"
 logo_url: "/images/logo/logo1.svg"
 
 locale: "ru"

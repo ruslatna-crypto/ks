@@ -1,6 +1,7 @@
 import React from 'react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleTable from '../components/ArticleTable';
+import SEO from '../components/SEO';
 import { siteDataBilingual } from '../data/siteContentBilingual';
 import { useLanguage } from '../context/LanguageContext';
 import { Youtube, ExternalLink, Activity, BookOpen } from 'lucide-react';
@@ -19,6 +20,16 @@ const LecturesPage = () => {
 
   return (
     <div className="page-wrap">
+      <SEO
+        title={lang === 'en' ? 'Clinical Lectures & Methodologies' : 'Клинические лекции и методики'}
+        description={lang === 'en'
+          ? '76 clinical lectures and practical methodologies for the medical application of infrared resonant radiation.'
+          : '76 клинических лекций и практических методик применения инфракрасного резонансного излучения в медицине.'}
+        canonicalPath={lang === 'en' ? '/en/metodika' : '/metodika'}
+        ruPath="/metodika"
+        enPath="/en/metodika"
+        lang={lang}
+      />
       <div className="container">
         <Breadcrumbs items={breadcrumbs} />
         

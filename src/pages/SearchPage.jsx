@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import siteData from '../data/siteContent';
 import { getNews, getArticles } from '../utils/contentLoader';
 import { Search, FileText, ArrowRight, Tag } from 'lucide-react';
@@ -160,6 +161,16 @@ const SearchPage = () => {
 
   return (
     <div className="page-wrap">
+      <SEO
+        title={lang === 'en' ? 'Search Materials' : 'Поиск по материалам'}
+        description={lang === 'en'
+          ? 'Search scientific developments, clinical lectures, publications and news across the KERAMIKA SINTEZ portal.'
+          : 'Поиск по научно-техническим разработкам, клиническим лекциям, публикациям и новостям портала KERAMIKA SINTEZ.'}
+        canonicalPath={lang === 'en' ? '/en/search' : '/search'}
+        ruPath="/search"
+        enPath="/en/search"
+        lang={lang}
+      />
       <div className="container" style={{ maxWidth: 1200 }}>
         <Breadcrumbs items={breadcrumbs} />
         

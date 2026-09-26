@@ -1,6 +1,7 @@
 import React from 'react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleTable from '../components/ArticleTable';
+import SEO from '../components/SEO';
 import { siteDataBilingual } from '../data/siteContentBilingual';
 import { useLanguage } from '../context/LanguageContext';
 import { Activity, FileText } from 'lucide-react';
@@ -19,6 +20,16 @@ const ClinicalPage = () => {
 
   return (
     <div className="page-wrap">
+      <SEO
+        title={lang === 'en' ? 'Clinical Protocols & Research' : 'Клинические испытания и медицинские методики'}
+        description={lang === 'en'
+          ? 'Clinical trial results and approved medical protocols for pulsed functional ceramics therapy.'
+          : 'Результаты клинических испытаний и утвержденные медицинские протоколы импульсной керамической терапии.'}
+        canonicalPath={lang === 'en' ? '/en/klinik' : '/klinik'}
+        ruPath="/klinik"
+        enPath="/en/klinik"
+        lang={lang}
+      />
       <div className="container">
         <Breadcrumbs items={breadcrumbs} />
         

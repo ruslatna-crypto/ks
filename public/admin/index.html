@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Управление контентом — ООО «KERAMIKA SINTEZ»</title>
-  <link rel="icon" type="image/svg+xml" href="/images/logo/logo1.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" href="/favicon.ico" />
   <!-- Explicit Decap CMS config URL -->
   <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
   <script>
@@ -21,7 +22,28 @@
   </style>
 </head>
 <body>
-  <!-- Decap CMS official script -->
+  <!-- Manual Initialization to dynamically adapt OAuth base_url and local backend -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+  <script>
+    var hostname = window.location.hostname;
+    var isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || hostname === 'ks.loc';
+
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'ruslatna-crypto/ks',
+          branch: 'main',
+          base_url: window.location.origin,
+          auth_endpoint: 'api/auth'
+        },
+        local_backend: isLocal,
+        display_url: window.location.origin
+      }
+    });
+  </script>
 </body>
 </html>

@@ -2,6 +2,7 @@ import React from 'react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import MapWidget from '../components/MapWidget';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 import { Phone, Mail, MapPin, Clock, Building2 } from 'lucide-react';
@@ -16,6 +17,16 @@ const ContactPage = () => {
 
   return (
     <div className="page-wrap">
+      <SEO
+        title={lang === 'en' ? 'Contacts' : 'Контакты'}
+        description={lang === 'en'
+          ? 'Contact information of LLC KERAMIKA SINTEZ: production address, telephone, email and inquiry form.'
+          : 'Контактная информация ООО «KERAMIKA SINTEZ»: адрес производства, телефон, электронная почта и форма связи.'}
+        canonicalPath={lang === 'en' ? '/en/contact' : '/contact'}
+        ruPath="/contact"
+        enPath="/en/contact"
+        lang={lang}
+      />
       <div className="container">
         <Breadcrumbs items={breadcrumbs} />
         

@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { getNewsBySlug } from '../utils/contentLoader';
 import { renderMarkdownBody } from '../utils/markdownRenderer';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import { Calendar, Tag, ArrowLeft, User, FileQuestion } from 'lucide-react';
 
 const NewsDetailPage = () => {
@@ -16,6 +17,12 @@ const NewsDetailPage = () => {
   if (!item) {
     return (
       <div className="container" style={{ paddingTop: '50px', paddingBottom: '70px', textAlign: 'center' }}>
+        <SEO
+          title={lang === 'en' ? 'News not found' : 'Новость не найдена'}
+          description={lang === 'en' ? 'The requested news article was not found.' : 'Запрошенная новость не найдена.'}
+          canonicalPath="/news"
+          lang={lang}
+        />
         <FileQuestion size={48} color="var(--color-text-muted)" style={{ margin: '0 auto 16px' }} />
         <h1 style={{ fontSize: '1.8rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: '12px' }}>
           {lang === 'en' ? 'News not found' : 'Новость не найдена'}
@@ -35,6 +42,17 @@ const NewsDetailPage = () => {
 
   return (
     <div style={{ backgroundColor: 'var(--color-background)', minHeight: '80vh', paddingBottom: '70px' }}>
+      <SEO
+        title={item.title}
+        description={item.excerpt || item.title}
+        canonicalPath={lang === 'en' ? `/en/news/${slug}` : `/news/${slug}`}
+        ruPath={`/news/${slug}`}
+        enPath={`/en/news/${slug}`}
+        image={item.image || '/images/logo/logo1.svg'}
+        type="article"
+        article={{ date: item.date, author: item.author, category: item.category }}
+        lang={lang}
+      />
       <div className="container" style={{ paddingTop: '24px' }}>
         <Breadcrumbs currentTitle={item.title} parentTitle={lang === 'en' ? 'News' : 'Новости'} parentRoute={backRoute} />
 

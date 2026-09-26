@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
 import MapWidget from '../components/MapWidget';
+import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 import { Phone, Mail, MapPin, ArrowRight, Layers, Award, Sparkles, Activity, Newspaper, Calendar } from 'lucide-react';
@@ -119,6 +120,16 @@ const HomePage = () => {
 
   return (
     <div>
+      <SEO
+        title={lang === 'en' ? 'Scientific & Production Portal' : 'Научно-производственный портал'}
+        description={lang === 'en'
+          ? 'KERAMIKA SINTEZ LLC — research, development and implementation of energy-efficient technologies based on pulsed functional ceramics.'
+          : 'ООО «KERAMIKA SINTEZ» — исследования, разработка и внедрение энергоэффективных технологий на основе импульсной функциональной керамики.'}
+        canonicalPath={lang === 'en' ? '/en' : '/'}
+        ruPath="/"
+        enPath="/en"
+        lang={lang}
+      />
       {/* 1. Hero Intro Section: Scientific & Technological Showcase */}
       <section className="hero-intro-section">
         <div className="container">

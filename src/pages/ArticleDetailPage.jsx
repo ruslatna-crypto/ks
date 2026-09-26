@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { getArticleBySlug } from '../utils/contentLoader';
 import { renderMarkdownBody } from '../utils/markdownRenderer';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import { Calendar, Tag, ArrowLeft, User, FileQuestion } from 'lucide-react';
 
 const ArticleDetailPage = () => {
@@ -16,6 +17,12 @@ const ArticleDetailPage = () => {
   if (!item) {
     return (
       <div className="container" style={{ paddingTop: '50px', paddingBottom: '70px', textAlign: 'center' }}>
+        <SEO
+          title={lang === 'en' ? 'Article not found' : 'Статья не найдена'}
+          description={lang === 'en' ? 'The requested article was not found.' : 'Запрошенная статья не найдена.'}
+          canonicalPath="/articles"
+          lang={lang}
+        />
         <FileQuestion size={48} color="var(--color-text-muted)" style={{ margin: '0 auto 16px' }} />
         <h1 style={{ fontSize: '1.8rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: '12px' }}>
           {lang === 'en' ? 'Article not found' : 'Статья не найдена'}
@@ -33,10 +40,19 @@ const ArticleDetailPage = () => {
     );
   }
 
-
-
   return (
     <div style={{ backgroundColor: 'var(--color-background)', minHeight: '80vh', paddingBottom: '70px' }}>
+      <SEO
+        title={item.title}
+        description={item.excerpt || item.title}
+        canonicalPath={lang === 'en' ? `/en/articles/${slug}` : `/articles/${slug}`}
+        ruPath={`/articles/${slug}`}
+        enPath={`/en/articles/${slug}`}
+        image={item.image || '/images/logo/logo1.svg'}
+        type="article"
+        article={{ date: item.date, author: item.author, category: item.category }}
+        lang={lang}
+      />
       <div className="container" style={{ paddingTop: '24px' }}>
         <Breadcrumbs currentTitle={item.title} parentTitle={lang === 'en' ? 'Articles' : 'Статьи'} parentRoute={backRoute} />
 

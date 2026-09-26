@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ArticleTable from '../components/ArticleTable';
 import Lightbox from '../components/Lightbox';
+import SEO from '../components/SEO';
 import { siteDataBilingual } from '../data/siteContentBilingual';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
@@ -66,10 +67,21 @@ const DevelopmentPage = ({ pageId }) => {
     });
   };
 
-  const otherDevelopments = relatedDevelopmentsList.filter(d => d.id !== pageId);
+  const seoDescription = pageData.text 
+    ? pageData.text.split('\n')[0].replace(/\*\*/g, '').slice(0, 160)
+    : (lang === 'en' ? 'Scientific and technical developments based on functional ceramics.' : 'Научно-технические разработки на основе импульсной функциональной керамики.');
 
   return (
     <div className="page-wrap">
+      <SEO
+        title={pageData.title}
+        description={seoDescription}
+        canonicalPath={lang === 'en' ? `/en/${pageId}` : `/${pageId}`}
+        ruPath={`/${pageId}`}
+        enPath={`/en/${pageId}`}
+        image={galleryImages?.[0]?.url || '/images/logo/logo1.svg'}
+        lang={lang}
+      />
       <div className="container">
         <Breadcrumbs items={breadcrumbs} />
         

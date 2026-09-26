@@ -1,17 +1,16 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "redirects": [
     {
       "source": "/admin",
-      "destination": "/admin/index.html"
-    },
+      "destination": "/admin/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
     {
-      "source": "/admin/",
-      "destination": "/admin/index.html"
-    },
-    {
-      "source": "/((?!api/|admin|uploads|assets|images|robots\\.txt|sitemap\\.xml|config\\.yml).*)",
+      "source": "/((?!api/|admin/|uploads/|assets/|images/|robots\\.txt|sitemap\\.xml|favicon\\.ico|favicon\\.svg|config\\.yml).*)",
       "destination": "/index.html"
     }
   ]
