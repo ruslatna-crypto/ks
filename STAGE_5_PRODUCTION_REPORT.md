@@ -169,15 +169,31 @@ CMS.init({
 
 # ЭТАП 5 — PASS WITH CONDITIONS
 
-### Условия завершения:
-Все программные, архитектурные, маршрутизационные, SEO и конфигурационные задачи Этапа 5 выполнены и зафиксированы в репозитории `ruslatna-crypto/ks` в ветке `main`. Для окончательного ввода в эксплуатацию пользователю необходимо выполнить следующие внешние действия:
+### Статус выполнения:
+1. **Развёртывание на Vercel:** **ВЫПОЛНЕНО** — проект успешно подключён и активен по адресу: [`https://ks-gray.vercel.app`](https://ks-gray.vercel.app).
+2. **Маршрутизация и SPA:** **ВЫПОЛНЕНО** — прямые URL, статические файлы и Serverless-функции работают без 404 ошибок.
+3. **SEO-оптимизация:** **ВЫПОЛНЕНО** — `robots.txt`, `sitemap.xml`, Canonical, Open Graph и Favicon привязаны к production-домену `https://ks-gray.vercel.app`.
+4. **Корректировка шапки:** **ВЫПОЛНЕНО** — лишний текст удалён, телефон оформлен текстом, социальные кнопки анимированы.
+5. **Научный контент:** **СОХРАНЁН НА 100%** — 7 разработок, 76 лекций, протоколы и формулы без изменений.
 
-1. **Импорт репозитория в Vercel:**
-   * Открыть [vercel.com](https://vercel.com/) → **Add New Project** → Выбрать репозиторий `ruslatna-crypto/ks`.
-   * Framework Preset: **Vite**, Build Command: `npm run build`, Output Directory: `dist`.
-2. **Создание GitHub OAuth App:**
-   * Указать Callback URL: `https://<ВАШ-ПРОЕКТ>.vercel.app/api/callback`.
-3. **Установка Environment Variables в Vercel:**
-   * Добавить `GITHUB_CLIENT_ID` и `GITHUB_CLIENT_SECRET`.
-4. **Контрольный вход в `/admin/`:**
-   * Открыть `https://<ВАШ-ПРОЕКТ>.vercel.app/admin/`, авторизоваться через GitHub и опубликовать тестовую новость.
+### Что осталось сделать пользователю:
+
+1. **Создать GitHub OAuth App в GitHub:**
+   * Открыть: **Settings → Developer settings → OAuth Apps → New OAuth App**.
+   * **Application name:** `KERAMIKA SINTEZ CMS`
+   * **Homepage URL:** `https://ks-gray.vercel.app`
+   * **Authorization callback URL:** `https://ks-gray.vercel.app/api/callback`
+   * Нажать **Register application**.
+
+2. **Добавить ключи в Vercel Dashboard:**
+   * Открыть проект `ks` в Vercel → **Settings → Environment Variables**.
+   * Добавить:
+     * `GITHUB_CLIENT_ID` = *(Client ID из OAuth App)*
+     * `GITHUB_CLIENT_SECRET` = *(Client Secret из OAuth App)*
+
+3. **Контрольный вход в CMS и проверка публикации:**
+   * Открыть `https://ks-gray.vercel.app/admin/`.
+   * Нажать **Login with GitHub** и подтвердить доступ к репозиторию `ruslatna-crypto/ks`.
+   * Создать временную новость: `PRODUCTION CMS TEST — DELETE ME` и нажать **Publish**.
+   * Убедиться, что появился новый коммит в GitHub, Vercel выполнил деплой, и новость появилась на `https://ks-gray.vercel.app/news`.
+   * Удалить тестовую новость через CMS.
