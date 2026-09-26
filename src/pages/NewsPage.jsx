@@ -68,7 +68,7 @@ const NewsPage = () => {
                 }}
               >
                 {item.image && (
-                  <div style={{ height: '200px', overflow: 'hidden', background: 'var(--color-background-alt)' }}>
+                  <div className="card-icon-container card-image" style={{ height: '200px' }}>
                     <img 
                       src={item.image} 
                       alt={item.title} 

@@ -68,7 +68,7 @@ const ArticlesPage = () => {
                 }}
               >
                 {item.image && (
-                  <div style={{ height: '210px', overflow: 'hidden', background: 'var(--color-background-alt)' }}>
+                  <div className="card-icon-container card-image" style={{ height: '210px' }}>
                     <img 
                       src={item.image} 
                       alt={item.title} 

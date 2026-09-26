@@ -146,7 +146,7 @@ const HomePage = () => {
               const targetUrl = getTargetRoute(card.route);
               return (
                 <Link key={idx} to={targetUrl} className="ks-dev-card infraks-card">
-                  <div className="card-icon-container">
+                  <div className="card-icon-container card-image">
                     <img src={card.icon} alt={data.title} loading="lazy" />
                   </div>
                   <div className="ks-card-content infraks-card-content">
