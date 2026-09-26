@@ -270,18 +270,6 @@ const Header = () => {
               </li>
 
               <li className="nav-item-wrap">
-                <Link to={getPath('/news')} className={`nav-item-link ${isCurrent('/news') ? 'active' : ''}`}>
-                  {lang === 'en' ? 'News' : 'Новости'}
-                </Link>
-              </li>
-
-              <li className="nav-item-wrap">
-                <Link to={getPath('/articles')} className={`nav-item-link ${isCurrent('/articles') ? 'active' : ''}`}>
-                  {lang === 'en' ? 'Articles' : 'Статьи'}
-                </Link>
-              </li>
-
-              <li className="nav-item-wrap">
                 <Link to={getPath('/contact')} className={`nav-item-link ${isCurrent('/contact') ? 'active' : ''}`}>
                   {t.header.contact}
                 </Link>
@@ -451,14 +439,6 @@ const Header = () => {
                   </div>
                 )}
               </div>
-
-              <Link to={getPath('/news')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
-                {lang === 'en' ? 'News' : 'Новости'}
-              </Link>
-
-              <Link to={getPath('/articles')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
-                {lang === 'en' ? 'Articles' : 'Статьи'}
-              </Link>
 
               <Link to={getPath('/contact')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
                 {t.header.contact}

@@ -5,7 +5,7 @@ import MapWidget from '../components/MapWidget';
 import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { Phone, Mail, MapPin, ArrowRight, Layers, Award, Sparkles, Activity, Newspaper, Calendar } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Layers, Newspaper, Calendar } from 'lucide-react';
 import { getNews } from '../utils/contentLoader';
 
 const cardsData = [
@@ -130,66 +130,7 @@ const HomePage = () => {
         enPath="/en"
         lang={lang}
       />
-      {/* 1. Hero Intro Section: Scientific & Technological Showcase */}
-      <section className="hero-intro-section">
-        <div className="container">
-          <div className="hero-intro-grid">
-            <div className="hero-intro-left">
-              <h1 className="hero-intro-title">
-                {lang === 'en' ? (
-                  <>Scientific Developments <br /><span className="accent-title">Based on Functional Ceramics</span></>
-                ) : (
-                  <>Научные разработки <br /><span className="accent-title">на основе функциональной керамики</span></>
-                )}
-              </h1>
-              <p className="hero-intro-desc">
-                {lang === 'en'
-                  ? 'Development and industrial implementation of energy-efficient technologies based on pulsed functional ceramics: agricultural drying, therapeutic medical lamps, pathogen sterilization, and polymer solar converters.'
-                  : 'Разработка и промышленное внедрение энергоэффективных технологий на базе функциональной импульсной керамики: сушка сельхозпродукции, медицинские лампы, стерилизация и полимерные преобразователи солнечного света.'}
-              </p>
-              <div className="hero-intro-actions">
-                <a href="#developments-grid" className="hero-btn-primary">
-                  <span>{lang === 'en' ? 'Explore Developments' : 'Все разработки'}</span>
-                  <ArrowRight size={16} />
-                </a>
-                <Link to={getTargetRoute('/contact')} className="hero-btn-secondary">
-                  <span>{lang === 'en' ? 'Contact Center' : 'Связаться с нами'}</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Technological Stats Widgets (Strictly verified data from siteContent) */}
-            <div className="hero-stats-panel">
-              <div className="hero-stat-card">
-                <div className="hero-stat-val">7</div>
-                <div className="hero-stat-label">
-                  {lang === 'en' ? 'Core development directions' : 'Ключевых направлений разработок'}
-                </div>
-              </div>
-              <div className="hero-stat-card">
-                <div className="hero-stat-val">&gt; 100 000×</div>
-                <div className="hero-stat-label">
-                  {lang === 'en' ? 'Microbial reduction factor (SPSMI tests)' : 'Снижение микробной обсемененности (тесты СПСГМИ)'}
-                </div>
-              </div>
-              <div className="hero-stat-card">
-                <div className="hero-stat-val">{lang === 'en' ? 'Pulsed IR' : 'ИК-импульс'}</div>
-                <div className="hero-stat-label">
-                  {lang === 'en' ? 'Functional ceramics technology' : 'Импульсная функциональная керамика'}
-                </div>
-              </div>
-              <div className="hero-stat-card">
-                <div className="hero-stat-val">R&amp;D</div>
-                <div className="hero-stat-label">
-                  {lang === 'en' ? 'Proprietary research and equipment' : 'Собственные исследования и оборудование'}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Hero Slider (7-slide technological panoramic banner) */}
+      {/* 1. Hero Slider (7-slide technological panoramic banner immediately under header menu) */}
       <HeroSlider />
 
       {/* 3. Developments Grid Section */}
