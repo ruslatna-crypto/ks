@@ -124,7 +124,7 @@ export function renderMarkdownBody(content) {
     // Heading 2: ## ...
     if (trimmed.startsWith('## ')) {
       elements.push(
-        <h2 key={`h2-${i}`} style={{ fontSize: '1.55rem', fontWeight: 700, color: 'var(--color-dark)', marginTop: '32px', marginBottom: '16px', borderBottom: '1px solid var(--color-border)', paddingBottom: '8px' }}>
+        <h2 key={`h2-${i}`} style={{ fontSize: '20px', fontWeight: 700, color: 'var(--color-dark)', marginTop: '32px', marginBottom: '16px', borderBottom: '1px solid var(--color-border)', paddingBottom: '8px' }}>
           {trimmed.replace(/^##\s+/, '')}
         </h2>
       );
@@ -134,7 +134,7 @@ export function renderMarkdownBody(content) {
     // Heading 3: ### ...
     if (trimmed.startsWith('### ')) {
       elements.push(
-        <h3 key={`h3-${i}`} style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-primary)', marginTop: '22px', marginBottom: '10px' }}>
+        <h3 key={`h3-${i}`} style={{ fontSize: '16px', fontWeight: 600, color: 'var(--color-primary)', marginTop: '22px', marginBottom: '10px' }}>
           {trimmed.replace(/^###\s+/, '')}
         </h3>
       );
@@ -156,7 +156,7 @@ export function renderMarkdownBody(content) {
       elements.push(
         <div key={`li-${i}`} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '8px', lineHeight: 1.65 }}>
           <span style={{ color: 'var(--color-primary)', fontWeight: 'bold' }}>•</span>
-          <span style={{ color: 'var(--color-text)', fontSize: '1.02rem' }}>
+          <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>
             {renderInlineMarkdown(trimmed.replace(/^[*•\-]\s*/, ''))}
           </span>
         </div>
@@ -166,7 +166,7 @@ export function renderMarkdownBody(content) {
 
     // Paragraph
     elements.push(
-      <p key={`p-${i}`} style={{ fontSize: '1.04rem', lineHeight: 1.75, color: 'var(--color-text)', marginBottom: '16px' }}>
+      <p key={`p-${i}`} style={{ fontSize: '14px', lineHeight: 1.75, color: 'var(--color-text)', marginBottom: '16px' }}>
         {renderInlineMarkdown(trimmed)}
       </p>
     );

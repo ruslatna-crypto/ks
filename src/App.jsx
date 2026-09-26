@@ -8,6 +8,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 // Route-based lazy loading
 const HomePage = lazy(() => import('./pages/HomePage'));
 const DevelopmentPage = lazy(() => import('./pages/DevelopmentPage'));
+const LampPage = lazy(() => import('./pages/LampPage'));
 const LecturesPage = lazy(() => import('./pages/LecturesPage'));
 const ClinicalPage = lazy(() => import('./pages/ClinicalPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
@@ -82,9 +83,9 @@ function App() {
             <Route path="/grili" element={<DevelopmentPage pageId="gril" />} />
             <Route path="/en/gril" element={<DevelopmentPage pageId="gril" />} />
             
-            <Route path="/lamp" element={<DevelopmentPage pageId="lamp" />} />
-            <Route path="/lechebnye-lampy" element={<DevelopmentPage pageId="lamp" />} />
-            <Route path="/en/lamp" element={<DevelopmentPage pageId="lamp" />} />
+            <Route path="/lamp" element={<LampPage />} />
+            <Route path="/lechebnye-lampy" element={<LampPage />} />
+            <Route path="/en/lamp" element={<LampPage />} />
             
             <Route path="/cotton" element={<DevelopmentPage pageId="cotton" />} />
             <Route path="/hlopok" element={<DevelopmentPage pageId="cotton" />} />

@@ -56,10 +56,10 @@ const LecturesPage = () => {
               <Youtube size={18} />
               <span>YouTube Channel</span>
             </div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 4 }}>
+            <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 4 }}>
               {lang === 'en' ? 'Video lectures by Professor R. Rakhimov' : 'Видеолекции профессора Р. Рахимова'}
             </h3>
-            <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.92rem', maxWidth: '640px' }}>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: '14px', maxWidth: '640px' }}>
               {lang === 'en' 
                 ? 'Scientific reports, conference presentations, and in-depth analysis of pulsed functional ceramics physics.' 
                 : 'Лекции, доклады на международных конференциях и физический разбор действия импульсной керамики.'}
@@ -101,7 +101,7 @@ const LecturesPage = () => {
           {/* Scientific Tables */}
           {tables.length > 0 && (
             <div style={{ marginTop: 36 }}>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: 18 }}>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--color-primary)', marginBottom: 18 }}>
                 {lang === 'en' ? 'Scientific Tables and Research Results' : 'Научные таблицы и результаты исследований'}
               </h2>
               {tables.map((tbl, tIdx) => (
@@ -117,7 +117,7 @@ const LecturesPage = () => {
           {/* Graphs and images */}
           {images.length > 0 && (
             <div style={{ marginTop: 40 }}>
-              <h3 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: 18, color: 'var(--color-dark)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: 18, color: 'var(--color-dark)' }}>
                 {lang === 'en' ? 'Spectral charts and diagrams' : 'Спектральные диаграммы и графики'}
               </h3>
               <div className="photos-grid-layout">

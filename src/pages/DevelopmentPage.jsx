@@ -165,7 +165,7 @@ const DevelopmentPage = ({ pageId }) => {
                   <div key={sIdx} className="lamp-intro-grid">
                     <div className="lamp-intro-text">
                       {sec.paragraphs && sec.paragraphs.map((p, pIdx) => (
-                        <p key={pIdx} style={{ fontSize: '1.05rem', lineHeight: '1.8', marginBottom: pIdx === sec.paragraphs.length - 1 ? 0 : '18px' }}>
+                        <p key={pIdx} style={{ fontSize: '14px', lineHeight: '1.8', marginBottom: pIdx === sec.paragraphs.length - 1 ? 0 : '18px' }}>
                           {renderFormattedText(p)}
                         </p>
                       ))}
@@ -217,11 +217,11 @@ const DevelopmentPage = ({ pageId }) => {
                 <div key={sIdx} style={{ marginBottom: 28 }}>
                   {sec.title && (
                     sec.title === 'ТИПЫ ЛАМП' || sec.title === 'TYPES OF LAMPS' ? (
-                      <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-primary)', borderBottom: '2px solid var(--color-border)', paddingBottom: '10px', marginTop: '36px', marginBottom: '20px' }}>
+                      <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-primary)', borderBottom: '2px solid var(--color-border)', paddingBottom: '10px', marginTop: '36px', marginBottom: '20px' }}>
                         {sec.title}
                       </h2>
                     ) : (
-                      <h3 style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--color-primary)', marginTop: '24px', marginBottom: '14px' }}>
+                      <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-primary)', marginTop: '24px', marginBottom: '14px' }}>
                         {sec.title}
                       </h3>
                     )
@@ -230,7 +230,7 @@ const DevelopmentPage = ({ pageId }) => {
                     if (p.startsWith('•') || p.startsWith('-')) {
                       return (
                         <div key={pIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '8px', lineHeight: 1.65 }}>
-                          <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: '1.2' }}>•</span>
+                          <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '16px', lineHeight: '1.2' }}>•</span>
                           <span>{renderFormattedText(p.replace(/^[•\-]\s*/, ''))}</span>
                         </div>
                       );
@@ -258,7 +258,7 @@ const DevelopmentPage = ({ pageId }) => {
           {/* Photo gallery */}
           {images.length > 0 && (
             <div style={{ marginTop: 44 }}>
-              <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: 18, color: 'var(--color-dark)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: 18, color: 'var(--color-dark)' }}>
                 {lang === 'en' ? 'Photographs and Diagrams' : 'Фотоматериалы и схемы'}
               </h3>
               <div className="photos-grid-layout">
@@ -284,7 +284,7 @@ const DevelopmentPage = ({ pageId }) => {
 
         {/* Related Scientific Developments Section */}
         <section style={{ marginTop: 60, paddingTop: 40, borderTop: '1px solid var(--color-border)' }}>
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 20 }}>
+          <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 20 }}>
             {lang === 'en' ? 'Related Scientific Developments' : 'Другие научные разработки'}
           </h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>

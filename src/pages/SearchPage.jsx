@@ -233,14 +233,14 @@ const SearchPage = () => {
                 </Link>
               </div>
 
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '6px 0 10px', color: 'var(--color-dark)' }}>
+              <h2 style={{ fontSize: '20px', fontWeight: 700, margin: '6px 0 10px', color: 'var(--color-dark)' }}>
                 <Link to={getTargetRoute(page.route)} style={{ color: 'inherit' }}>
                   {page.title}
                 </Link>
               </h2>
 
               {snippets.map((snip, sIdx) => (
-                <p key={sIdx} style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, marginBottom: 6 }}>
+                <p key={sIdx} style={{ fontSize: '14px', color: 'var(--color-text-secondary)', lineHeight: 1.6, marginBottom: 6 }}>
                   {snip}
                 </p>
               ))}
@@ -250,10 +250,10 @@ const SearchPage = () => {
           {query && results.length === 0 && (
             <div style={{ padding: '60px 20px', textAlign: 'center', background: 'var(--color-background-alt)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
               <FileText size={46} color="var(--color-text-muted)" style={{ margin: '0 auto 16px' }} />
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: 8, color: 'var(--color-dark)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: 8, color: 'var(--color-dark)' }}>
                 {lang === 'en' ? 'Nothing found' : 'Ничего не найдено'}
               </h3>
-              <p style={{ color: 'var(--color-text-secondary)', maxWidth: 440, margin: '0 auto', fontSize: '0.92rem' }}>
+              <p style={{ color: 'var(--color-text-secondary)', maxWidth: 440, margin: '0 auto', fontSize: '14px' }}>
                 {lang === 'en'
                   ? 'Try changing the wording, checking the spelling, or using broader terms (e.g., drying, lamp, film).'
                   : 'Попробуйте изменить формулировку, проверить написание или использовать более общие термины (например: сушка, лампа, плёнка).'}

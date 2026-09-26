@@ -30,10 +30,10 @@ const NewsPage = () => {
         <Breadcrumbs currentTitle={lang === 'en' ? 'News' : 'Новости'} />
 
         <div style={{ marginTop: '20px', marginBottom: '36px' }}>
-          <h1 className="page-title-heading" style={{ fontSize: '2.4rem', fontWeight: 800, color: 'var(--color-dark)', marginBottom: '12px' }}>
+          <h1 className="page-title-heading" style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-dark)', marginBottom: '12px' }}>
             {lang === 'en' ? 'Company News & Events' : 'Новости и события компании'}
           </h1>
-          <p style={{ fontSize: '1.05rem', color: 'var(--color-text-secondary)', maxWidth: '780px', lineHeight: 1.6 }}>
+          <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', maxWidth: '780px', lineHeight: 1.6 }}>
             {lang === 'en'
               ? 'Official announcements, scientific updates, and corporate events from LLC "KERAMIKA SINTEZ".'
               : 'Официальные сообщения, научные обновления и производственные события ООО «KERAMIKA SINTEZ».'}
@@ -43,10 +43,10 @@ const NewsPage = () => {
         {newsList.length === 0 ? (
           <div style={{ padding: '60px 20px', textAlign: 'center', background: 'var(--color-background-alt)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
             <Newspaper size={48} color="var(--color-text-muted)" style={{ margin: '0 auto 16px' }} />
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 8 }}>
+            <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 8 }}>
               {lang === 'en' ? 'No news published yet' : 'Новостей пока нет'}
             </h3>
-            <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.94rem' }}>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: '14px' }}>
               {lang === 'en' ? 'Check back later for company announcements.' : 'Следите за обновлениями в ближайшее время.'}
             </p>
           </div>
@@ -77,13 +77,13 @@ const NewsPage = () => {
                     )}
                   </div>
 
-                  <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: '12px', lineHeight: 1.35 }}>
+                  <h2 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--color-dark)', marginBottom: '12px', lineHeight: 1.35 }}>
                     <Link to={getTargetRoute(item.slug)} style={{ color: 'inherit', textDecoration: 'none' }}>
                       {item.title}
                     </Link>
                   </h2>
 
-                  <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, flexGrow: 1, marginBottom: '20px' }}>
+                  <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', lineHeight: 1.6, flexGrow: 1, marginBottom: '20px' }}>
                     {item.excerpt}
                   </p>
 

@@ -31,10 +31,10 @@ const NotFoundPage = () => {
         }}>
           404
         </div>
-        <h1 style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--color-dark)', marginBottom: 12 }}>
+        <h1 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-dark)', marginBottom: 12 }}>
           {lang === 'en' ? 'Page Not Found' : 'Страница не найдена'}
         </h1>
-        <p style={{ color: 'var(--color-text-secondary)', fontSize: '1.02rem', lineHeight: 1.6, marginBottom: 32 }}>
+        <p style={{ color: 'var(--color-text-secondary)', fontSize: '14px', lineHeight: 1.6, marginBottom: 32 }}>
           {lang === 'en'
             ? 'The requested page has been moved, renamed, or is temporarily unavailable. Please return to the homepage or contact our center.'
             : 'Запрашиваемая страница перемещена, удалена или указан неверный адрес. Воспользуйтесь меню сайта или перейдите на главную страницу научно-производственного центра.'}

@@ -24,7 +24,7 @@ const NewsDetailPage = () => {
           lang={lang}
         />
         <FileQuestion size={48} color="var(--color-text-muted)" style={{ margin: '0 auto 16px' }} />
-        <h1 style={{ fontSize: '1.8rem', fontWeight: 700, color: 'var(--color-dark)', marginBottom: '12px' }}>
+        <h1 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--color-dark)', marginBottom: '12px' }}>
           {lang === 'en' ? 'News not found' : 'Новость не найдена'}
         </h1>
         <p style={{ color: 'var(--color-text-secondary)', marginBottom: '24px' }}>
@@ -72,12 +72,12 @@ const NewsDetailPage = () => {
             )}
           </div>
 
-          <h1 style={{ fontSize: '2.3rem', fontWeight: 800, color: 'var(--color-dark)', lineHeight: 1.3, marginBottom: '20px' }}>
+          <h1 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-dark)', lineHeight: 1.3, marginBottom: '20px' }}>
             {item.title}
           </h1>
 
           {item.excerpt && (
-            <p style={{ fontSize: '1.15rem', color: 'var(--color-text-secondary)', lineHeight: 1.65, marginBottom: '28px', fontStyle: 'italic', borderLeft: '3px solid var(--color-primary)', paddingLeft: '16px' }}>
+            <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', lineHeight: 1.65, marginBottom: '28px', fontStyle: 'italic', borderLeft: '3px solid var(--color-primary)', paddingLeft: '16px' }}>
               {item.excerpt}
             </p>
           )}
@@ -88,7 +88,7 @@ const NewsDetailPage = () => {
             </div>
           )}
 
-          <div style={{ fontSize: '1.04rem', lineHeight: 1.75, color: 'var(--color-text)' }}>
+          <div style={{ fontSize: '14px', lineHeight: 1.75, color: 'var(--color-text)' }}>
             {renderContent(item.content)}
           </div>
 
