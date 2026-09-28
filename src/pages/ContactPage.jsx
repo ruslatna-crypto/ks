@@ -108,9 +108,6 @@ const ContactPage = () => {
               <a href="https://max.ru/u/+998998336783" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="MAX: +998 99 8336783">
                 <img src="/images/icons/max.svg" alt="MAX" />
               </a>
-              <a href="https://www.youtube.com/@Rahimovrx" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="YouTube">
-                <img src="/images/icons/youtube.svg" alt="YouTube" />
-              </a>
             </div>
 
             {/* Map Container */}

@@ -326,11 +326,11 @@ const LampPage = () => {
         setPhotoMaxHeight(null);
       }
 
-      // Размер стула (Установка «СТ»): на 10% выше текста справа, но не более
+      // Размер стула (Установка «СТ»): точно по высоте бокового текста
       if (installationTextRef.current && isDesktop) {
         const h = installationTextRef.current.offsetHeight;
         if (h > 0) {
-          setChairMaxHeight(Math.round(h * 1.1));
+          setChairMaxHeight((prev) => (prev === h ? prev : h));
         }
       } else {
         setChairMaxHeight(null);
@@ -338,6 +338,10 @@ const LampPage = () => {
     };
 
     updateDimensions();
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => updateDimensions());
+    }
 
     const ro = typeof ResizeObserver !== 'undefined'
       ? new ResizeObserver(() => updateDimensions())
@@ -476,7 +480,9 @@ const LampPage = () => {
                 }}
                 style={{
                   cursor: 'pointer',
-                  maxHeight: chairMaxHeight ? `${chairMaxHeight}px` : undefined
+                  maxHeight: chairMaxHeight ? `${chairMaxHeight}px` : undefined,
+                  height: chairMaxHeight ? `${chairMaxHeight}px` : undefined,
+                  width: 'auto'
                 }}
                 title={lang === 'en' ? 'Click to enlarge' : 'Нажмите для увеличения'}
               />

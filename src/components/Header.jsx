@@ -2,7 +2,20 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { Search, Menu, X, ChevronDown, Phone, Mail, FileText, ExternalLink, ArrowRight } from 'lucide-react';
+import { Search, Menu, X, ChevronDown, Phone, Mail, FileText, ExternalLink, ArrowRight, Youtube } from 'lucide-react';
+
+const VkIcon = ({ size = 15 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+    style={{ display: 'inline-block', verticalAlign: 'middle', flexShrink: 0 }}
+  >
+    <path d="M12.785 16.241s.286-.032.433-.191c.135-.145.131-.418.131-.418s-.019-1.281.576-1.47c.586-.186 1.339 1.239 2.138 1.787.604.415 1.063.324 1.063.324l2.132-.03s1.116-.07.587-.946c-.044-.072-.311-.655-1.602-1.854-1.351-1.256-1.17-1.052.457-3.22 1-.138 1.4-2.22 1.275-2.57-.12-.334-.86-.245-.86-.245l-2.404.015s-.178-.024-.31.054c-.128.077-.21.255-.21.255s-.38 1.012-.888 1.874c-1.071 1.821-1.5 1.918-1.675 1.803-.408-.266-.306-1.07-.306-1.64 0-1.782.27-2.524-.526-2.716-.264-.064-.458-.106-1.134-.113-.867-.01-1.6.003-2.015.207-.276.136-.489.44-.359.458.16.021.523.099.715.361.248.337.24 1.094.24 1.094s.143 2.1-.334 2.361c-.327.18-.775-.187-1.737-1.84-.492-.847-.864-1.783-.864-1.783s-.072-.176-.2-.27c-.156-.114-.374-.15-.374-.15l-2.285.015s-.343.01-.469.158c-.112.131-.009.403-.009.403s1.79 4.188 3.818 6.3c1.86 1.937 3.974 1.809 3.974 1.809h.963z" />
+  </svg>
+);
 
 const Header = () => {
   const { lang, switchLanguage } = useLanguage();
@@ -151,9 +164,6 @@ const Header = () => {
                 <a href="https://max.ru/u/+998998336783" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="MAX: +998 99 8336783">
                   <img src="/images/icons/max.svg" alt="MAX" />
                 </a>
-                <a href="https://www.youtube.com/@Rahimovrx" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="YouTube">
-                  <img src="/images/icons/youtube.svg" alt="YouTube" />
-                </a>
               </div>
 
               {/* Language Switcher & Author Site Link */}
@@ -276,14 +286,38 @@ const Header = () => {
               </li>
             </ul>
 
-            <button 
-              className={`nav-search-btn ${isSearchOpen ? 'active' : ''}`}
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              aria-label={t.header.searchBtn}
-            >
-              <Search size={15} />
-              <span>{t.header.searchBtn}</span>
-            </button>
+            <div className="header-nav-actions">
+              <a
+                href="https://www.youtube.com/@Rahimovrx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-action-btn header-btn-youtube"
+                aria-label="YouTube"
+                title="YouTube"
+              >
+                <Youtube size={15} />
+                <span>YouTube</span>
+              </a>
+
+              <button
+                type="button"
+                className="nav-action-btn header-btn-vk"
+                aria-label="VK Video"
+                title="VK Video"
+              >
+                <VkIcon size={15} />
+                <span>VK Video</span>
+              </button>
+
+              <button 
+                className={`nav-search-btn ${isSearchOpen ? 'active' : ''}`}
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                aria-label={t.header.searchBtn}
+              >
+                <Search size={15} />
+                <span>{t.header.searchBtn}</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -463,9 +497,6 @@ const Header = () => {
                 </a>
                 <a href="https://max.ru/u/+998998336783" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="MAX: +998 99 8336783">
                   <img src="/images/icons/max.svg" alt="MAX" />
-                </a>
-                <a href="https://www.youtube.com/@Rahimovrx" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="YouTube">
-                  <img src="/images/icons/youtube.svg" alt="YouTube" />
                 </a>
               </div>
             </div>

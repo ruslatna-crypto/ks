@@ -38,7 +38,9 @@ const cardsData = [
   },
   {
     route: '/gril',
-    icon: '/images/icons/gril.svg',
+    icon: '/images/grili/gr1.jpg',
+    imageFit: 'cover',
+    imagePosition: 'center bottom',
     ru: {
       category: 'Пищевая промышленность',
       title: 'Грили, выпечка',
@@ -147,7 +149,16 @@ const HomePage = () => {
               return (
                 <Link key={idx} to={targetUrl} className="ks-dev-card infraks-card">
                   <div className="card-icon-container card-image">
-                    <img src={card.icon} alt={data.title} loading="lazy" />
+                    <img
+                      src={card.icon}
+                      alt={data.title}
+                      loading="lazy"
+                      style={
+                        card.imageFit
+                          ? { objectFit: card.imageFit, objectPosition: card.imagePosition || 'center' }
+                          : undefined
+                      }
+                    />
                   </div>
                   <div className="ks-card-content infraks-card-content">
                     <h3 className="ks-card-title infraks-card-title">{data.title}</h3>
@@ -209,9 +220,6 @@ const HomePage = () => {
                 </a>
                 <a href="https://max.ru/u/+998998336783" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="MAX: +998 99 8336783">
                   <img src="/images/icons/max.svg" alt="MAX" />
-                </a>
-                <a href="https://www.youtube.com/@Rahimovrx" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="YouTube">
-                  <img src="/images/icons/youtube.svg" alt="YouTube" />
                 </a>
               </div>
             </div>

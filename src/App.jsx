@@ -8,6 +8,9 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 // Route-based lazy loading
 const HomePage = lazy(() => import('./pages/HomePage'));
 const DevelopmentPage = lazy(() => import('./pages/DevelopmentPage'));
+const SushkaPage = lazy(() => import('./pages/SushkaPage'));
+const PlenkaPage = lazy(() => import('./pages/PlenkaPage'));
+const SterilPage = lazy(() => import('./pages/SterilPage'));
 const LampPage = lazy(() => import('./pages/LampPage'));
 const LecturesPage = lazy(() => import('./pages/LecturesPage'));
 const ClinicalPage = lazy(() => import('./pages/ClinicalPage'));
@@ -63,8 +66,8 @@ function App() {
             <Route path="/en/main" element={<HomePage />} />
 
             {/* Разработки / Developments */}
-            <Route path="/sushka" element={<DevelopmentPage pageId="sushka" />} />
-            <Route path="/en/sushka" element={<DevelopmentPage pageId="sushka" />} />
+            <Route path="/sushka" element={<SushkaPage />} />
+            <Route path="/en/sushka" element={<SushkaPage />} />
             
             <Route path="/sush-ustanovka" element={<DevelopmentPage pageId="sush-ustanovka" />} />
             <Route path="/en/sush-ustanovka" element={<DevelopmentPage pageId="sush-ustanovka" />} />
@@ -72,12 +75,13 @@ function App() {
             <Route path="/metodikasushka" element={<DevelopmentPage pageId="metodikasushka" />} />
             <Route path="/en/metodikasushka" element={<DevelopmentPage pageId="metodikasushka" />} />
             
-            <Route path="/plenka" element={<DevelopmentPage pageId="plenka" />} />
-            <Route path="/en/plenka" element={<DevelopmentPage pageId="plenka" />} />
+            <Route path="/plenka" element={<PlenkaPage />} />
+            <Route path="/en/plenka" element={<PlenkaPage />} />
             
-            <Route path="/steril" element={<DevelopmentPage pageId="steril" />} />
-            <Route path="/sterilizaciya" element={<DevelopmentPage pageId="steril" />} />
-            <Route path="/en/steril" element={<DevelopmentPage pageId="steril" />} />
+            <Route path="/steril" element={<SterilPage />} />
+            <Route path="/sterilizaciya" element={<SterilPage />} />
+            <Route path="/en/steril" element={<SterilPage />} />
+            <Route path="/en/sterilizaciya" element={<SterilPage />} />
             
             <Route path="/gril" element={<DevelopmentPage pageId="gril" />} />
             <Route path="/grili" element={<DevelopmentPage pageId="gril" />} />
