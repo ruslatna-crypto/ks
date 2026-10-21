@@ -39,7 +39,12 @@ export const LanguageProvider = ({ children }) => {
       '/clinical-cases': '/en/clinical-cases',
       '/en/clinical-cases': '/clinical-cases',
       '/klinik': '/en/klinik',
-      '/en/klinik': '/klinik'
+      '/en/klinik': '/klinik',
+      '/gril': '/en/gril',
+      '/grili': '/en/gril',
+      '/en/gril': '/gril',
+      '/metod': '/en/metod',
+      '/en/metod': '/metod'
     };
 
     if (routePairs[currentPath]) {

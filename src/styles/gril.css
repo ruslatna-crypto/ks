@@ -1,0 +1,824 @@
+/* ==========================================================================
+   Grili & Vypechka Page Styles (ООО «KERAMIKA SINTEZ»)
+   ========================================================================== */
+
+.gril-page-wrap {
+  padding-bottom: 80px;
+  background-color: #ffffff;
+}
+
+.gril-header-block {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.gril-header-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.gril-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.gril-tag-badge svg {
+  color: var(--color-primary);
+}
+
+.gril-tag-badge.gril-tag-accent {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.gril-tag-badge.gril-tag-accent svg {
+  color: #059669;
+}
+
+.gril-main-title {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.gril-header-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 980px;
+  margin: 0;
+}
+
+.gril-article {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.gril-section {
+  position: relative;
+}
+
+.gril-section-header {
+  margin-bottom: 24px;
+}
+
+.gril-section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gril-section-title {
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.015em;
+}
+
+.gril-section-subtitle {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.gril-title-bar {
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.gril-accent-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.gril-prose-text {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #334155;
+  margin: 0 0 14px 0;
+}
+
+.gril-prose-text:last-child {
+  margin-bottom: 0;
+}
+
+/* 1. Principle section */
+.gril-principle-section {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 32px 36px;
+}
+
+.gril-principle-prose {
+  margin-bottom: 28px;
+}
+
+.gril-principle-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gril-principle-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.gril-principle-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+.gril-card-top-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #f0fdf4;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.gril-card-top-icon svg {
+  color: var(--color-primary);
+}
+
+.gril-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  line-height: 1.35;
+}
+
+.gril-card-descr {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 2. Feature Rows (Grills & Baking) */
+.gril-feature-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.gril-feature-row-reverse {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.gril-feature-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gril-advantages-box {
+  margin-top: 18px;
+  padding: 20px 24px;
+  background-color: #f8fafc;
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 10px 10px 0;
+}
+
+.gril-adv-box-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px 0;
+}
+
+.gril-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gril-feature-item {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.gril-feature-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.gril-feature-media-col {
+  width: 100%;
+}
+
+.gril-media-figure {
+  margin: 0;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gril-media-figure:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.gril-media-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background-color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gril-media-baking-wrap {
+  background-color: #f8fafc;
+}
+
+.gril-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.gril-media-baking-wrap .gril-feature-img {
+  object-fit: contain;
+  padding: 16px;
+}
+
+.gril-media-figure:hover .gril-feature-img {
+  transform: scale(1.03);
+}
+
+.gril-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.gril-media-figure:hover .gril-media-overlay {
+  opacity: 1;
+}
+
+.gril-zoom-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gril-media-caption {
+  padding: 14px 18px;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+
+.gril-badge-micro {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  background-color: #f0fdfa;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.gril-media-caption p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+/* Metrics blocks */
+.gril-metrics-block {
+  margin-top: 16px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.gril-metrics-heading {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px 0;
+}
+
+.gril-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.gril-metric-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.gril-metric-card:hover {
+  border-color: #cbd5e1;
+  background-color: #f1f5f9;
+}
+
+.gril-metric-header {
+  margin-bottom: 10px;
+}
+
+.gril-metric-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.gril-metric-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.gril-val-old,
+.gril-val-new {
+  display: flex;
+  flex-direction: column;
+}
+
+.gril-val-old .val-tag {
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.2;
+}
+
+.gril-val-old .val-number {
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.gril-metric-arrow {
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gril-val-new .val-tag {
+  font-size: 11px;
+  color: #0284c7;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.gril-val-new .val-number {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.gril-metric-footer {
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 8px;
+}
+
+.gril-metric-note {
+  font-size: 12px;
+  color: #059669;
+  font-weight: 600;
+}
+
+/* 5. Tests section */
+.gril-tests-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 32px 36px;
+}
+
+.gril-geography-banner {
+  display: inline-block;
+  background-color: #ecfeff;
+  border: 1px solid #a5f3fc;
+  color: #0e7490;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.gril-geography-banner strong {
+  color: #155e75;
+}
+
+.gril-tests-panels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.gril-test-panel {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.gril-test-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.gril-panel-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.gril-test-panel-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.gril-test-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gril-test-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.gril-test-icon-col {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 6px;
+}
+
+.gril-test-svg-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gril-test-text-col {
+  flex-grow: 1;
+}
+
+.gril-test-item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin: 0 0 4px 0;
+}
+
+.gril-test-item-value {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.gril-test-item-descr {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 6. Applications Section */
+.gril-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gril-application-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.gril-application-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+.gril-app-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #f0fdfa;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.gril-app-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+.gril-app-descr {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* 7. Gallery Section */
+.gril-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gril-gallery-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gril-gallery-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.gril-gallery-img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.gril-gallery-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.gril-gallery-card:hover .gril-gallery-img {
+  transform: scale(1.05);
+}
+
+.gril-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.gril-gallery-card:hover .gril-gallery-overlay {
+  opacity: 1;
+}
+
+.gril-gallery-zoom-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gril-gallery-info {
+  padding: 14px 16px;
+  border-top: 1px solid #f1f5f9;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gril-gallery-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.gril-gallery-caption {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #475569;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Responsive Adaptations for Grili Page
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .gril-principle-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gril-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .gril-feature-row,
+  .gril-feature-row-reverse {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .gril-media-img-wrap {
+    height: 260px;
+  }
+
+  .gril-tests-panels-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gril-applications-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gril-principle-section,
+  .gril-tests-section {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gril-article {
+    gap: 40px;
+  }
+
+  .gril-principle-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gril-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gril-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gril-header-block {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .gril-main-title {
+    font-size: 22px;
+  }
+
+  .gril-header-lead {
+    font-size: 15px;
+  }
+
+  .gril-media-img-wrap {
+    height: 220px;
+  }
+
+  .gril-gallery-img-container {
+    height: 180px;
+  }
+
+  .gril-advantages-box {
+    padding: 16px 18px;
+  }
+
+  .gril-feature-item {
+    font-size: 14px;
+  }
+}

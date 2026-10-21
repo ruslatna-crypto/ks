@@ -11,6 +11,8 @@ const DevelopmentPage = lazy(() => import('./pages/DevelopmentPage'));
 const SushkaPage = lazy(() => import('./pages/SushkaPage'));
 const PlenkaPage = lazy(() => import('./pages/PlenkaPage'));
 const SterilPage = lazy(() => import('./pages/SterilPage'));
+const GrilPage = lazy(() => import('./pages/GrilPage'));
+const MetodPage = lazy(() => import('./pages/MetodPage'));
 const LampPage = lazy(() => import('./pages/LampPage'));
 const CottonPage = lazy(() => import('./pages/CottonPage'));
 const PaintPage = lazy(() => import('./pages/PaintPage'));
@@ -85,9 +87,9 @@ function App() {
             <Route path="/en/steril" element={<SterilPage />} />
             <Route path="/en/sterilizaciya" element={<SterilPage />} />
             
-            <Route path="/gril" element={<DevelopmentPage pageId="gril" />} />
-            <Route path="/grili" element={<DevelopmentPage pageId="gril" />} />
-            <Route path="/en/gril" element={<DevelopmentPage pageId="gril" />} />
+            <Route path="/gril" element={<GrilPage />} />
+            <Route path="/grili" element={<GrilPage />} />
+            <Route path="/en/gril" element={<GrilPage />} />
             
             <Route path="/lamp" element={<LampPage />} />
             <Route path="/lechebnye-lampy" element={<LampPage />} />
@@ -106,8 +108,8 @@ function App() {
             <Route path="/en/kraska" element={<PaintPage />} />
 
             {/* Медицина / Medicine */}
-            <Route path="/metod" element={<DevelopmentPage pageId="metod" />} />
-            <Route path="/en/metod" element={<DevelopmentPage pageId="metod" />} />
+            <Route path="/metod" element={<MetodPage />} />
+            <Route path="/en/metod" element={<MetodPage />} />
             
             <Route path="/virus" element={<DevelopmentPage pageId="virus" />} />
             <Route path="/en/virus" element={<DevelopmentPage pageId="virus" />} />
