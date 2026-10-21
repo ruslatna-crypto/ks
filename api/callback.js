@@ -1,4 +1,13 @@
 // Vercel Serverless Function: GitHub OAuth Callback endpoint for Decap CMS
+
+const TRUSTED_ORIGINS = [
+  'https://www.infraks.uz',
+  'https://infraks.uz',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'http://localhost:3000'
+];
+
 export default async function handler(req, res) {
   const { code } = req.query;
   const clientId = process.env.GITHUB_CLIENT_ID || process.env.OAUTH_CLIENT_ID;
@@ -37,7 +46,14 @@ export default async function handler(req, res) {
       provider: 'github'
     });
 
-    // Post message back to Decap CMS window
+    // Safely serialize for injection into inline <script>
+    const serializedContent = JSON.stringify(content)
+      .replace(/</g, '\\u003c')
+      .replace(/>/g, '\\u003e');
+
+    const serializedOrigins = JSON.stringify(TRUSTED_ORIGINS);
+
+    // Post message back to Decap CMS window with strict origin & source checks
     const script = `
       <!doctype html>
       <html>
@@ -45,16 +61,53 @@ export default async function handler(req, res) {
         <body>
           <script>
             (function() {
+              var trustedOrigins = ${serializedOrigins};
+              var expectedOrigin = window.location.origin;
+
+              // 1. Validate that the current window is on a trusted origin (exact match)
+              if (!trustedOrigins.includes(expectedOrigin)) {
+                console.error('[OAuth Callback] Untrusted origin rejected:', expectedOrigin);
+                return;
+              }
+
+              // 2. Validate that window.opener exists
+              if (!window.opener) {
+                console.error('[OAuth Callback] Missing window.opener');
+                return;
+              }
+
               function receiveMessage(e) {
+                // 3. Strict origin validation: exact match against expectedOrigin
+                if (e.origin !== expectedOrigin) {
+                  console.warn('[OAuth Callback] Blocked message from untrusted origin:', e.origin);
+                  return;
+                }
+
+                // 4. Strict source validation: must originate from window.opener
+                if (!e.source || e.source !== window.opener) {
+                  console.warn('[OAuth Callback] Blocked message from invalid source');
+                  return;
+                }
+
+                // 5. Strict message type and payload validation
+                if (typeof e.data !== 'string' || e.data !== 'authorizing:github') {
+                  console.warn('[OAuth Callback] Blocked unexpected message data:', e.data);
+                  return;
+                }
+
+                // 6. Safe dispatch strictly to expectedOrigin (never "*" or arbitrary e.origin)
                 window.opener.postMessage(
-                  'authorization:github:success:${content}',
-                  e.origin
+                  'authorization:github:success:' + ${serializedContent},
+                  expectedOrigin
                 );
                 window.removeEventListener("message", receiveMessage, false);
                 window.close();
               }
+
               window.addEventListener("message", receiveMessage, false);
-              window.opener.postMessage("authorizing:github", "*");
+
+              // 7. Initial handshake directed strictly to expectedOrigin
+              window.opener.postMessage("authorizing:github", expectedOrigin);
             })();
           </script>
         </body>

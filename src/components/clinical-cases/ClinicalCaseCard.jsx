@@ -3,6 +3,21 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, ExternalLink, Activity, Image as ImageIcon, Table as TableIcon } from 'lucide-react';
 import ClinicalChart from './ClinicalChart';
 
+/**
+ * Defense-in-depth zero-dependency sanitizer for clinical cases content.
+ * Strips dangerous tags, event handlers and javascript: URIs while preserving
+ * 100% of semantic formatting, tables, lists, and layout styles.
+ */
+function sanitizeClinicalHtml(html) {
+  if (!html || typeof html !== 'string') return '';
+  return html
+    .replace(/<\s*(script|iframe|object|embed|applet|form|input|button|textarea|style|link|meta)\b[^>]*>[\s\S]*?<\s*\/\s*\1\s*>/gi, '')
+    .replace(/<\s*(script|iframe|object|embed|applet|form|input|button|textarea|style|link|meta)\b[^>]*>/gi, '')
+    .replace(/\s+on[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
+    .replace(/(href|src)\s*=\s*(["'])\s*(javascript|vbscript|data):[\s\S]*?\2/gi, '$1="#blocked"')
+    .replace(/(href|src)\s*=\s*(javascript|vbscript|data):[^\s>]*/gi, '$1="#blocked"');
+}
+
 export default function ClinicalCaseCard({
   caseItem,
   isExpanded = false,
@@ -102,7 +117,7 @@ export default function ClinicalCaseCard({
           {/* Main Original Content */}
           <div
             className="clinical-card-content"
-            dangerouslySetInnerHTML={{ __html: content }}
+            dangerouslySetInnerHTML={{ __html: sanitizeClinicalHtml(content) }}
           />
 
           {/* Image Gallery if present */}
