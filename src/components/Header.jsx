@@ -122,6 +122,9 @@ const Header = () => {
   };
 
   const getPath = (basePath) => {
+    if (basePath === '/cotton' || basePath === '/hlopok') {
+      return lang === 'en' ? '/en/cotton' : '/hlopok';
+    }
     if (lang === 'en') {
       return basePath === '/' ? '/en' : `/en${basePath}`;
     }
@@ -129,12 +132,12 @@ const Header = () => {
   };
 
   const isDevActive = () => {
-    const devRoutes = ['/sushka', '/sush-ustanovka', '/metodikasushka', '/plenka', '/steril', '/gril', '/lamp', '/cotton', '/paint'];
+    const devRoutes = ['/sushka', '/sush-ustanovka', '/metodikasushka', '/plenka', '/steril', '/gril', '/grili', '/lamp', '/cotton', '/hlopok', '/paint', '/lakokraska', '/kraska'];
     return devRoutes.some(r => isCurrent(r));
   };
 
   const isMedActive = () => {
-    const medRoutes = ['/metod', '/virus', '/klinik', '/metodika'];
+    const medRoutes = ['/metod', '/klinik', '/clinical-cases'];
     return medRoutes.some(r => isCurrent(r));
   };
 
@@ -258,14 +261,8 @@ const Header = () => {
                   <Link to={getPath('/metod')} className="dropdown-item">
                     {t.menu.metod}
                   </Link>
-                  <Link to={getPath('/virus')} className="dropdown-item">
-                    {t.menu.virus}
-                  </Link>
                   <Link to={getPath('/klinik')} className="dropdown-item">
                     {t.menu.klinik}
-                  </Link>
-                  <Link to={getPath('/metodika')} className="dropdown-item">
-                    {t.menu.metodika}
                   </Link>
                   <a 
                     href="https://www.youtube.com/@Rahimovrx" 
@@ -299,15 +296,17 @@ const Header = () => {
                 <span>YouTube</span>
               </a>
 
-              <button
-                type="button"
+              <a
+                href="https://vkvideo.ru/@club239680928"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="nav-action-btn header-btn-vk"
                 aria-label="VK Video"
                 title="VK Video"
               >
                 <VkIcon size={15} />
                 <span>VK Video</span>
-              </button>
+              </a>
 
               <button 
                 className={`nav-search-btn ${isSearchOpen ? 'active' : ''}`}
@@ -427,6 +426,34 @@ const Header = () => {
               </a>
             </div>
 
+            {/* Video Channels in Mobile Drawer */}
+            <div style={{ display: 'flex', gap: 8, marginBottom: 18 }}>
+              <a
+                href="https://www.youtube.com/@Rahimovrx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-action-btn header-btn-youtube"
+                style={{ flex: 1, justifyContent: 'center' }}
+                aria-label="YouTube"
+                title="YouTube"
+              >
+                <Youtube size={15} />
+                <span>YouTube</span>
+              </a>
+              <a
+                href="https://vkvideo.ru/@club239680928"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-action-btn header-btn-vk"
+                style={{ flex: 1, justifyContent: 'center' }}
+                aria-label="VK Video"
+                title="VK Video"
+              >
+                <VkIcon size={15} />
+                <span>VK Video</span>
+              </a>
+            </div>
+
             <nav style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               <Link to={getPath('/')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
                 {t.header.home}
@@ -466,9 +493,7 @@ const Header = () => {
                 {medOpen && (
                   <div style={{ paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
                     <Link to={getPath('/metod')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.metod}</Link>
-                    <Link to={getPath('/virus')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.virus}</Link>
                     <Link to={getPath('/klinik')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.klinik}</Link>
-                    <Link to={getPath('/metodika')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.metodika}</Link>
                     <a href="https://www.youtube.com/@Rahimovrx" target="_blank" rel="noopener noreferrer" className="dropdown-item" style={{ color: '#dc2626' }}>{t.menu.lectures}</a>
                   </div>
                 )}

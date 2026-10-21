@@ -19,15 +19,14 @@ export default function SEO({
   const location = useLocation();
 
   useEffect(() => {
-    // 1. Determine site origin dynamically or from VITE_SITE_URL
-    const origin = (typeof window !== 'undefined' && window.location && window.location.origin)
-      ? window.location.origin
-      : 'https://ks-gray.vercel.app';
+    // 1. Determine site origin: use authoritative production domain for canonical and OG tags
+    const prodDomain = (import.meta.env.VITE_SITE_URL || 'https://www.infraks.uz').replace(/\/+$/, '');
+    const origin = prodDomain;
 
     // 2. Set document title
     const brandName = 'KERAMIKA SINTEZ';
     const fullTitle = title 
-      ? `${title} | ${brandName}` 
+      ? (title.includes(brandName) ? title : `${title} | ${brandName}`)
       : `ООО «KERAMIKA SINTEZ» — Научно-производственный портал`;
     document.title = fullTitle;
 
@@ -55,7 +54,7 @@ export default function SEO({
       }
       if (!el) {
         el = document.createElement('link');
-        el.setAttribute(rel, rel);
+        el.setAttribute('rel', rel);
         if (hreflang) el.setAttribute('hreflang', hreflang);
         document.head.appendChild(el);
       }
@@ -70,7 +69,9 @@ export default function SEO({
     // 4. Canonical URL
     const activePath = canonicalPath || location.pathname;
     const cleanCanonicalPath = activePath.startsWith('/') ? activePath : `/${activePath}`;
-    const canonicalUrl = `${origin}${cleanCanonicalPath === '/' ? '' : cleanCanonicalPath}`;
+    const canonicalUrl = cleanCanonicalPath === '/' 
+      ? `${origin}/` 
+      : `${origin}${cleanCanonicalPath.replace(/\/+$/, '')}`;
     setLink('canonical', canonicalUrl);
 
     // 5. Hreflang alternate links (RU, EN, x-default)
@@ -82,7 +83,9 @@ export default function SEO({
       : (activePath.startsWith('/en') ? activePath : `/en${activePath === '/' ? '' : activePath}`);
 
     if (effectiveRuPath) {
-      const ruUrl = `${origin}${effectiveRuPath === '/' ? '' : effectiveRuPath}`;
+      const ruUrl = effectiveRuPath === '/' 
+        ? `${origin}/` 
+        : `${origin}${effectiveRuPath.replace(/\/+$/, '')}`;
       setLink('alternate', ruUrl, 'ru');
       setLink('alternate', ruUrl, 'x-default');
     }

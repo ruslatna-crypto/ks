@@ -24,6 +24,29 @@ export const LanguageProvider = ({ children }) => {
     setLang(newLang);
 
     const currentPath = location.pathname;
+
+    const routePairs = {
+      '/hlopok': '/en/cotton',
+      '/cotton': '/en/cotton',
+      '/en/cotton': '/hlopok',
+      '/en/hlopok': '/hlopok',
+      '/lakokraska': '/en/paint',
+      '/kraska': '/en/paint',
+      '/paint': '/en/paint',
+      '/en/paint': '/paint',
+      '/en/lakokraska': '/lakokraska',
+      '/en/kraska': '/kraska',
+      '/clinical-cases': '/en/clinical-cases',
+      '/en/clinical-cases': '/clinical-cases',
+      '/klinik': '/en/klinik',
+      '/en/klinik': '/klinik'
+    };
+
+    if (routePairs[currentPath]) {
+      navigate(routePairs[currentPath]);
+      return;
+    }
+
     if (newLang === 'en') {
       if (!currentPath.startsWith('/en')) {
         const targetPath = currentPath === '/' ? '/en' : `/en${currentPath}`;

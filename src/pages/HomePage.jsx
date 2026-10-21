@@ -137,9 +137,14 @@ const HomePage = () => {
       <section className="home-cards-section" id="developments-grid">
         <div className="container">
           <div className="home-section-header">
-            <h2 className="home-section-title">
+            <h1 className="home-section-title">
               {lang === 'en' ? 'Core Scientific Developments' : 'Ключевые направления разработок'}
-            </h2>
+            </h1>
+            <p className="home-section-subtitle">
+              {lang === 'en'
+                ? 'Energy-efficient technologies and practical applications of pulsed functional ceramics'
+                : 'Энергоэффективные технологии и практическое применение импульсной функциональной керамики'}
+            </p>
           </div>
 
           <div className="home-cards-grid">
@@ -224,9 +229,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="contact-map-card">
-              <MapWidget />
-            </div>
+            <MapWidget />
           </div>
         </div>
       </section>

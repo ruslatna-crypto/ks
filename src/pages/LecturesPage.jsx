@@ -52,9 +52,8 @@ const LecturesPage = () => {
           boxShadow: 'var(--shadow-sm)'
         }}>
           <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: '#DC2626', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 6 }}>
-              <Youtube size={18} />
-              <span>YouTube Channel</span>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'var(--color-primary)', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 6 }}>
+              <span>{lang === 'en' ? 'Official Video Channels' : 'Официальные видеоканалы'}</span>
             </div>
             <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--color-dark)', marginBottom: 4 }}>
               {lang === 'en' ? 'Video lectures by Professor R. Rakhimov' : 'Видеолекции профессора Р. Рахимова'}
@@ -65,27 +64,51 @@ const LecturesPage = () => {
                 : 'Лекции, доклады на международных конференциях и физический разбор действия импульсной керамики.'}
             </p>
           </div>
-          <a
-            href="https://www.youtube.com/@Rahimovrx"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 8,
-              background: '#DC2626',
-              color: '#ffffff',
-              padding: '11px 22px',
-              borderRadius: 'var(--radius-sm)',
-              fontWeight: 600,
-              fontSize: '0.92rem',
-              transition: 'background 0.15s ease',
-              boxShadow: '0 4px 12px rgba(220, 38, 38, 0.25)'
-            }}
-          >
-            <span>{lang === 'en' ? 'Watch lectures' : 'Смотреть видео'}</span>
-            <ExternalLink size={15} />
-          </a>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <a
+              href="https://www.youtube.com/@Rahimovrx"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                background: '#DC2626',
+                color: '#ffffff',
+                padding: '11px 20px',
+                borderRadius: 'var(--radius-sm)',
+                fontWeight: 600,
+                fontSize: '0.92rem',
+                transition: 'background 0.15s ease',
+                boxShadow: '0 4px 12px rgba(220, 38, 38, 0.25)'
+              }}
+            >
+              <Youtube size={16} />
+              <span>YouTube</span>
+              <ExternalLink size={14} />
+            </a>
+            <a
+              href="https://vkvideo.ru/@club239680928"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                background: '#0077ff',
+                color: '#ffffff',
+                padding: '11px 20px',
+                borderRadius: 'var(--radius-sm)',
+                fontWeight: 600,
+                fontSize: '0.92rem',
+                transition: 'background 0.15s ease',
+                boxShadow: '0 4px 12px rgba(0, 119, 255, 0.25)'
+              }}
+            >
+              <span>VK Video</span>
+              <ExternalLink size={14} />
+            </a>
+          </div>
         </div>
 
         <article className="article-text-section">
