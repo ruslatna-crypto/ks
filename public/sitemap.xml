@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- RU Core Pages (Stage 1 & Stage 2 Verified) -->
+  <!-- RU Core Pages (Stages 1 & 2) -->
   <url>
     <loc>https://www.infraks.uz/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/" />
@@ -136,8 +136,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- EN Pages (Stage 1 & Stage 2 Verified) -->
+  <!-- EN Core Pages (Stages 1 & 2) -->
   <url>
     <loc>https://www.infraks.uz/en</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/" />
@@ -145,7 +144,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/" />
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/news</loc>
@@ -154,7 +153,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/news" />
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/news/portal-update</loc>
@@ -172,7 +171,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/articles" />
     <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/articles/functional-ceramics-principles</loc>
@@ -187,33 +186,37 @@
     <loc>https://www.infraks.uz/en/sushka</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/sushka" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/sushka" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/sushka" />
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/plenka</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/plenka" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/plenka" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/plenka" />
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/steril</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/steril" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/steril" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/steril" />
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/lamp</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/lamp" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/lamp" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/lamp" />
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/cotton</loc>
@@ -222,7 +225,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/hlopok" />
     <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/paint</loc>
@@ -231,12 +234,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/paint" />
     <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/metodika</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/metodika" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/metodika" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/metodika" />
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -245,24 +249,2171 @@
     <loc>https://www.infraks.uz/en/klinik</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik" />
     <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/contact</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/contact" />
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/search</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/search" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/search" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/search" />
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <!-- RU Clinical Cases (Stage 3: 119 verified cases) -->
+  <url>
+    <loc>https://www.infraks.uz/klinik/herpes-genitalis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/herpes-genitalis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/herpes-genitalis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/herpes-genitalis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/abscessing-echinococcosis-of-the-lest-lung</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/abscessing-echinococcosis-of-the-lest-lung" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/abscessing-echinococcosis-of-the-lest-lung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/abscessing-echinococcosis-of-the-lest-lung" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/adenoma-of-the-prostate</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/adenoma-of-the-prostate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/adenoma-of-the-prostate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/adenoma-of-the-prostate" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/allergic-rhinitis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/allergic-rhinitis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/allergic-rhinitis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/allergic-rhinitis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/bladder-atony</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/bladder-atony" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/bladder-atony" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/bladder-atony" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/buerger-s-disease</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/buerger-s-disease" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/buerger-s-disease" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/buerger-s-disease" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/asymptomatic-hematuria</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/asymptomatic-hematuria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/asymptomatic-hematuria" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/asymptomatic-hematuria" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/painful-scar-from-hydrochloric-acid-burn</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/painful-scar-from-hydrochloric-acid-burn" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/painful-scar-from-hydrochloric-acid-burn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/painful-scar-from-hydrochloric-acid-burn" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/skin-diseases</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/skin-diseases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/skin-diseases" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/skin-diseases" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/abdominal-pain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/abdominal-pain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/abdominal-pain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/abdominal-pain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/groin-pain-and-menstrual-cycle-disorder</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/groin-pain-and-menstrual-cycle-disorder" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/groin-pain-and-menstrual-cycle-disorder" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/groin-pain-and-menstrual-cycle-disorder" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/joint-pain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/joint-pain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/joint-pain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/joint-pain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/pain-in-the-calf-muscle</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pain-in-the-calf-muscle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pain-in-the-calf-muscle" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pain-in-the-calf-muscle" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/pain-at-the-attachment-site-of-the-achilles-tendon</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pain-at-the-attachment-site-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pain-at-the-attachment-site-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pain-at-the-attachment-site-of-the-achilles-tendon" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/inflammation-of-the-achilles-tendon</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-the-achilles-tendon" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/inflammation-of-subcutaneous-fat-in-aids</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-subcutaneous-fat-in-aids" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-subcutaneous-fat-in-aids" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-subcutaneous-fat-in-aids" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/hair-loss-due-to-chemotherapy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hair-loss-due-to-chemotherapy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hair-loss-due-to-chemotherapy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hair-loss-due-to-chemotherapy" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/hypertension</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypertension" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypertension" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypertension" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/hypertension-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypertension-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypertension-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypertension-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/hypertension-and-diabetes</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypertension-and-diabetes" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypertension-and-diabetes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypertension-and-diabetes" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/hypoxia-of-the-brain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypoxia-of-the-brain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/hypoxia-of-the-brain-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypoxia-of-the-brain-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/hyperhidrosis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hyperhidrosis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hyperhidrosis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hyperhidrosis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/bilateral-varicose-ulcers-on-the-legs</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/bilateral-varicose-ulcers-on-the-legs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/bilateral-varicose-ulcers-on-the-legs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/bilateral-varicose-ulcers-on-the-legs" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/dermatomyositis-polymyositis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/dermatomyositis-polymyositis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/dermatomyositis-polymyositis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/dermatomyositis-polymyositis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/childhood-autism</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/childhood-autism" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/childhood-autism" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/childhood-autism" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/diabetes</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetes" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetes" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/diabetic-gangrene-of-the-big-toe</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-gangrene-of-the-big-toe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-gangrene-of-the-big-toe" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-gangrene-of-the-big-toe" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/diabetic-retinopathy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-retinopathy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-retinopathy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-retinopathy" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/diabetic-retinopathy-hypertension</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-retinopathy-hypertension" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-retinopathy-hypertension" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-retinopathy-hypertension" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/diabetic-foot-ulcer</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-foot-ulcer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-foot-ulcer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-foot-ulcer" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/diplopia-in-myasthenia-gravis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diplopia-in-myasthenia-gravis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diplopia-in-myasthenia-gravis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diplopia-in-myasthenia-gravis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/corneal-revascularization-due-to-contact-lenses</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/corneal-revascularization-due-to-contact-lenses" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/corneal-revascularization-due-to-contact-lenses" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/corneal-revascularization-due-to-contact-lenses" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/intestinal-dysbacteriosis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/intestinal-dysbacteriosis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/intestinal-dysbacteriosis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/intestinal-dysbacteriosis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/calf-muscle-discomfort-and-drowsiness</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/calf-muscle-discomfort-and-drowsiness" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/calf-muscle-discomfort-and-drowsiness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/calf-muscle-discomfort-and-drowsiness" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/delayed-femur-fracture-healing</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/delayed-femur-fracture-healing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/delayed-femur-fracture-healing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/delayed-femur-fracture-healing" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/constipation</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/constipation" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/constipation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/constipation" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/difficult-and-frequent-urination</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/difficult-and-frequent-urination" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/difficult-and-frequent-urination" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/difficult-and-frequent-urination" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/coronary-artery-disease-cad</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/coronary-artery-disease-cad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/coronary-artery-disease-cad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/coronary-artery-disease-cad" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-iddm</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-iddm" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-iddm" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-iddm" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-case-study</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-case-study" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-case-study</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-case-study" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-4</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-4" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-4</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-4" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-5</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-5" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-5" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-5" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/spinal-deformities</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/spinal-deformities" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/spinal-deformities" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/spinal-deformities" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/cough-with-vomiting-associated-with-congenital-heart-disease</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/cough-with-vomiting-associated-with-congenital-heart-disease" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/cough-with-vomiting-associated-with-congenital-heart-disease" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/cough-with-vomiting-associated-with-congenital-heart-disease" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/ovarian-cyst</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/ovarian-cyst" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/ovarian-cyst" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/ovarian-cyst" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/ovarian-cyst-and-psoriasis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/ovarian-cyst-and-psoriasis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/ovarian-cyst-and-psoriasis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/ovarian-cyst-and-psoriasis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/abdominal-colic-and-diarrhea</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/abdominal-colic-and-diarrhea" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/abdominal-colic-and-diarrhea" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/abdominal-colic-and-diarrhea" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/migraine</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/migraine-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/migraine-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/migraine-4</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-4" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-4" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/migraine-with-hypertension</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-with-hypertension" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-with-hypertension" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-with-hypertension" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/erectile-dysfunction-with-type-ii-diabetes</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/erectile-dysfunction-with-type-ii-diabetes" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/erectile-dysfunction-with-type-ii-diabetes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/erectile-dysfunction-with-type-ii-diabetes" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/nephrotic-syndrome-with-increasing-edema</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/nephrotic-syndrome-with-increasing-edema" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/nephrotic-syndrome-with-increasing-edema" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/nephrotic-syndrome-with-increasing-edema" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/low-folle-numbers</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/low-folle-numbers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/low-folle-numbers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/low-folle-numbers" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/nodular-cancer-of-the-left-breast-t2-no-mo</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/nodular-cancer-of-the-left-breast-t2-no-mo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/nodular-cancer-of-the-left-breast-t2-no-mo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/nodular-cancer-of-the-left-breast-t2-no-mo" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-gouty-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-gouty-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-exacerbation-of-chronic-gouty-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-gouty-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-prostatitis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-prostatitis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-exacerbation-of-chronic-prostatitis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-prostatitis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/obesity</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/obesity" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/obesity" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/obesity" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/poisoning-with-several-chemicals</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/poisoning-with-several-chemicals" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/poisoning-with-several-chemicals" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/poisoning-with-several-chemicals" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/acute-respiratory-viral-infection</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-respiratory-viral-infection" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-respiratory-viral-infection" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-respiratory-viral-infection" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/acute-cystitis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-cystitis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-cystitis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-cystitis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/paracetamol-poisoning</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/paracetamol-poisoning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/paracetamol-poisoning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/paracetamol-poisoning" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/absence-of-menstruation-for-7-months</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/absence-of-menstruation-for-7-months" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/absence-of-menstruation-for-7-months" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/absence-of-menstruation-for-7-months" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/elevated-cholesterol-levels-and-lipid-imbalance</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/elevated-cholesterol-levels-and-lipid-imbalance" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/elevated-cholesterol-levels-and-lipid-imbalance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/elevated-cholesterol-levels-and-lipid-imbalance" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/constant-bleeding-from-the-genital-tract</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/constant-bleeding-from-the-genital-tract" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/constant-bleeding-from-the-genital-tract" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/constant-bleeding-from-the-genital-tract" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/morning-asthma-attacks</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/morning-asthma-attacks" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/morning-asthma-attacks" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/morning-asthma-attacks" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/psoriasis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/psoriasis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/psoriasis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/psoriasis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/psoriasis-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/psoriasis-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/psoriasis-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/psoriasis-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/lung-cancer-with-metastases</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/lung-cancer-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/lung-cancer-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/lung-cancer-with-metastases" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/bladder-cancer</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/bladder-cancer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/bladder-cancer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/bladder-cancer" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/pancreatic-cancer</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pancreatic-cancer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pancreatic-cancer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pancreatic-cancer" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/rheumatoid-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/rheumatoid-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/cut-wound-on-the-middle-third-of-the-left-forearm</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/cut-wound-on-the-middle-third-of-the-left-forearm" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/cut-wound-on-the-middle-third-of-the-left-forearm" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/cut-wound-on-the-middle-third-of-the-left-forearm" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/gray-hair</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/gray-hair" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/gray-hair" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/gray-hair" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/sero-negative-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sero-negative-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sero-negative-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sero-negative-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/sero-negative-arthritis-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sero-negative-arthritis-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sero-negative-arthritis-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sero-negative-arthritis-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/sero-negative-arthritis-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sero-negative-arthritis-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sero-negative-arthritis-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sero-negative-arthritis-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/severe-back-pain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/severe-back-pain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/severe-back-pain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/severe-back-pain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/carpal-tunnel-syndrome</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/carpal-tunnel-syndrome" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/carpal-tunnel-syndrome" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/carpal-tunnel-syndrome" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/sistemnaya-krasnaya-volchanka</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sistemnaya-krasnaya-volchanka" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sistemnaya-krasnaya-volchanka" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sistemnaya-krasnaya-volchanka" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/systemic-lupus-erythematosus</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/systemic-lupus-erythematosus" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/systemic-lupus-erythematosus" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/systemic-lupus-erythematosus" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/spondylolisthesis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/spondylolisthesis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/spondylolisthesis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/spondylolisthesis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/tics</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/tics" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/tics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/tics" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/thyrotoxic-cardiomyopathy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/thyrotoxic-cardiomyopathy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/thyrotoxic-cardiomyopathy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/thyrotoxic-cardiomyopathy" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/toxoplasmosis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/toxoplasmosis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/toxoplasmosis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/toxoplasmosis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/nodular-toxic-goiter</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/nodular-toxic-goiter" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/nodular-toxic-goiter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/nodular-toxic-goiter" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/thickenings-on-the-skin-of-the-left-frontal-bone</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/thickenings-on-the-skin-of-the-left-frontal-bone" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/thickenings-on-the-skin-of-the-left-frontal-bone" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/thickenings-on-the-skin-of-the-left-frontal-bone" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/chronic-renal-failure</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/chronic-renal-failure" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/chronic-renal-failure" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/chronic-renal-failure" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/chronic-renal-failure-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/chronic-renal-failure-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/chronic-renal-failure-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/chronic-renal-failure-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/chronic-renal-failure-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/chronic-renal-failure-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/chronic-renal-failure-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/chronic-renal-failure-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/cytomegalovirus-infection</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/cytomegalovirus-infection" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/cytomegalovirus-infection" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/cytomegalovirus-infection" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/frequent-headaches</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/frequent-headaches" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/frequent-headaches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/frequent-headaches" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <!-- EN Clinical Cases (Stage 3: 119 verified cases) -->
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/herpes-genitalis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/herpes-genitalis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/herpes-genitalis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/herpes-genitalis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/abscessing-echinococcosis-of-the-lest-lung</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/abscessing-echinococcosis-of-the-lest-lung" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/abscessing-echinococcosis-of-the-lest-lung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/abscessing-echinococcosis-of-the-lest-lung" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/adenoma-of-the-prostate</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/adenoma-of-the-prostate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/adenoma-of-the-prostate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/adenoma-of-the-prostate" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/allergic-rhinitis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/allergic-rhinitis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/allergic-rhinitis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/allergic-rhinitis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/atherosclerosis-iii-atherosclerosis-of-the-cerebral-vessels" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/bladder-atony</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/bladder-atony" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/bladder-atony" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/bladder-atony" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/buerger-s-disease</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/buerger-s-disease" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/buerger-s-disease" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/buerger-s-disease" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/asymptomatic-hematuria</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/asymptomatic-hematuria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/asymptomatic-hematuria" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/asymptomatic-hematuria" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/painful-scar-from-hydrochloric-acid-burn</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/painful-scar-from-hydrochloric-acid-burn" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/painful-scar-from-hydrochloric-acid-burn" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/painful-scar-from-hydrochloric-acid-burn" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/skin-diseases</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/skin-diseases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/skin-diseases" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/skin-diseases" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/abdominal-pain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/abdominal-pain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/abdominal-pain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/abdominal-pain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/groin-pain-and-menstrual-cycle-disorder</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/groin-pain-and-menstrual-cycle-disorder" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/groin-pain-and-menstrual-cycle-disorder" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/groin-pain-and-menstrual-cycle-disorder" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/joint-pain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/joint-pain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/joint-pain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/joint-pain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/pain-in-the-calf-muscle</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pain-in-the-calf-muscle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pain-in-the-calf-muscle" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pain-in-the-calf-muscle" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pain-in-the-left-postauricular-area-and-external-auditory-canal-widening-of-the-eye-fissure" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/pain-at-the-attachment-site-of-the-achilles-tendon</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pain-at-the-attachment-site-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pain-at-the-attachment-site-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pain-at-the-attachment-site-of-the-achilles-tendon" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/inflammation-of-the-achilles-tendon</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-the-achilles-tendon" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-the-achilles-tendon" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-of-a-sick-finger" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-the-subcutaneous-fat-under-the-nail" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/inflammation-of-subcutaneous-fat-in-aids</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/inflammation-of-subcutaneous-fat-in-aids" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/inflammation-of-subcutaneous-fat-in-aids" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/inflammation-of-subcutaneous-fat-in-aids" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/hair-loss-due-to-chemotherapy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hair-loss-due-to-chemotherapy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hair-loss-due-to-chemotherapy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hair-loss-due-to-chemotherapy" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/hypertension</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypertension" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypertension" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypertension" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/absence-of-dorsiflexion-and-sensitivity-in-the-right-foot" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/hypertension-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypertension-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypertension-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypertension-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/hypertension-and-diabetes</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypertension-and-diabetes" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypertension-and-diabetes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypertension-and-diabetes" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/hypoxia-of-the-brain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypoxia-of-the-brain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/hypoxia-of-the-brain-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hypoxia-of-the-brain-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hypoxia-of-the-brain-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/hyperhidrosis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/hyperhidrosis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/hyperhidrosis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/hyperhidrosis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/bilateral-varicose-ulcers-on-the-legs</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/bilateral-varicose-ulcers-on-the-legs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/bilateral-varicose-ulcers-on-the-legs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/bilateral-varicose-ulcers-on-the-legs" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/dermatomyositis-polymyositis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/dermatomyositis-polymyositis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/dermatomyositis-polymyositis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/dermatomyositis-polymyositis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/childhood-autism</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/childhood-autism" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/childhood-autism" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/childhood-autism" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/diabetes</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetes" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetes" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/diabetic-gangrene-of-the-big-toe</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-gangrene-of-the-big-toe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-gangrene-of-the-big-toe" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-gangrene-of-the-big-toe" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/diabetic-retinopathy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-retinopathy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-retinopathy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-retinopathy" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/diabetic-retinopathy-hypertension</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-retinopathy-hypertension" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-retinopathy-hypertension" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-retinopathy-hypertension" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/diabetic-foot-ulcer</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diabetic-foot-ulcer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diabetic-foot-ulcer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diabetic-foot-ulcer" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/diplopia-in-myasthenia-gravis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/diplopia-in-myasthenia-gravis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/diplopia-in-myasthenia-gravis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/diplopia-in-myasthenia-gravis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/corneal-revascularization-due-to-contact-lenses</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/corneal-revascularization-due-to-contact-lenses" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/corneal-revascularization-due-to-contact-lenses" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/corneal-revascularization-due-to-contact-lenses" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/intestinal-dysbacteriosis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/intestinal-dysbacteriosis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/intestinal-dysbacteriosis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/intestinal-dysbacteriosis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/calf-muscle-discomfort-and-drowsiness</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/calf-muscle-discomfort-and-drowsiness" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/calf-muscle-discomfort-and-drowsiness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/calf-muscle-discomfort-and-drowsiness" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/delayed-femur-fracture-healing</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/delayed-femur-fracture-healing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/delayed-femur-fracture-healing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/delayed-femur-fracture-healing" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/constipation</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/constipation" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/constipation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/constipation" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/difficult-and-frequent-urination</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/difficult-and-frequent-urination" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/difficult-and-frequent-urination" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/difficult-and-frequent-urination" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/coronary-artery-disease-cad</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/coronary-artery-disease-cad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/coronary-artery-disease-cad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/coronary-artery-disease-cad" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-iddm</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-iddm" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-iddm" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-iddm" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-case-study</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-case-study" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-case-study</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-case-study" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-case-study" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-4</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/insulin-dependent-diabetes-mellitus-4" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-4</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-4" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-5</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-5" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/non-insulin-dependent-diabetes-mellitus-5" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/non-insulin-dependent-diabetes-mellitus-5" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/spinal-deformities</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/spinal-deformities" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/spinal-deformities" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/spinal-deformities" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/carcinoma-of-the-right-breast-with-metastases-to-axillary-lymph-nodes-t3-n2-mo" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/cough-with-vomiting-associated-with-congenital-heart-disease</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/cough-with-vomiting-associated-with-congenital-heart-disease" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/cough-with-vomiting-associated-with-congenital-heart-disease" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/cough-with-vomiting-associated-with-congenital-heart-disease" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/ovarian-cyst</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/ovarian-cyst" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/ovarian-cyst" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/ovarian-cyst" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/ovarian-cyst-and-psoriasis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/ovarian-cyst-and-psoriasis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/ovarian-cyst-and-psoriasis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/ovarian-cyst-and-psoriasis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/abdominal-colic-and-diarrhea</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/abdominal-colic-and-diarrhea" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/abdominal-colic-and-diarrhea" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/abdominal-colic-and-diarrhea" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/migraine</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/migraine-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/migraine-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/migraine-4</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-4" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-4" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-4" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/migraine-with-hypertension</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/migraine-with-hypertension" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/migraine-with-hypertension" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/migraine-with-hypertension" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/erectile-dysfunction-with-type-ii-diabetes</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/erectile-dysfunction-with-type-ii-diabetes" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/erectile-dysfunction-with-type-ii-diabetes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/erectile-dysfunction-with-type-ii-diabetes" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/nephrotic-syndrome-with-increasing-edema</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/nephrotic-syndrome-with-increasing-edema" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/nephrotic-syndrome-with-increasing-edema" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/nephrotic-syndrome-with-increasing-edema" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/low-folle-numbers</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/low-folle-numbers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/low-folle-numbers" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/low-folle-numbers" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/nodular-cancer-of-the-left-breast-t2-no-mo</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/nodular-cancer-of-the-left-breast-t2-no-mo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/nodular-cancer-of-the-left-breast-t2-no-mo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/nodular-cancer-of-the-left-breast-t2-no-mo" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/acute-exacerbation-of-chronic-gouty-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-gouty-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-exacerbation-of-chronic-gouty-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-gouty-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/acute-exacerbation-of-chronic-prostatitis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-prostatitis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-exacerbation-of-chronic-prostatitis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-exacerbation-of-chronic-prostatitis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/obesity</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/obesity" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/obesity" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/obesity" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/poisoning-with-several-chemicals</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/poisoning-with-several-chemicals" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/poisoning-with-several-chemicals" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/poisoning-with-several-chemicals" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/acute-respiratory-viral-infection</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-respiratory-viral-infection" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-respiratory-viral-infection" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-respiratory-viral-infection" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/acute-cystitis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/acute-cystitis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/acute-cystitis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/acute-cystitis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/paracetamol-poisoning</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/paracetamol-poisoning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/paracetamol-poisoning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/paracetamol-poisoning" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/absence-of-pregnancy-pain-in-the-right-inguinal-region-prolonged-menstrual-cycle" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/absence-of-menstruation-for-7-months</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/absence-of-menstruation-for-7-months" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/absence-of-menstruation-for-7-months" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/absence-of-menstruation-for-7-months" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/fracture-of-the-ischial-bone-fractures-of-the-tibia-femur-fracture" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/squamous-cell-carcinoma-of-the-soft-tissues-of-the-right-face-with-metastases" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/elevated-cholesterol-levels-and-lipid-imbalance</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/elevated-cholesterol-levels-and-lipid-imbalance" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/elevated-cholesterol-levels-and-lipid-imbalance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/elevated-cholesterol-levels-and-lipid-imbalance" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/constant-bleeding-from-the-genital-tract</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/constant-bleeding-from-the-genital-tract" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/constant-bleeding-from-the-genital-tract" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/constant-bleeding-from-the-genital-tract" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/morning-asthma-attacks</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/morning-asthma-attacks" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/morning-asthma-attacks" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/morning-asthma-attacks" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/psoriasis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/psoriasis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/psoriasis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/psoriasis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/psoriasis-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/psoriasis-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/psoriasis-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/psoriasis-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/lung-cancer-with-metastases</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/lung-cancer-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/lung-cancer-with-metastases" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/lung-cancer-with-metastases" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/bladder-cancer</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/bladder-cancer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/bladder-cancer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/bladder-cancer" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/pancreatic-cancer</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/pancreatic-cancer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/pancreatic-cancer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/pancreatic-cancer" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/rheumatism-rheumatic-carditis-mitral-aortic-defect-rheumatoid-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/rheumatoid-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/rheumatoid-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/rheumatoid-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/cut-wound-on-the-middle-third-of-the-left-forearm</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/cut-wound-on-the-middle-third-of-the-left-forearm" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/cut-wound-on-the-middle-third-of-the-left-forearm" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/cut-wound-on-the-middle-third-of-the-left-forearm" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/severe-weakness-shortness-of-breath-malaise-tachycardia-attacks" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/spontaneous-late-miscarriage-with-hepatosplenomegaly" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/gray-hair</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/gray-hair" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/gray-hair" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/gray-hair" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/sero-negative-arthritis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sero-negative-arthritis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sero-negative-arthritis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sero-negative-arthritis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/sero-negative-arthritis-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sero-negative-arthritis-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sero-negative-arthritis-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sero-negative-arthritis-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/sero-negative-arthritis-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sero-negative-arthritis-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sero-negative-arthritis-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sero-negative-arthritis-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/severe-back-pain</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/severe-back-pain" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/severe-back-pain" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/severe-back-pain" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/carpal-tunnel-syndrome</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/carpal-tunnel-syndrome" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/carpal-tunnel-syndrome" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/carpal-tunnel-syndrome" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/sistemnaya-krasnaya-volchanka</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/sistemnaya-krasnaya-volchanka" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/sistemnaya-krasnaya-volchanka" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/sistemnaya-krasnaya-volchanka" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/systemic-lupus-erythematosus</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/systemic-lupus-erythematosus" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/systemic-lupus-erythematosus" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/systemic-lupus-erythematosus" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/tearing-joint-ache-leg-pain-vision-loss-general-weakness" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/spondylolisthesis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/spondylolisthesis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/spondylolisthesis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/spondylolisthesis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/tics</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/tics" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/tics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/tics" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/thyrotoxic-cardiomyopathy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/thyrotoxic-cardiomyopathy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/thyrotoxic-cardiomyopathy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/thyrotoxic-cardiomyopathy" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/toxoplasmosis</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/toxoplasmosis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/toxoplasmosis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/toxoplasmosis" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/enlargement-of-the-thyroid-gland-weakness-sleepiness" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/nodular-toxic-goiter</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/nodular-toxic-goiter" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/nodular-toxic-goiter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/nodular-toxic-goiter" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/thickenings-on-the-skin-of-the-left-frontal-bone</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/thickenings-on-the-skin-of-the-left-frontal-bone" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/thickenings-on-the-skin-of-the-left-frontal-bone" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/thickenings-on-the-skin-of-the-left-frontal-bone" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/chronic-renal-failure</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/chronic-renal-failure" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/chronic-renal-failure" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/chronic-renal-failure" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/chronic-renal-failure-2</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/chronic-renal-failure-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/chronic-renal-failure-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/chronic-renal-failure-2" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/chronic-renal-failure-3</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/chronic-renal-failure-3" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/chronic-renal-failure-3" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/chronic-renal-failure-3" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/cytomegalovirus-infection</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/cytomegalovirus-infection" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/cytomegalovirus-infection" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/cytomegalovirus-infection" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/frequent-headaches</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/frequent-headaches" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/frequent-headaches" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/frequent-headaches" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/klinik/effect-of-ir-radiation-on-a-patient-taking-rifampicin" />
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 </urlset>

@@ -15,7 +15,7 @@ const LampPage = lazy(() => import('./pages/LampPage'));
 const CottonPage = lazy(() => import('./pages/CottonPage'));
 const PaintPage = lazy(() => import('./pages/PaintPage'));
 const LecturesPage = lazy(() => import('./pages/LecturesPage'));
-const ClinicalPage = lazy(() => import('./pages/ClinicalPage'));
+const ClinicalCasesPage = lazy(() => import('./pages/ClinicalCasesPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const SearchPage = lazy(() => import('./pages/SearchPage'));
 const NewsPage = lazy(() => import('./pages/NewsPage'));
@@ -116,8 +116,14 @@ function App() {
             <Route path="/lekcii" element={<LecturesPage />} />
             <Route path="/en/metodika" element={<LecturesPage />} />
             
-            <Route path="/klinik" element={<ClinicalPage />} />
-            <Route path="/en/klinik" element={<ClinicalPage />} />
+            <Route path="/klinik" element={<ClinicalCasesPage />} />
+            <Route path="/klinik/:id" element={<ClinicalCasesPage />} />
+            <Route path="/en/klinik" element={<ClinicalCasesPage />} />
+            <Route path="/en/klinik/:id" element={<ClinicalCasesPage />} />
+            <Route path="/clinical-cases" element={<ClinicalCasesPage />} />
+            <Route path="/clinical-cases/:id" element={<ClinicalCasesPage />} />
+            <Route path="/en/clinical-cases" element={<ClinicalCasesPage />} />
+            <Route path="/en/clinical-cases/:id" element={<ClinicalCasesPage />} />
 
             {/* Контакты / Contacts */}
             <Route path="/contact" element={<ContactPage />} />
