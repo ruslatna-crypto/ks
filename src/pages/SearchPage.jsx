@@ -170,6 +170,7 @@ const SearchPage = () => {
         ruPath="/search"
         enPath="/en/search"
         lang={lang}
+        noindex={true}
       />
       <div className="container">
         <Breadcrumbs items={breadcrumbs} />

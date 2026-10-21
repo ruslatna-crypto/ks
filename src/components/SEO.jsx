@@ -14,7 +14,9 @@ export default function SEO({
   image = '/images/logo/logo1.svg',
   type = 'website',
   article = null,
-  lang = 'ru'
+  lang = 'ru',
+  noindex = false,
+  robots = null
 }) {
   const location = useLocation();
 
@@ -41,6 +43,10 @@ export default function SEO({
       }
       el.setAttribute('content', content);
     };
+
+    // 2.5 Robots directive
+    const robotsContent = robots || (noindex ? 'noindex, follow' : 'index, follow');
+    setMeta('name', 'robots', robotsContent);
 
     // Helper: update or create link tag
     const setLink = (rel, href, hreflang) => {
@@ -120,7 +126,12 @@ export default function SEO({
     // 9. Document lang attribute
     document.documentElement.lang = lang;
 
-  }, [title, description, canonicalPath, ruPath, enPath, image, type, article, lang, location.pathname]);
+    return () => {
+      if (noindex || robots) {
+        setMeta('name', 'robots', 'index, follow');
+      }
+    };
+  }, [title, description, canonicalPath, ruPath, enPath, image, type, article, lang, noindex, robots, location.pathname]);
 
   return null;
 }
