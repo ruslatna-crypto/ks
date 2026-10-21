@@ -32,7 +32,7 @@
 В корне проекта создайте или проверьте файл `.env.local` (он добавлен в `.gitignore`):
 
 ```bash
-TELEGRAM_BOT_TOKEN=8298692023:AAFOBkAKdkeiccKNAGZY0eZZ4DV2wecxbgU
+TELEGRAM_BOT_TOKEN=REDACTED_ROTATED_TOKEN
 TELEGRAM_CHAT_ID=193632181
 ```
 
