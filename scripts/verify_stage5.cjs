@@ -73,7 +73,7 @@ assert(adminHtml.includes('auth_endpoint: \'api/auth\''), 'admin/index.html sets
 const configYml = fs.readFileSync(path.resolve(__dirname, '../public/admin/config.yml'), 'utf8');
 assert(configYml.includes('repo: ruslatna-crypto/ks'), 'config.yml repo points to ruslatna-crypto/ks');
 assert(configYml.includes('branch: main'), 'config.yml branch points to main');
-assert(!configYml.includes('https://ks.loc'), 'config.yml has NO hardcoded local domain');
+assert(!/ks\.loc\b/i.test(configYml), 'config.yml has NO hardcoded local domain');
 
 // 7. Check serverless OAuth endpoints
 const apiAuth = fs.readFileSync(path.resolve(__dirname, '../api/auth.js'), 'utf8');

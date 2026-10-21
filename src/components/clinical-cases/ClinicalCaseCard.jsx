@@ -1,21 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ExternalLink, Activity, Image as ImageIcon, Table as TableIcon } from 'lucide-react';
+import DOMPurify from 'dompurify';
 import ClinicalChart from './ClinicalChart';
 
 /**
- * Defense-in-depth zero-dependency sanitizer for clinical cases content.
- * Strips dangerous tags, event handlers and javascript: URIs while preserving
- * 100% of semantic formatting, tables, lists, and layout styles.
+ * Robust HTML sanitizer powered by DOMPurify:
+ * - Preserves semantic typography, lists, and clinical data tables.
+ * - Strictly forbids dangerous executable elements (script, iframe, object, embed, form, etc.).
+ * - Blocks inline event handlers (on*).
+ * - Restricts URI schemes to safe protocols, disallowing javascript:, vbscript:, and data:.
  */
-function sanitizeClinicalHtml(html) {
+const SANITIZE_CONFIG = {
+  USE_PROFILES: { html: true },
+  FORBID_TAGS: [
+    'script',
+    'iframe',
+    'object',
+    'embed',
+    'applet',
+    'form',
+    'input',
+    'button',
+    'textarea',
+    'select',
+    'link',
+    'meta',
+    'style'
+  ],
+  FORBID_ATTR: [
+    'action',
+    'formaction',
+    'xlink:href'
+  ],
+  ALLOW_DATA_ATTR: false,
+  ALLOWED_URI_REGEXP: /^(?:(?:https?|mailto|tel):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i
+};
+
+export function sanitizeClinicalHtml(html) {
   if (!html || typeof html !== 'string') return '';
-  return html
-    .replace(/<\s*(script|iframe|object|embed|applet|form|input|button|textarea|style|link|meta)\b[^>]*>[\s\S]*?<\s*\/\s*\1\s*>/gi, '')
-    .replace(/<\s*(script|iframe|object|embed|applet|form|input|button|textarea|style|link|meta)\b[^>]*>/gi, '')
-    .replace(/\s+on[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
-    .replace(/(href|src)\s*=\s*(["'])\s*(javascript|vbscript|data):[\s\S]*?\2/gi, '$1="#blocked"')
-    .replace(/(href|src)\s*=\s*(javascript|vbscript|data):[^\s>]*/gi, '$1="#blocked"');
+  return DOMPurify.sanitize(html, SANITIZE_CONFIG);
 }
 
 export default function ClinicalCaseCard({
