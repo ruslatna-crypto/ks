@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- RU Core Pages (Stage 1 Verified) -->
+  <!-- RU Core Pages (Stage 1 & Stage 2 Verified) -->
   <url>
     <loc>https://www.infraks.uz/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/" />
@@ -83,6 +83,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.infraks.uz/hlopok</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/hlopok" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/cotton" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/hlopok" />
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/paint</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/paint" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/paint" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/paint" />
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.infraks.uz/metodika</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/metodika" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/metodika" />
@@ -119,7 +137,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- EN Pages (Stage 1 Verified) -->
+  <!-- EN Pages (Stage 1 & Stage 2 Verified) -->
   <url>
     <loc>https://www.infraks.uz/en</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/" />
@@ -196,6 +214,24 @@
     <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/cotton</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/hlopok" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/cotton" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/hlopok" />
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.infraks.uz/en/paint</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/paint" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/paint" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/paint" />
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/metodika</loc>

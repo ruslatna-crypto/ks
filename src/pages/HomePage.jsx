@@ -115,6 +115,9 @@ const HomePage = () => {
   const t = translations[lang];
 
   const getTargetRoute = (route) => {
+    if (route === '/cotton' || route === '/hlopok') {
+      return lang === 'en' ? '/en/cotton' : '/hlopok';
+    }
     return lang === 'en' ? `/en${route}` : route;
   };
 

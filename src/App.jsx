@@ -12,6 +12,8 @@ const SushkaPage = lazy(() => import('./pages/SushkaPage'));
 const PlenkaPage = lazy(() => import('./pages/PlenkaPage'));
 const SterilPage = lazy(() => import('./pages/SterilPage'));
 const LampPage = lazy(() => import('./pages/LampPage'));
+const CottonPage = lazy(() => import('./pages/CottonPage'));
+const PaintPage = lazy(() => import('./pages/PaintPage'));
 const LecturesPage = lazy(() => import('./pages/LecturesPage'));
 const ClinicalPage = lazy(() => import('./pages/ClinicalPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
@@ -91,13 +93,17 @@ function App() {
             <Route path="/lechebnye-lampy" element={<LampPage />} />
             <Route path="/en/lamp" element={<LampPage />} />
             
-            <Route path="/cotton" element={<DevelopmentPage pageId="cotton" />} />
-            <Route path="/hlopok" element={<DevelopmentPage pageId="cotton" />} />
-            <Route path="/en/cotton" element={<DevelopmentPage pageId="cotton" />} />
+            <Route path="/cotton" element={<CottonPage />} />
+            <Route path="/hlopok" element={<CottonPage />} />
+            <Route path="/en/cotton" element={<CottonPage />} />
+            <Route path="/en/hlopok" element={<CottonPage />} />
             
-            <Route path="/paint" element={<DevelopmentPage pageId="paint" />} />
-            <Route path="/kraska" element={<DevelopmentPage pageId="paint" />} />
-            <Route path="/en/paint" element={<DevelopmentPage pageId="paint" />} />
+            <Route path="/paint" element={<PaintPage />} />
+            <Route path="/lakokraska" element={<PaintPage />} />
+            <Route path="/kraska" element={<PaintPage />} />
+            <Route path="/en/paint" element={<PaintPage />} />
+            <Route path="/en/lakokraska" element={<PaintPage />} />
+            <Route path="/en/kraska" element={<PaintPage />} />
 
             {/* Медицина / Medicine */}
             <Route path="/metod" element={<DevelopmentPage pageId="metod" />} />

@@ -1,0 +1,965 @@
+/* ==========================================================================
+   ООО «KERAMIKA SINTEZ» — Paint Drying Page Styles («Сушка лакокрасочных материалов»)
+   Strictly adheres to corporate scientific design tokens and industrial aesthetics
+   ========================================================================== */
+
+.paint-page-wrap {
+  padding-bottom: 80px;
+  background-color: var(--color-background, #ffffff);
+  color: var(--color-text, #202228);
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.paint-hero-section {
+  padding-top: 20px;
+  padding-bottom: 48px;
+  background: linear-gradient(180deg, rgba(234, 88, 12, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.paint-hero-intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.paint-hero-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.paint-hero-title {
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-heading, #0f172a);
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.paint-hero-p {
+  font-size: 1.025rem;
+  line-height: 1.65;
+  color: var(--color-text, #334155);
+  margin-bottom: 14px;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.paint-hero-p:last-of-type {
+  margin-bottom: 0;
+}
+
+.paint-hero-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.paint-hero-badge-card {
+  padding: 14px 18px;
+  background-color: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.paint-hero-badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  border-color: rgba(234, 88, 12, 0.3);
+}
+
+.paint-badge-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted, #64748b);
+  margin-bottom: 4px;
+}
+
+.paint-badge-value {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-heading, #0f172a);
+}
+
+.paint-hero-ust-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.paint-hero-ust-figure {
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.paint-hero-ust-figure:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
+.paint-hero-ust-figure img {
+  height: auto;
+  max-height: 364px; /* Increased by 30% from 280px */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.paint-zoom-hint {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(15, 23, 42, 0.75);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  backdrop-filter: blur(4px);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.paint-hero-ust-figure:hover .paint-zoom-hint,
+.paint-hero-figure:hover .paint-zoom-hint {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   2. GENERAL SECTION HEADERS
+   ========================================================================== */
+.paint-section {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+}
+
+.paint-section:last-of-type {
+  border-bottom: none;
+}
+
+.paint-section-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 44px;
+}
+
+.paint-section-title {
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-heading, #0f172a);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.paint-section-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-muted, #64748b);
+}
+
+/* ==========================================================================
+   3. TECHNOLOGY COMPARISON (TRADITIONAL VS INNOVATIVE)
+   ========================================================================== */
+.paint-tech-image-wrap,
+.paint-princip-image-wrap,
+.paint-oblast-image-wrap,
+.paint-srav-image-wrap,
+.paint-primer-image-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.paint-docs-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.paint-doc-figure {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-border, #e2e8f0);
+  background: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.paint-doc-figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.paint-doc-figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 22 / 32;
+  object-fit: cover;
+  display: block;
+}
+
+.paint-clickable-figure {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.paint-clickable-figure:hover {
+  transform: scale(1.008);
+}
+
+.paint-clickable-figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  border-radius: 14px;
+}
+
+.paint-clickable-figure:hover .paint-zoom-hint {
+  opacity: 1;
+}
+
+.paint-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.paint-compare-card {
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paint-compare-traditional {
+  background-color: var(--color-surface-subtle, #f8fafc);
+  border: 1px solid var(--color-border, #e2e8f0);
+}
+
+.paint-compare-innovative {
+  background: linear-gradient(180deg, rgba(234, 88, 12, 0.03) 0%, rgba(255, 255, 255, 1) 100%);
+  border: 2px solid rgba(234, 88, 12, 0.35);
+  box-shadow: 0 10px 30px rgba(234, 88, 12, 0.07);
+}
+
+.paint-compare-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.paint-compare-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.paint-compare-traditional .paint-compare-badge {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.paint-compare-innovative .paint-compare-badge {
+  background-color: #ea580c;
+  color: #ffffff;
+}
+
+.paint-compare-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-heading, #0f172a);
+}
+
+.paint-compare-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.paint-compare-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.paint-compare-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.paint-compare-traditional .paint-compare-icon-box {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.paint-compare-innovative .paint-compare-icon-box {
+  background-color: #ffedd5;
+  color: #ea580c;
+}
+
+.paint-compare-item-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.paint-compare-item-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-heading, #0f172a);
+  margin-bottom: 4px;
+}
+
+.paint-compare-item-desc {
+  font-size: 0.925rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #475569);
+}
+
+/* ==========================================================================
+   4. PHYSICS CHAIN / FUNCTIONAL CERAMICS FLOW
+   ========================================================================== */
+.paint-chain-section {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 48px 36px;
+  margin: 20px 0;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
+}
+
+.paint-chain-section .paint-section-title {
+  color: #ffffff;
+}
+
+.paint-chain-section .paint-section-subtitle {
+  color: #94a3b8;
+}
+
+.paint-chain-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  position: relative;
+  margin-top: 36px;
+}
+
+.paint-chain-step {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.paint-chain-step:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: #ea580c;
+}
+
+.paint-step-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ea580c;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  display: inline-block;
+  background: rgba(234, 88, 12, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.paint-step-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.paint-step-desc {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   4.1 COATING PROPERTIES GRID
+   ========================================================================== */
+.paint-properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.paint-property-card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+}
+
+.paint-property-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.paint-property-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.paint-property-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: rgba(234, 88, 12, 0.08);
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.paint-property-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-heading, #0f172a);
+}
+
+.paint-property-desc {
+  font-size: 0.925rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #475569);
+}
+
+/* ==========================================================================
+   5. INDUSTRIAL COMPANIES GRID (9 SECTORS, 25 COMPANIES)
+   ========================================================================== */
+.paint-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.paint-industry-card {
+  background-color: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.paint-industry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border-color: rgba(234, 88, 12, 0.35);
+}
+
+.paint-industry-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.paint-industry-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: rgba(234, 88, 12, 0.06);
+  border: 1px solid rgba(234, 88, 12, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+.paint-industry-icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.paint-industry-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-heading, #0f172a);
+  line-height: 1.25;
+}
+
+.paint-industry-companies {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #475569);
+  padding-top: 10px;
+  border-top: 1px dashed var(--color-border, #e2e8f0);
+  margin-top: auto;
+  font-weight: 500;
+}
+
+.paint-companies-summary-box {
+  margin-top: 32px;
+  padding: 20px 24px;
+  background-color: rgba(2, 132, 199, 0.05);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--color-heading, #0f172a);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   6. TEST RESULTS & COMPARATIVE TABLE (ML-1111)
+   ========================================================================== */
+.paint-test-intro-box {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 28px;
+  box-shadow: none;
+}
+
+.paint-test-intro-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text, #334155);
+  margin-bottom: 28px;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.paint-impacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.paint-impact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-heading, #0f172a);
+}
+
+.paint-impact-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ea580c;
+  flex-shrink: 0;
+}
+
+/* Table container */
+.paint-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.paint-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.paint-table th {
+  background-color: #f8fafc;
+  padding: 16px 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-heading, #0f172a);
+  border-bottom: 2px solid var(--color-border, #e2e8f0);
+}
+
+.paint-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.paint-table tr:last-child td {
+  border-bottom: none;
+}
+
+.paint-table tr:hover td {
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+.paint-td-param {
+  font-weight: 700;
+  color: var(--color-heading, #0f172a);
+  width: 25%;
+}
+
+.paint-td-traditional {
+  color: #64748b;
+  width: 35%;
+}
+
+.paint-td-innovative {
+  color: #ea580c;
+  font-weight: 600;
+  width: 40%;
+  background-color: rgba(234, 88, 12, 0.02);
+}
+
+/* ==========================================================================
+   7. GALLERY (SPECIMENS / LIGHTBOX)
+   ========================================================================== */
+.paint-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.paint-specimen-card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.paint-specimen-card:hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+.paint-specimen-img-box {
+  width: 100%;
+  height: 220px;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  border-radius: 12px;
+}
+
+.paint-specimen-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.paint-specimen-card:hover .paint-specimen-img-box img {
+  transform: scale(1.05);
+}
+
+.paint-specimen-time-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.paint-specimen-body {
+  padding: 14px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.paint-specimen-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-heading, #0f172a);
+  margin-bottom: 8px;
+}
+
+.paint-specimen-desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text-muted, #64748b);
+  margin-bottom: 12px;
+}
+
+.paint-specimen-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #ea580c;
+}
+
+/* ==========================================================================
+   8. CTA SECTION
+   ========================================================================== */
+.paint-cta-section {
+  margin-top: 48px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 48px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
+}
+
+.paint-cta-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.paint-cta-title {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+.paint-cta-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+}
+
+.paint-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background-color: #ea580c;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
+}
+
+.paint-cta-btn:hover {
+  background-color: #c2410c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.5);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE MEDIA QUERIES (11 BREAKPOINTS VALIDATION)
+   ========================================================================== */
+
+/* 1280px and below */
+@media screen and (max-width: 1280px) {
+  .paint-chain-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 1024px and below */
+@media screen and (max-width: 1024px) {
+  .paint-hero-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  
+  .paint-hero-ust-wrap {
+    order: 1;
+  }
+
+  .paint-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .paint-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 768px and below */
+@media screen and (max-width: 768px) {
+  .paint-hero-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .paint-docs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .paint-hero-ust-figure img {
+    max-height: 312px; /* Increased by 30% from 240px */
+  }
+
+  .paint-compare-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .paint-chain-section {
+    padding: 32px 20px;
+  }
+
+  .paint-chain-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .paint-industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paint-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paint-cta-section {
+    padding: 36px 20px;
+  }
+}
+
+/* 480px and below (Mobile standard & compact) */
+@media screen and (max-width: 480px) {
+  .paint-section {
+    padding: 36px 0;
+  }
+
+  .paint-docs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .paint-hero-badges {
+    grid-template-columns: 1fr;
+  }
+
+  .paint-chain-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paint-compare-card {
+    padding: 20px;
+  }
+
+  .paint-test-intro-box {
+    padding: 20px;
+  }
+
+  .paint-impacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paint-companies-summary-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}

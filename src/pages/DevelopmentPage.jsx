@@ -50,6 +50,9 @@ const DevelopmentPage = ({ pageId }) => {
   ];
 
   const getPath = (basePath) => {
+    if (basePath === '/cotton' || basePath === '/hlopok') {
+      return lang === 'en' ? '/en/cotton' : '/hlopok';
+    }
     if (lang === 'en') {
       return basePath === '/' ? '/en' : `/en${basePath}`;
     }
