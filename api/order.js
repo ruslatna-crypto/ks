@@ -223,7 +223,6 @@ export default async function handler(req, res) {
   const product = typeof body.product === 'string' ? body.product.trim() : '';
   const quantityRaw = parseInt(body.quantity, 10);
   const quantity = !isNaN(quantityRaw) && quantityRaw > 0 ? Math.min(quantityRaw, 10000) : 1;
-  const organization = typeof body.organization === 'string' ? body.organization.trim() : '';
   const email = typeof body.email === 'string' ? body.email.trim() : '';
   const city = typeof body.city === 'string' ? body.city.trim() : '';
   const comment = typeof body.comment === 'string' ? body.comment.trim() : '';
@@ -267,13 +266,6 @@ export default async function handler(req, res) {
     return sendResponse(res, 400, {
       ok: false,
       error: 'Пожалуйста, введите корректный адрес электронной почты.'
-    }, matchedOrigin);
-  }
-
-  if (organization.length > 100) {
-    return sendResponse(res, 400, {
-      ok: false,
-      error: 'Поле организации слишком длинное (максимум 100 символов).'
     }, matchedOrigin);
   }
 
@@ -345,9 +337,6 @@ export default async function handler(req, res) {
   text += `━━━━━━━━━━━━━━━━━━━━\n`;
   text += `👤 <b>Контактное лицо:</b> ${escapeHtml(name)}\n`;
   text += `📞 <b>Телефон:</b> <code>${escapeHtml(phone)}</code>\n`;
-  if (organization) {
-    text += `🏢 <b>Организация:</b> ${escapeHtml(organization)}\n`;
-  }
   if (email) {
     text += `✉️ <b>Email:</b> ${escapeHtml(email)}\n`;
   }

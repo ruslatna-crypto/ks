@@ -11,8 +11,7 @@ import {
   MapPin,
   MessageSquare,
   Clock,
-  Check,
-  Building2
+  Check
 } from 'lucide-react';
 import '../styles/lamp-order.css';
 
@@ -46,7 +45,6 @@ const LampOrderForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    organization: '',
     email: '',
     city: '',
     comment: ''
@@ -178,7 +176,6 @@ const LampOrderForm = () => {
         totalQuantity: totalQuantity,
         name: formData.name.trim(),
         phone: formData.phone.trim(),
-        organization: formData.organization.trim(),
         email: formData.email.trim(),
         city: formData.city.trim(),
         comment: formData.comment.trim(),
@@ -212,7 +209,6 @@ const LampOrderForm = () => {
         totalQuantity: totalQuantity,
         name: formData.name,
         phone: formData.phone,
-        organization: formData.organization,
         email: formData.email,
         messageId: data.messageId
       });
@@ -237,7 +233,6 @@ const LampOrderForm = () => {
     setFormData({
       name: '',
       phone: '',
-      organization: '',
       email: '',
       city: '',
       comment: ''
@@ -299,12 +294,6 @@ const LampOrderForm = () => {
                 </span>
                 <span className="lamp-order-summary-value">{successData.name}</span>
               </div>
-              {successData.organization && (
-                <div className="lamp-order-summary-row">
-                  <span className="lamp-order-summary-label">{isEn ? 'Organization:' : 'Организация:'}</span>
-                  <span className="lamp-order-summary-value">{successData.organization}</span>
-                </div>
-              )}
               <div className="lamp-order-summary-row">
                 <span className="lamp-order-summary-label">{isEn ? 'Phone:' : 'Телефон:'}</span>
                 <span className="lamp-order-summary-value font-mono">{successData.phone}</span>
@@ -475,24 +464,6 @@ const LampOrderForm = () => {
                 />
               </div>
 
-              {/* Organization (Optional) */}
-              <div className="lamp-order-col-span-1">
-                <label className="lamp-order-label">
-                  <Building2 size={15} />
-                  <span>{isEn ? 'Organization / Clinic' : 'Организация / Клиника'}</span>
-                  <span className="lamp-order-optional">({isEn ? 'optional' : 'необязательно'})</span>
-                </label>
-                <input
-                  type="text"
-                  name="organization"
-                  placeholder={isEn ? 'e.g. Health Center, Clinic' : 'Например: Клиника «Здоровье», НИИ'}
-                  value={formData.organization}
-                  onChange={handleChange}
-                  className="lamp-order-input"
-                  maxLength={100}
-                />
-              </div>
-
               {/* Email (Required) */}
               <div className="lamp-order-col-span-1">
                 <label className="lamp-order-label">
@@ -513,7 +484,7 @@ const LampOrderForm = () => {
               </div>
 
               {/* City / Delivery location */}
-              <div className="lamp-order-col-span-2">
+              <div className="lamp-order-col-span-1">
                 <label className="lamp-order-label">
                   <MapPin size={15} />
                   <span>{isEn ? 'City / Delivery Region' : 'Город / Регион доставки'}</span>
