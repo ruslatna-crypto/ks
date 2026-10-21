@@ -1,6 +1,47 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(robots\\.txt|sitemap\\.xml)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/admin",
@@ -10,7 +51,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!api/|admin/|uploads/|assets/|images/|robots\\.txt|sitemap\\.xml|favicon\\.ico|favicon\\.svg|config\\.yml).*)",
+      "source": "/((?!api/|admin/|uploads/|assets/|images/|pdf/|videos/|robots\\.txt|sitemap\\.xml|favicon\\.ico|favicon\\.svg|config\\.yml).*)",
       "destination": "/index.html"
     }
   ]

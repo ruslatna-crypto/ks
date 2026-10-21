@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Lightbox from '../components/Lightbox';
 import SEO from '../components/SEO';
+import LampOrderForm from '../components/LampOrderForm';
 import { useLanguage } from '../context/LanguageContext';
 
 const EMITTER_TYPES_DATA = [
@@ -540,6 +541,9 @@ const LampPage = () => {
             </p>
           </div>
         </section>
+
+        {/* Order Form Section placed at bottom of content directly before footer */}
+        <LampOrderForm />
       </div>
 
       <Lightbox
