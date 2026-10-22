@@ -131,22 +131,154 @@ async function runTests() {
     if (statusCode !== 400) throw new Error('Expected 400 for honeypot');
   }
 
-  console.log('\n--- TEST 4: Reject Submission Faster than 1.2s (400) ---');
+  console.log('\n--- TEST 4: Timestamp Verification Suite (_t) ---');
+  // 4a. Correct fresh timestamp (Date.now()) -> proceeds past timestamp check
   {
     const { req, res, getResult } = createMockReqRes({
       method: 'POST',
       body: {
         items: [{ id: 'RC', quantity: 1 }],
-        name: 'Speed Bot',
+        name: 'Честный Пользователь',
         phone: '+998901234567',
-        email: 'speed@test.com',
-        _t: Date.now() - 200 // 200ms ago
+        email: 'user@test.com',
+        _t: Date.now() // Fresh Unix ms timestamp
+      }
+    });
+    // Mock telegram so submission succeeds
+    const origFetch = global.fetch;
+    global.fetch = async () => ({ ok: true, json: async () => ({ ok: true, result: { message_id: 101 } }) });
+    try {
+      await orderHandler(req, res);
+      const { statusCode, responseData } = getResult();
+      console.log('4a Fresh timestamp Status:', statusCode);
+      if (statusCode !== 200) throw new Error('Expected 200 for fresh valid timestamp');
+    } finally {
+      global.fetch = origFetch;
+    }
+  }
+
+  // 4b. Missing timestamp -> 400
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'No Timestamp Bot',
+        phone: '+998901234567',
+        email: 'user@test.com'
+        // _t omitted
       }
     });
     await orderHandler(req, res);
     const { statusCode, responseData } = getResult();
-    console.log('Status:', statusCode, 'Result:', responseData);
-    if (statusCode !== 400) throw new Error('Expected 400 for fast submit');
+    console.log('4b Missing timestamp Status:', statusCode, 'Result:', responseData);
+    if (statusCode !== 400 || responseData.error !== 'Отсутствует временная метка отправки формы.') {
+      throw new Error('Expected 400 with missing timestamp error');
+    }
+  }
+
+  // 4c. Invalid non-numeric string / NaN -> 400
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'NaN Bot',
+        phone: '+998901234567',
+        email: 'user@test.com',
+        _t: 'abc_not_a_number'
+      }
+    });
+    await orderHandler(req, res);
+    const { statusCode, responseData } = getResult();
+    console.log('4c NaN timestamp Status:', statusCode, 'Result:', responseData);
+    if (statusCode !== 400 || responseData.error !== 'Некорректная временная метка формы.') {
+      throw new Error('Expected 400 with invalid timestamp error');
+    }
+  }
+
+  // 4d. Timestamp in seconds instead of milliseconds (< 1e11) -> 400
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'Seconds Bot',
+        phone: '+998901234567',
+        email: 'user@test.com',
+        _t: Math.floor(Date.now() / 1000) // Seconds (10 digits)
+      }
+    });
+    await orderHandler(req, res);
+    const { statusCode, responseData } = getResult();
+    console.log('4d Seconds timestamp Status:', statusCode, 'Result:', responseData);
+    if (statusCode !== 400 || responseData.error !== 'Некорректный формат временной метки: ожидаются миллисекунды (Unix timestamp ms).') {
+      throw new Error('Expected 400 with seconds format error');
+    }
+  }
+
+  // 4e. Future timestamp exceeding 2 min clock skew leeway -> 400
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'Far Future Bot',
+        phone: '+998901234567',
+        email: 'user@test.com',
+        _t: Date.now() + 10 * 60 * 1000 // 10 minutes in future
+      }
+    });
+    await orderHandler(req, res);
+    const { statusCode, responseData } = getResult();
+    console.log('4e Future timestamp Status:', statusCode, 'Result:', responseData);
+    if (statusCode !== 400 || responseData.error !== 'Недопустимая временная метка отправки формы.') {
+      throw new Error('Expected 400 with future timestamp error');
+    }
+  }
+
+  // 4f. Future timestamp within reasonable 2 min clock skew allowance -> allowed
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'Slight Skew User',
+        phone: '+998901234568',
+        email: 'skew@test.com',
+        _t: Date.now() + 30 * 1000 // 30s ahead due to client clock drift
+      }
+    });
+    const origFetch = global.fetch;
+    global.fetch = async () => ({ ok: true, json: async () => ({ ok: true, result: { message_id: 102 } }) });
+    try {
+      await orderHandler(req, res);
+      const { statusCode } = getResult();
+      console.log('4f Clock skew tolerance (30s ahead) Status:', statusCode);
+      if (statusCode !== 200) throw new Error('Expected 200 for acceptable clock skew');
+    } finally {
+      global.fetch = origFetch;
+    }
+  }
+
+  // 4g. Expired / stale timestamp (> 15 min old) -> 400
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'Expired Token Bot',
+        phone: '+998901234567',
+        email: 'user@test.com',
+        _t: Date.now() - 30 * 60 * 1000 // 30 minutes old
+      }
+    });
+    await orderHandler(req, res);
+    const { statusCode, responseData } = getResult();
+    console.log('4g Expired timestamp Status:', statusCode, 'Result:', responseData);
+    if (statusCode !== 400 || responseData.error !== 'Срок действия временной метки истек. Пожалуйста, обновите страницу.') {
+      throw new Error('Expected 400 with expired timestamp error');
+    }
   }
 
   console.log('\n--- TEST 5: Reject Oversized Body > 10KB (413) ---');
@@ -166,7 +298,7 @@ async function runTests() {
   {
     const { req, res, getResult } = createMockReqRes({
       method: 'POST',
-      body: { name: 'Иван', phone: '+998901234567', email: 'ivan@test.com' }
+      body: { name: 'Иван', phone: '+998901234567', email: 'ivan@test.com', _t: Date.now() }
     });
     await orderHandler(req, res);
     const { statusCode, responseData } = getResult();
@@ -344,47 +476,7 @@ async function runTests() {
     }
   }
 
-  console.log('\n--- TEST 13: Reject Future Timestamp in _t (400) ---');
-  {
-    const { req, res, getResult } = createMockReqRes({
-      method: 'POST',
-      body: {
-        items: [{ id: 'RC', quantity: 1 }],
-        name: 'Future Bot',
-        phone: '+998901234567',
-        email: 'future@test.com',
-        _t: Date.now() + 60000 // 60s in future
-      }
-    });
-    await orderHandler(req, res);
-    const { statusCode, responseData } = getResult();
-    console.log('Status:', statusCode, 'Result:', responseData);
-    if (statusCode !== 400 || responseData.error !== 'Недопустимая временная метка отправки формы.') {
-      throw new Error('Expected 400 for future _t timestamp');
-    }
-  }
-
-  console.log('\n--- TEST 14: Reject Invalid Non-numeric _t (400) ---');
-  {
-    const { req, res, getResult } = createMockReqRes({
-      method: 'POST',
-      body: {
-        items: [{ id: 'RC', quantity: 1 }],
-        name: 'Bad Timestamp Bot',
-        phone: '+998901234567',
-        email: 'badts@test.com',
-        _t: 'invalid_string'
-      }
-    });
-    await orderHandler(req, res);
-    const { statusCode, responseData } = getResult();
-    console.log('Status:', statusCode, 'Result:', responseData);
-    if (statusCode !== 400 || responseData.error !== 'Некорректная временная метка формы.') {
-      throw new Error('Expected 400 for non-numeric _t');
-    }
-  }
-
-  console.log('\n--- TEST 15: IP Rate Limiting (429 on 6th request within window) ---');
+  console.log('\n--- TEST 13: IP Rate Limiting (429 on 6th request within window) ---');
   {
     const originalFetch = global.fetch;
     global.fetch = async () => ({
@@ -403,7 +495,7 @@ async function runTests() {
             name: `User ${i}`,
             phone: `+99890000000${i}`,
             email: `user${i}@test.com`,
-            _t: Date.now() - 5000
+            _t: Date.now()
           },
           headers: { 'x-real-ip': testIp }
         });
@@ -420,7 +512,7 @@ async function runTests() {
           name: 'User 6',
           phone: '+998900000006',
           email: 'user6@test.com',
-          _t: Date.now() - 5000
+          _t: Date.now()
         },
         headers: { 'x-real-ip': testIp }
       });
@@ -433,13 +525,13 @@ async function runTests() {
     }
   }
 
-  console.log('\n--- TEST 16: Cloudflare Turnstile Opt-in Verification ---');
+  console.log('\n--- TEST 14: Cloudflare Turnstile Opt-in Verification ---');
   {
     const originalFetch = global.fetch;
     process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY = 'mock_secret_key_for_testing';
 
     try {
-      // 16a. Missing token when key configured -> 400
+      // 14a. Missing token when key configured -> 400
       const missingTokenCall = createMockReqRes({
         method: 'POST',
         body: {
@@ -447,7 +539,7 @@ async function runTests() {
           name: 'No Token User',
           phone: '+998901234567',
           email: 'notoken@test.com',
-          _t: Date.now() - 5000
+          _t: Date.now()
         },
         headers: { 'x-real-ip': '198.51.100.99' }
       });
@@ -455,7 +547,7 @@ async function runTests() {
       const missingRes = missingTokenCall.getResult();
       if (missingRes.statusCode !== 400) throw new Error('Expected 400 for missing Turnstile token');
 
-      // 16b. Invalid token rejected by Cloudflare -> 403
+      // 14b. Invalid token rejected by Cloudflare -> 403
       global.fetch = async (url) => {
         if (url.includes('turnstile')) {
           return {
@@ -474,7 +566,7 @@ async function runTests() {
           phone: '+998901234567',
           email: 'invalidtoken@test.com',
           turnstile_token: 'bad_token',
-          _t: Date.now() - 5000
+          _t: Date.now()
         },
         headers: { 'x-real-ip': '198.51.100.99' }
       });
@@ -482,7 +574,7 @@ async function runTests() {
       const invalidRes = invalidTokenCall.getResult();
       if (invalidRes.statusCode !== 403) throw new Error('Expected 403 for invalid Turnstile token');
 
-      // 16c. Valid token accepted by Cloudflare -> 200
+      // 14c. Valid token accepted by Cloudflare -> 200
       global.fetch = async (url) => {
         if (url.includes('turnstile')) {
           return {
@@ -504,7 +596,7 @@ async function runTests() {
           phone: '+998901234567',
           email: 'validtoken@test.com',
           turnstile_token: 'good_token',
-          _t: Date.now() - 5000
+          _t: Date.now()
         },
         headers: { 'x-real-ip': '198.51.100.99' }
       });
@@ -519,7 +611,7 @@ async function runTests() {
     }
   }
 
-  console.log('\nALL 16 BACKEND SECURITY, CORS, ANTI-SPAM & SANITIZATION TESTS PASSED!');
+  console.log('\nALL 14 BACKEND SECURITY, CORS, ANTI-SPAM & SANITIZATION SUITE TESTS PASSED!');
 }
 
 runTests().catch(err => {

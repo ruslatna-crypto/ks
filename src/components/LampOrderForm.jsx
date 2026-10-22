@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Send,
@@ -54,7 +54,6 @@ const LampOrderForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successData, setSuccessData] = useState(null);
-  const mountTimeRef = useRef(Date.now());
 
   // Toggle card on click
   const handleToggleCard = (itemId) => {
@@ -179,7 +178,7 @@ const LampOrderForm = () => {
         email: formData.email.trim(),
         city: formData.city.trim(),
         comment: formData.comment.trim(),
-        _t: mountTimeRef.current,
+        _t: Date.now(),
         company_website: honeypot
       };
 
@@ -229,7 +228,6 @@ const LampOrderForm = () => {
     setSuccessData(null);
     setErrorMsg('');
     setQuantities({});
-    mountTimeRef.current = Date.now();
     setFormData({
       name: '',
       phone: '',

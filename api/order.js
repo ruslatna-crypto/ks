@@ -223,38 +223,48 @@ export default async function handler(req, res) {
     }, matchedOrigin);
   }
 
-  // 3. Anti-spam: Submission speed check (token timestamp)
+  // 3. Anti-spam: Submission timestamp check (_t)
   const now = Date.now();
-  if (body._t !== undefined && body._t !== null) {
-    const tNum = Number(body._t);
-    if (isNaN(tNum) || tNum <= 0) {
-      return sendResponse(res, 400, {
-        ok: false,
-        error: 'Некорректная временная метка формы.'
-      }, matchedOrigin);
-    }
-    const elapsed = now - tNum;
-    // Disallow timestamps noticeably in the future (>5s clock skew allowance)
-    if (elapsed < -5000) {
-      return sendResponse(res, 400, {
-        ok: false,
-        error: 'Недопустимая временная метка отправки формы.'
-      }, matchedOrigin);
-    }
-    // If submitted faster than 1.2s, likely a bot script
-    if (elapsed >= 0 && elapsed < 1200) {
-      return sendResponse(res, 400, {
-        ok: false,
-        error: 'Форма заполнена слишком быстро. Пожалуйста, проверьте данные и попробуйте снова.'
-      }, matchedOrigin);
-    }
-    // Reject submissions older than 24h (stale replay protection)
-    if (elapsed > 24 * 60 * 60 * 1000) {
-      return sendResponse(res, 400, {
-        ok: false,
-        error: 'Срок действия формы истек. Пожалуйста, обновите страницу.'
-      }, matchedOrigin);
-    }
+  if (body._t === undefined || body._t === null || body._t === '') {
+    return sendResponse(res, 400, {
+      ok: false,
+      error: 'Отсутствует временная метка отправки формы.'
+    }, matchedOrigin);
+  }
+
+  const tNum = Number(body._t);
+  if (isNaN(tNum) || !isFinite(tNum) || tNum <= 0) {
+    return sendResponse(res, 400, {
+      ok: false,
+      error: 'Некорректная временная метка формы.'
+    }, matchedOrigin);
+  }
+
+  // Check seconds vs milliseconds (Unix timestamp in ms is >= 1e11)
+  if (tNum < 1e11) {
+    return sendResponse(res, 400, {
+      ok: false,
+      error: 'Некорректный формат временной метки: ожидаются миллисекунды (Unix timestamp ms).'
+    }, matchedOrigin);
+  }
+
+  const elapsed = now - tNum;
+  // Disallow timestamps noticeably in the future (>2 min clock skew allowance)
+  const MAX_FUTURE_SKEW_MS = 2 * 60 * 1000; // 2 minutes allowance for client clock drift
+  if (elapsed < -MAX_FUTURE_SKEW_MS) {
+    return sendResponse(res, 400, {
+      ok: false,
+      error: 'Недопустимая временная метка отправки формы.'
+    }, matchedOrigin);
+  }
+
+  // Reject stale submissions older than 15 minutes (replay protection)
+  const MAX_TIMESTAMP_AGE_MS = 15 * 60 * 1000; // 15 minutes
+  if (elapsed > MAX_TIMESTAMP_AGE_MS) {
+    return sendResponse(res, 400, {
+      ok: false,
+      error: 'Срок действия временной метки истек. Пожалуйста, обновите страницу.'
+    }, matchedOrigin);
   }
 
   // 3b. Anti-spam: Cloudflare Turnstile verification (opt-in via CLOUDFLARE_TURNSTILE_SECRET_KEY)
