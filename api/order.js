@@ -22,13 +22,30 @@ const ALLOWED_ORIGINS = [
 function checkOrigin(req) {
   const origin = req.headers['origin'];
   if (!origin) return null; // Same-origin or non-browser client
-  if (
-    ALLOWED_ORIGINS.includes(origin) ||
-    origin.endsWith('.infraks.uz') ||
-    origin.endsWith('.vercel.app')
-  ) {
+
+  // 1. Static confirmed production & development origins
+  if (ALLOWED_ORIGINS.includes(origin)) {
     return origin;
   }
+
+  // 2. Verified infraks.uz domain and its subdomains (strictly HTTPS)
+  if (/^https:\/\/([a-zA-Z0-9-]+\.)*infraks\.uz$/.test(origin)) {
+    return origin;
+  }
+
+  // 3. Exact Vercel deployment URL injected by Vercel runtime for preview/production
+  if (process.env.VERCEL_URL && origin === `https://${process.env.VERCEL_URL}`) {
+    return origin;
+  }
+  if (process.env.VERCEL_BRANCH_URL && origin === `https://${process.env.VERCEL_BRANCH_URL}`) {
+    return origin;
+  }
+
+  // 4. Default project alias on Vercel (if configured)
+  if (origin === 'https://ks.vercel.app') {
+    return origin;
+  }
+
   return false; // Disallowed origin
 }
 
@@ -379,7 +396,7 @@ export default async function handler(req, res) {
       console.error('[API/ORDER ERROR] Telegram API rejected message:', tgData?.description || tgResponse.statusText);
       return sendResponse(res, 502, {
         ok: false,
-        error: `Ошибка доставки сообщения через Telegram: ${tgData?.description || 'Неизвестная ошибка Telegram API'}`
+        error: 'Не удалось отправить заявку. Пожалуйста, повторите попытку позже или свяжитесь с нами по телефону.'
       }, matchedOrigin);
     }
 
@@ -399,13 +416,13 @@ export default async function handler(req, res) {
       console.error('[API/ORDER ERROR] Telegram API request timed out (10s)');
       return sendResponse(res, 504, {
         ok: false,
-        error: 'Превышено время ожидания ответа от сервера Telegram (тайм-аут 10 с). Пожалуйста, повторите попытку.'
+        error: 'Превышено время ожидания ответа сервера. Пожалуйста, повторите попытку позже.'
       }, matchedOrigin);
     }
     console.error('[API/ORDER ERROR] Network error connecting to Telegram API:', networkErr.message);
     return sendResponse(res, 502, {
       ok: false,
-      error: 'Сетевой сбой при обращении к серверу Telegram. Пожалуйста, попробуйте позже или свяжитесь по телефону.'
+      error: 'Не удалось отправить заявку из-за сбоя связи. Пожалуйста, попробуйте позже или свяжитесь по телефону.'
     }, matchedOrigin);
   }
 }

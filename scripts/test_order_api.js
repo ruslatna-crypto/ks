@@ -62,16 +62,57 @@ async function runTests() {
     if (statusCode !== 405) throw new Error('Expected 405 for GET');
   }
 
-  console.log('\n--- TEST 2: Reject Disallowed CORS Origin (403) ---');
+  console.log('\n--- TEST 2: CORS Validation (SEC-07: Reject Unauthorized, Allow Verified) ---');
   {
-    const { req, res, getResult } = createMockReqRes({
+    // 2a. Reject arbitrary external origin
+    const tExternal = createMockReqRes({
       method: 'POST',
       headers: { origin: 'https://malicious-attacker.com' }
     });
-    await orderHandler(req, res);
-    const { statusCode, responseData } = getResult();
-    console.log('Status:', statusCode, 'Result:', responseData);
-    if (statusCode !== 403) throw new Error('Expected 403 for disallowed origin');
+    await orderHandler(tExternal.req, tExternal.res);
+    if (tExternal.getResult().statusCode !== 403) throw new Error('Expected 403 for malicious origin');
+
+    // 2b. Reject arbitrary vercel.app origin (SEC-07 fix verification)
+    const tVercel = createMockReqRes({
+      method: 'POST',
+      headers: { origin: 'https://arbitrary-user.vercel.app' }
+    });
+    await orderHandler(tVercel.req, tVercel.res);
+    if (tVercel.getResult().statusCode !== 403) throw new Error('Expected 403 for arbitrary *.vercel.app domain');
+
+    // 2c. Reject lookalike fake domain
+    const tFake = createMockReqRes({
+      method: 'POST',
+      headers: { origin: 'https://fake-infraks.uz' }
+    });
+    await orderHandler(tFake.req, tFake.res);
+    if (tFake.getResult().statusCode !== 403) throw new Error('Expected 403 for fake-infraks.uz');
+
+    // 2d. Allow confirmed production domain via OPTIONS preflight
+    const tProd = createMockReqRes({
+      method: 'OPTIONS',
+      headers: { origin: 'https://www.infraks.uz' }
+    });
+    await orderHandler(tProd.req, tProd.res);
+    const prodRes = tProd.getResult();
+    if (prodRes.statusCode !== 204 || prodRes.headers['access-control-allow-origin'] !== 'https://www.infraks.uz') {
+      throw new Error('Expected 204 and CORS header for https://www.infraks.uz');
+    }
+
+    // 2e. Allow exact deployment URL when VERCEL_URL is set
+    process.env.VERCEL_URL = 'ks-git-preview-test.vercel.app';
+    const tPreview = createMockReqRes({
+      method: 'OPTIONS',
+      headers: { origin: 'https://ks-git-preview-test.vercel.app' }
+    });
+    await orderHandler(tPreview.req, tPreview.res);
+    const previewRes = tPreview.getResult();
+    delete process.env.VERCEL_URL;
+    if (previewRes.statusCode !== 204 || previewRes.headers['access-control-allow-origin'] !== 'https://ks-git-preview-test.vercel.app') {
+      throw new Error('Expected 204 and CORS header for verified VERCEL_URL');
+    }
+
+    console.log('CORS SEC-07 checks passed: unauthorized origins rejected, verified origins allowed.');
   }
 
   console.log('\n--- TEST 3: Reject Honeypot (Spam Bot) (400) ---');
@@ -229,7 +270,81 @@ async function runTests() {
     }
   }
 
-  console.log('\nALL 10 BACKEND SECURITY & VALIDATION TESTS PASSED!');
+  console.log('\n--- TEST 11: Telegram API Error Sanitization (SEC-08) ---');
+  {
+    const originalFetch = global.fetch;
+    global.fetch = async () => ({
+      ok: false,
+      status: 400,
+      json: async () => ({ ok: false, description: 'Bad Request: chat not found' })
+    });
+
+    try {
+      const { req, res, getResult } = createMockReqRes({
+        method: 'POST',
+        body: {
+          items: [{ id: 'RC', quantity: 1 }],
+          name: 'Иван Ошибкин',
+          phone: '+998901112233',
+          email: 'errtest@example.com',
+          _t: Date.now() - 5000
+        },
+        headers: { 'x-real-ip': '192.168.1.101' }
+      });
+      await orderHandler(req, res);
+      const { statusCode, responseData } = getResult();
+      console.log('Status:', statusCode, 'Result:', responseData);
+      if (statusCode !== 502) throw new Error('Expected 502 for Telegram API failure');
+      if (responseData.error !== 'Не удалось отправить заявку. Пожалуйста, повторите попытку позже или свяжитесь с нами по телефону.') {
+        throw new Error('Expected sanitized neutral error message');
+      }
+      if (JSON.stringify(responseData).includes('Telegram') || JSON.stringify(responseData).includes('chat not found')) {
+        throw new Error('Response must not leak internal Telegram details');
+      }
+      console.log('SEC-08 rejection sanitization test passed: internal details hidden from client.');
+    } finally {
+      global.fetch = originalFetch;
+    }
+  }
+
+  console.log('\n--- TEST 12: Telegram Timeout Sanitization (SEC-08) ---');
+  {
+    const originalFetch = global.fetch;
+    global.fetch = async () => {
+      const err = new Error('The operation was aborted');
+      err.name = 'AbortError';
+      throw err;
+    };
+
+    try {
+      const { req, res, getResult } = createMockReqRes({
+        method: 'POST',
+        body: {
+          items: [{ id: 'RC', quantity: 1 }],
+          name: 'Иван Таймутов',
+          phone: '+998901112244',
+          email: 'timeout@example.com',
+          _t: Date.now() - 5000
+        },
+        headers: { 'x-real-ip': '192.168.1.102' }
+      });
+      await orderHandler(req, res);
+      const { statusCode, responseData } = getResult();
+      console.log('Status:', statusCode, 'Result:', responseData);
+      if (statusCode !== 504) throw new Error('Expected 504 for timeout');
+      if (responseData.error !== 'Превышено время ожидания ответа сервера. Пожалуйста, повторите попытку позже.') {
+        throw new Error('Expected sanitized neutral timeout message');
+      }
+      if (JSON.stringify(responseData).includes('Telegram')) {
+        throw new Error('Response must not leak internal Telegram service name');
+      }
+      console.log('SEC-08 timeout sanitization test passed: internal details hidden from client.');
+    } finally {
+      global.fetch = originalFetch;
+    }
+  }
+
+  console.log('\nALL 12 BACKEND SECURITY, CORS & SANITIZATION TESTS PASSED!');
 }
 
 runTests().catch(err => {
