@@ -28,31 +28,6 @@
       ]
     },
     {
-      "source": "/admin/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=()"
-        },
-        {
-          "key": "Content-Security-Policy-Report-Only",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://api.github.com https://github.com https://unpkg.com; frame-src 'self' https://www.google.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com;"
-        }
-      ]
-    },
-    {
       "source": "/assets/(.*)",
       "headers": [
         {
@@ -88,16 +63,9 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/admin",
-      "destination": "/admin/",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
-      "source": "/((?!api/|admin/|uploads/|assets/|images/|pdf/|videos/|robots\\.txt|sitemap\\.xml|favicon\\.ico|favicon\\.svg|config\\.yml).*)",
+      "source": "/((?!api/|uploads/|assets/|images/|pdf/|videos/|robots\\.txt|sitemap\\.xml|favicon\\.ico|favicon\\.svg).*)",
       "destination": "/index.html"
     }
   ]

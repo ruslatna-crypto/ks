@@ -17,19 +17,9 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       {
-        name: 'admin-and-api-server',
+        name: 'api-order-server',
         configureServer(server) {
           server.middlewares.use(async (req, res, next) => {
-            if (req.url === '/admin') {
-              res.writeHead(301, { Location: '/admin/' });
-              res.end();
-              return;
-            }
-            if (req.url === '/admin/') {
-              req.url = '/admin/index.html';
-              next();
-              return;
-            }
             if (req.url === '/api/order' || req.url?.startsWith('/api/order?')) {
               try {
                 await orderHandler(req, res);
