@@ -26,14 +26,14 @@
 | Переменная | Описание | Значение по умолчанию | Обязательность |
 | :--- | :--- | :--- | :--- |
 | `TELEGRAM_BOT_TOKEN` | Токен бота от [@BotFather](https://t.me/BotFather) | — | **Обязательно** |
-| `TELEGRAM_CHAT_ID` | Telegram Chat ID владельца/руководителя | `193632181` | Рекомендуется |
+| `TELEGRAM_CHAT_ID` | Telegram Chat ID владельца/руководителя | `your_telegram_chat_id_here` | Рекомендуется |
 
 ### Локальный файл `.env.local`
 В корне проекта создайте или проверьте файл `.env.local` (он добавлен в `.gitignore`):
 
 ```bash
-TELEGRAM_BOT_TOKEN=REDACTED_ROTATED_TOKEN
-TELEGRAM_CHAT_ID=193632181
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+TELEGRAM_CHAT_ID=your_telegram_chat_id_here
 ```
 
 ---
@@ -75,8 +75,8 @@ node scripts/test_order_api.js
 1. Перейдите в проект на [Vercel Dashboard](https://vercel.com).
 2. Откройте **Settings** → **Environment Variables**.
 3. Добавьте переменные для сред **Production**, **Preview** и **Development**:
-   - `TELEGRAM_BOT_TOKEN` = `8298692023:AAH7Eyq-ZgMXjdyqWFA1YgFC_9czyorh4Jc`
-   - `TELEGRAM_CHAT_ID` = `193632181`
+   - `TELEGRAM_BOT_TOKEN` = `your_telegram_bot_token_here`
+   - `TELEGRAM_CHAT_ID` = `your_telegram_chat_id_here`
 4. Нажмите **Save**.
 
 ### 2. Маршрутизация в `vercel.json`
