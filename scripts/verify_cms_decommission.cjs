@@ -60,7 +60,7 @@ check('vercel.json is valid and free of /admin headers, redirects, and regex', (
   // CSP check in root
   const rootHeader = vercel.headers.find(h => h.source === '/(.*)');
   assert(rootHeader, 'Root security headers must be preserved');
-  const csp = rootHeader.headers.find(h => h.key === 'Content-Security-Policy-Report-Only');
+  const csp = rootHeader.headers.find(h => h.key === 'Content-Security-Policy' || h.key === 'Content-Security-Policy-Report-Only');
   assert(csp, 'CSP header must be present');
   assert(!csp.value.includes('unpkg.com'), 'Root CSP must not contain unpkg.com');
   assert(!csp.value.includes('api.github.com'), 'Root CSP must not contain api.github.com');

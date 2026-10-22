@@ -344,7 +344,182 @@ async function runTests() {
     }
   }
 
-  console.log('\nALL 12 BACKEND SECURITY, CORS & SANITIZATION TESTS PASSED!');
+  console.log('\n--- TEST 13: Reject Future Timestamp in _t (400) ---');
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'Future Bot',
+        phone: '+998901234567',
+        email: 'future@test.com',
+        _t: Date.now() + 60000 // 60s in future
+      }
+    });
+    await orderHandler(req, res);
+    const { statusCode, responseData } = getResult();
+    console.log('Status:', statusCode, 'Result:', responseData);
+    if (statusCode !== 400 || responseData.error !== 'Недопустимая временная метка отправки формы.') {
+      throw new Error('Expected 400 for future _t timestamp');
+    }
+  }
+
+  console.log('\n--- TEST 14: Reject Invalid Non-numeric _t (400) ---');
+  {
+    const { req, res, getResult } = createMockReqRes({
+      method: 'POST',
+      body: {
+        items: [{ id: 'RC', quantity: 1 }],
+        name: 'Bad Timestamp Bot',
+        phone: '+998901234567',
+        email: 'badts@test.com',
+        _t: 'invalid_string'
+      }
+    });
+    await orderHandler(req, res);
+    const { statusCode, responseData } = getResult();
+    console.log('Status:', statusCode, 'Result:', responseData);
+    if (statusCode !== 400 || responseData.error !== 'Некорректная временная метка формы.') {
+      throw new Error('Expected 400 for non-numeric _t');
+    }
+  }
+
+  console.log('\n--- TEST 15: IP Rate Limiting (429 on 6th request within window) ---');
+  {
+    const originalFetch = global.fetch;
+    global.fetch = async () => ({
+      ok: true,
+      json: async () => ({ ok: true, result: { message_id: 1000 } })
+    });
+
+    const testIp = '198.51.100.42';
+    try {
+      // Send 5 successful requests with varying phones/items to avoid deduplication triggering
+      for (let i = 1; i <= 5; i++) {
+        const { req, res, getResult } = createMockReqRes({
+          method: 'POST',
+          body: {
+            items: [{ id: 'RC', quantity: i }],
+            name: `User ${i}`,
+            phone: `+99890000000${i}`,
+            email: `user${i}@test.com`,
+            _t: Date.now() - 5000
+          },
+          headers: { 'x-real-ip': testIp }
+        });
+        await orderHandler(req, res);
+        const { statusCode } = getResult();
+        if (statusCode !== 200) throw new Error(`Expected 200 on request #${i}`);
+      }
+
+      // 6th request from the same IP must be rejected with 429
+      const call6 = createMockReqRes({
+        method: 'POST',
+        body: {
+          items: [{ id: 'GI', quantity: 1 }],
+          name: 'User 6',
+          phone: '+998900000006',
+          email: 'user6@test.com',
+          _t: Date.now() - 5000
+        },
+        headers: { 'x-real-ip': testIp }
+      });
+      await orderHandler(call6.req, call6.res);
+      const res6 = call6.getResult();
+      console.log('Rate Limit 6th call Status:', res6.statusCode, 'Result:', res6.responseData);
+      if (res6.statusCode !== 429) throw new Error('Expected 429 on 6th request from same IP');
+    } finally {
+      global.fetch = originalFetch;
+    }
+  }
+
+  console.log('\n--- TEST 16: Cloudflare Turnstile Opt-in Verification ---');
+  {
+    const originalFetch = global.fetch;
+    process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY = 'mock_secret_key_for_testing';
+
+    try {
+      // 16a. Missing token when key configured -> 400
+      const missingTokenCall = createMockReqRes({
+        method: 'POST',
+        body: {
+          items: [{ id: 'RC', quantity: 1 }],
+          name: 'No Token User',
+          phone: '+998901234567',
+          email: 'notoken@test.com',
+          _t: Date.now() - 5000
+        },
+        headers: { 'x-real-ip': '198.51.100.99' }
+      });
+      await orderHandler(missingTokenCall.req, missingTokenCall.res);
+      const missingRes = missingTokenCall.getResult();
+      if (missingRes.statusCode !== 400) throw new Error('Expected 400 for missing Turnstile token');
+
+      // 16b. Invalid token rejected by Cloudflare -> 403
+      global.fetch = async (url) => {
+        if (url.includes('turnstile')) {
+          return {
+            ok: true,
+            json: async () => ({ success: false, 'error-codes': ['invalid-input-response'] })
+          };
+        }
+        return { ok: true, json: async () => ({ ok: true }) };
+      };
+
+      const invalidTokenCall = createMockReqRes({
+        method: 'POST',
+        body: {
+          items: [{ id: 'RC', quantity: 1 }],
+          name: 'Invalid Token User',
+          phone: '+998901234567',
+          email: 'invalidtoken@test.com',
+          turnstile_token: 'bad_token',
+          _t: Date.now() - 5000
+        },
+        headers: { 'x-real-ip': '198.51.100.99' }
+      });
+      await orderHandler(invalidTokenCall.req, invalidTokenCall.res);
+      const invalidRes = invalidTokenCall.getResult();
+      if (invalidRes.statusCode !== 403) throw new Error('Expected 403 for invalid Turnstile token');
+
+      // 16c. Valid token accepted by Cloudflare -> 200
+      global.fetch = async (url) => {
+        if (url.includes('turnstile')) {
+          return {
+            ok: true,
+            json: async () => ({ success: true })
+          };
+        }
+        return {
+          ok: true,
+          json: async () => ({ ok: true, result: { message_id: 2000 } })
+        };
+      };
+
+      const validTokenCall = createMockReqRes({
+        method: 'POST',
+        body: {
+          items: [{ id: 'RC', quantity: 1 }],
+          name: 'Valid Token User',
+          phone: '+998901234567',
+          email: 'validtoken@test.com',
+          turnstile_token: 'good_token',
+          _t: Date.now() - 5000
+        },
+        headers: { 'x-real-ip': '198.51.100.99' }
+      });
+      await orderHandler(validTokenCall.req, validTokenCall.res);
+      const validRes = validTokenCall.getResult();
+      if (validRes.statusCode !== 200) throw new Error('Expected 200 for valid Turnstile token');
+
+      console.log('Turnstile opt-in tests passed: missing token 400, invalid token 403, valid token 200.');
+    } finally {
+      delete process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY;
+      global.fetch = originalFetch;
+    }
+  }
+
+  console.log('\nALL 16 BACKEND SECURITY, CORS, ANTI-SPAM & SANITIZATION TESTS PASSED!');
 }
 
 runTests().catch(err => {

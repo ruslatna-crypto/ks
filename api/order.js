@@ -11,6 +11,26 @@ const MAX_REQUESTS_PER_WINDOW = 5;
 const DEDUP_WINDOW_MS = 30 * 1000; // 30 seconds
 const TELEGRAM_TIMEOUT_MS = 10 * 1000; // 10 seconds
 
+function pruneStores(now) {
+  if (rateLimitMap.size > 500) {
+    for (const [ip, timestamps] of rateLimitMap.entries()) {
+      const active = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW_MS);
+      if (active.length === 0) {
+        rateLimitMap.delete(ip);
+      } else {
+        rateLimitMap.set(ip, active);
+      }
+    }
+  }
+  if (recentRequestsMap.size > 500) {
+    for (const [key, ts] of recentRequestsMap.entries()) {
+      if (now - ts >= DEDUP_WINDOW_MS) {
+        recentRequestsMap.delete(key);
+      }
+    }
+  }
+}
+
 const ALLOWED_ORIGINS = [
   'https://www.infraks.uz',
   'https://infraks.uz',
@@ -205,24 +225,87 @@ export default async function handler(req, res) {
 
   // 3. Anti-spam: Submission speed check (token timestamp)
   const now = Date.now();
-  if (body._t && typeof body._t === 'number') {
-    const elapsed = now - body._t;
+  if (body._t !== undefined && body._t !== null) {
+    const tNum = Number(body._t);
+    if (isNaN(tNum) || tNum <= 0) {
+      return sendResponse(res, 400, {
+        ok: false,
+        error: 'Некорректная временная метка формы.'
+      }, matchedOrigin);
+    }
+    const elapsed = now - tNum;
+    // Disallow timestamps noticeably in the future (>5s clock skew allowance)
+    if (elapsed < -5000) {
+      return sendResponse(res, 400, {
+        ok: false,
+        error: 'Недопустимая временная метка отправки формы.'
+      }, matchedOrigin);
+    }
     // If submitted faster than 1.2s, likely a bot script
-    if (elapsed > 0 && elapsed < 1200) {
+    if (elapsed >= 0 && elapsed < 1200) {
       return sendResponse(res, 400, {
         ok: false,
         error: 'Форма заполнена слишком быстро. Пожалуйста, проверьте данные и попробуйте снова.'
       }, matchedOrigin);
     }
+    // Reject submissions older than 24h (stale replay protection)
+    if (elapsed > 24 * 60 * 60 * 1000) {
+      return sendResponse(res, 400, {
+        ok: false,
+        error: 'Срок действия формы истек. Пожалуйста, обновите страницу.'
+      }, matchedOrigin);
+    }
+  }
+
+  // 3b. Anti-spam: Cloudflare Turnstile verification (opt-in via CLOUDFLARE_TURNSTILE_SECRET_KEY)
+  const turnstileSecret = process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY;
+  if (turnstileSecret) {
+    const turnstileToken = body.turnstile_token || body['cf-turnstile-response'];
+    if (!turnstileToken || typeof turnstileToken !== 'string') {
+      return sendResponse(res, 400, {
+        ok: false,
+        error: 'Требуется подтверждение проверки безопасности (Turnstile token missing).'
+      }, matchedOrigin);
+    }
+    try {
+      const cfParams = new URLSearchParams();
+      cfParams.append('secret', turnstileSecret);
+      cfParams.append('response', turnstileToken);
+      if (req.headers['x-real-ip']) {
+        cfParams.append('remoteip', req.headers['x-real-ip']);
+      }
+      const cfRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: cfParams.toString()
+      });
+      const cfData = await cfRes.json().catch(() => ({}));
+      if (!cfRes.ok || !cfData.success) {
+        console.warn('[API/ORDER WARN] Cloudflare Turnstile validation failed:', cfData['error-codes'] || 'unknown');
+        return sendResponse(res, 403, {
+          ok: false,
+          error: 'Проверка защиты от спама не пройдена. Пожалуйста, попробуйте снова.'
+        }, matchedOrigin);
+      }
+    } catch (cfErr) {
+      console.error('[API/ORDER ERROR] Turnstile verification network error:', cfErr.message);
+      return sendResponse(res, 502, {
+        ok: false,
+        error: 'Сбой проверки безопасности. Пожалуйста, попробуйте позже.'
+      }, matchedOrigin);
+    }
   }
 
   // 4. Rate Limiting by IP (warm serverless instance scope)
-  const clientIp = (
+  pruneStores(now);
+
+  const rawIp = (
     req.headers['x-real-ip'] ||
     req.headers['x-forwarded-for']?.split(',')[0]?.trim() ||
     req.socket?.remoteAddress ||
     '127.0.0.1'
   );
+  const clientIp = typeof rawIp === 'string' && rawIp.trim().length > 0 ? rawIp.trim() : '127.0.0.1';
 
   const ipTimestamps = rateLimitMap.get(clientIp) || [];
   const recentTimestamps = ipTimestamps.filter(t => now - t < RATE_LIMIT_WINDOW_MS);
