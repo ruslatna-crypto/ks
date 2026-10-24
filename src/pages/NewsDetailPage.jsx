@@ -89,7 +89,7 @@ const NewsDetailPage = () => {
           )}
 
           <div style={{ fontSize: '14px', lineHeight: 1.75, color: 'var(--color-text)' }}>
-            {renderContent(item.content)}
+            {renderMarkdownBody(item.content)}
           </div>
 
           <div style={{ marginTop: '48px', paddingTop: '24px', borderTop: '1px solid var(--color-border)' }}>

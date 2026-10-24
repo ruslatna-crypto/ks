@@ -39,7 +39,13 @@ const SANITIZE_CONFIG = {
 
 export function sanitizeClinicalHtml(html) {
   if (!html || typeof html !== 'string') return '';
-  return DOMPurify.sanitize(html, SANITIZE_CONFIG);
+  const purify = (typeof DOMPurify === 'function' && typeof DOMPurify.sanitize !== 'function' && typeof window !== 'undefined')
+    ? DOMPurify(window)
+    : DOMPurify;
+  if (purify && typeof purify.sanitize === 'function') {
+    return purify.sanitize(html, SANITIZE_CONFIG);
+  }
+  return html;
 }
 
 export default function ClinicalCaseCard({
@@ -104,9 +110,16 @@ export default function ClinicalCaseCard({
             )}
           </div>
 
-          {/* Title */}
+          {/* Title with crawlable direct link */}
           <h3 className="clinical-card-title">
-            {title}
+            <Link
+              to={caseUrl}
+              onClick={(e) => e.stopPropagation()}
+              style={{ color: 'inherit', textDecoration: 'none' }}
+              title={lang === 'en' ? 'Open case page' : 'Открыть страницу наблюдения'}
+            >
+              {title}
+            </Link>
           </h3>
 
           {/* Tags row: Patient, Emitters */}

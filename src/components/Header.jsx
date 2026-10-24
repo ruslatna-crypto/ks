@@ -18,7 +18,7 @@ const VkIcon = ({ size = 15 }) => (
 );
 
 const Header = () => {
-  const { lang, switchLanguage } = useLanguage();
+  const { lang, switchLanguage, getEquivalentRoute } = useLanguage();
   const t = translations[lang];
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -137,7 +137,7 @@ const Header = () => {
   };
 
   const isMedActive = () => {
-    const medRoutes = ['/metod', '/klinik', '/clinical-cases'];
+    const medRoutes = ['/metod', '/klinik', '/clinical-cases', '/virus'];
     return medRoutes.some(r => isCurrent(r));
   };
 
@@ -171,22 +171,24 @@ const Header = () => {
 
               {/* Language Switcher & Author Site Link */}
               <div className="lang-switcher">
-                <button
+                <Link
+                  to={getEquivalentRoute(location.pathname, 'ru')}
                   className={`lang-btn ${lang === 'ru' ? 'active' : ''}`}
-                  onClick={() => switchLanguage('ru')}
                   title="Русский язык"
+                  hrefLang="ru"
                 >
                   <img src="/images/home/flag-1-3.svg" alt="РФ" />
                   <span>Рус</span>
-                </button>
-                <button
+                </Link>
+                <Link
+                  to={getEquivalentRoute(location.pathname, 'en')}
                   className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
-                  onClick={() => switchLanguage('en')}
                   title="English version"
+                  hrefLang="en"
                 >
                   <img src="/images/home/flag-1-1.svg" alt="EN" />
                   <span>Eng</span>
-                </button>
+                </Link>
                 <a
                   href="https://rakhimovr.uz/"
                   target="_blank"
@@ -231,6 +233,12 @@ const Header = () => {
                   <Link to={getPath('/sushka')} className="dropdown-item">
                     {t.menu.sushka}
                   </Link>
+                  <Link to={getPath('/sush-ustanovka')} className="dropdown-item">
+                    {t.menu.sushUstanovka || 'Сушильная установка «Узбекистан-3»'}
+                  </Link>
+                  <Link to={getPath('/metodikasushka')} className="dropdown-item">
+                    {t.menu.metodikaSushka || 'Методика сушки'}
+                  </Link>
                   <Link to={getPath('/plenka')} className="dropdown-item">
                     {t.menu.plenka}
                   </Link>
@@ -261,6 +269,9 @@ const Header = () => {
                   <Link to={getPath('/metod')} className="dropdown-item">
                     {t.menu.metod}
                   </Link>
+                  <Link to={getPath('/virus')} className="dropdown-item">
+                    {t.menu.virus || 'Метод лечения от вирусов'}
+                  </Link>
                   <Link to={getPath('/klinik')} className="dropdown-item">
                     {t.menu.klinik}
                   </Link>
@@ -274,6 +285,20 @@ const Header = () => {
                     <span>{t.menu.lectures}</span>
                   </a>
                 </div>
+              </li>
+
+              {/* Статьи / Articles */}
+              <li className="nav-item-wrap">
+                <Link to={getPath('/articles')} className={`nav-item-link ${isCurrent('/articles') ? 'active' : ''}`}>
+                  {t.header.articles}
+                </Link>
+              </li>
+
+              {/* Новости / News */}
+              <li className="nav-item-wrap">
+                <Link to={getPath('/news')} className={`nav-item-link ${isCurrent('/news') ? 'active' : ''}`}>
+                  {t.header.news}
+                </Link>
               </li>
 
               <li className="nav-item-wrap">
@@ -402,20 +427,26 @@ const Header = () => {
 
             {/* Language Switcher in Mobile Drawer */}
             <div className="lang-switcher" style={{ marginBottom: 22, width: 'fit-content' }}>
-              <button
+              <Link
+                to={getEquivalentRoute(location.pathname, 'ru')}
                 className={`lang-btn ${lang === 'ru' ? 'active' : ''}`}
-                onClick={() => { switchLanguage('ru'); setIsMobileOpen(false); }}
+                onClick={() => setIsMobileOpen(false)}
+                title="Русский язык"
+                hrefLang="ru"
               >
                 <img src="/images/home/flag-1-3.svg" alt="РФ" />
                 <span>Рус</span>
-              </button>
-              <button
+              </Link>
+              <Link
+                to={getEquivalentRoute(location.pathname, 'en')}
                 className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
-                onClick={() => { switchLanguage('en'); setIsMobileOpen(false); }}
+                onClick={() => setIsMobileOpen(false)}
+                title="English version"
+                hrefLang="en"
               >
                 <img src="/images/home/flag-1-1.svg" alt="EN" />
                 <span>Eng</span>
-              </button>
+              </Link>
               <a
                 href="https://rakhimovr.uz/"
                 target="_blank"
@@ -471,6 +502,8 @@ const Header = () => {
                 {devOpen && (
                   <div style={{ paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
                     <Link to={getPath('/sushka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.sushka}</Link>
+                    <Link to={getPath('/sush-ustanovka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.sushUstanovka || 'Сушильная установка'}</Link>
+                    <Link to={getPath('/metodikasushka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.metodikaSushka || 'Методика сушки'}</Link>
                     <Link to={getPath('/plenka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.plenka}</Link>
                     <Link to={getPath('/steril')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.steril}</Link>
                     <Link to={getPath('/gril')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.gril}</Link>
@@ -493,11 +526,20 @@ const Header = () => {
                 {medOpen && (
                   <div style={{ paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
                     <Link to={getPath('/metod')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.metod}</Link>
+                    <Link to={getPath('/virus')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.virus || 'Метод лечения от вирусов'}</Link>
                     <Link to={getPath('/klinik')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.klinik}</Link>
                     <a href="https://www.youtube.com/@Rahimovrx" target="_blank" rel="noopener noreferrer" className="dropdown-item" style={{ color: '#dc2626' }}>{t.menu.lectures}</a>
                   </div>
                 )}
               </div>
+
+              <Link to={getPath('/articles')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
+                {t.header.articles}
+              </Link>
+
+              <Link to={getPath('/news')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
+                {t.header.news}
+              </Link>
 
               <Link to={getPath('/contact')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
                 {t.header.contact}

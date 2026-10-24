@@ -132,7 +132,6 @@ const HeroSlider = () => {
                     alt={caption}
                     className="slide-banner-img"
                     loading={index === 0 ? 'eager' : 'lazy'}
-                    fetchPriority={index === 0 ? 'high' : 'low'}
                     decoding={index === 0 ? 'sync' : 'async'}
                   />
                   <div className={`slide-caption-badge pos-${slide.position}`}>

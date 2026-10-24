@@ -1,6 +1,28 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/main", "destination": "/", "permanent": true },
+    { "source": "/en/main", "destination": "/en", "permanent": true },
+    { "source": "/sterilizaciya", "destination": "/steril", "permanent": true },
+    { "source": "/en/sterilizaciya", "destination": "/en/steril", "permanent": true },
+    { "source": "/grili", "destination": "/gril", "permanent": true },
+    { "source": "/lechebnye-lampy", "destination": "/lamp", "permanent": true },
+    { "source": "/cotton", "destination": "/hlopok", "permanent": true },
+    { "source": "/en/hlopok", "destination": "/en/cotton", "permanent": true },
+    { "source": "/lakokraska", "destination": "/paint", "permanent": true },
+    { "source": "/kraska", "destination": "/paint", "permanent": true },
+    { "source": "/en/lakokraska", "destination": "/en/paint", "permanent": true },
+    { "source": "/en/kraska", "destination": "/en/paint", "permanent": true },
+    { "source": "/lekcii", "destination": "/metodika", "permanent": true },
+    { "source": "/contacts", "destination": "/contact", "permanent": true },
+    { "source": "/clinical-cases", "destination": "/klinik", "permanent": true },
+    { "source": "/clinical-cases/:id", "destination": "/klinik/:id", "permanent": true },
+    { "source": "/en/clinical-cases", "destination": "/en/klinik", "permanent": true },
+    { "source": "/en/clinical-cases/:id", "destination": "/en/klinik/:id", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -61,12 +83,6 @@
           "value": "public, max-age=3600, must-revalidate"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!api/|uploads/|assets/|images/|pdf/|videos/|robots\\.txt|sitemap\\.xml|favicon\\.ico|favicon\\.svg).*)",
-      "destination": "/index.html"
     }
   ]
 }

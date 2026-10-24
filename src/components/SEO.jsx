@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useSSRMeta } from '../context/SSRMetaContext';
 
 /**
  * Universal SEO & Meta manager for ООО «KERAMIKA SINTEZ».
@@ -19,17 +20,59 @@ export default function SEO({
   robots = null
 }) {
   const location = useLocation();
+  const ssrMeta = useSSRMeta();
+
+  // 1. Determine authoritative site origin
+  const prodDomain = (import.meta.env.VITE_SITE_URL || 'https://www.infraks.uz').replace(/\/+$/, '');
+  const origin = prodDomain;
+
+  // 2. Calculate document title
+  const brandName = 'KERAMIKA SINTEZ';
+  const fullTitle = title
+    ? (title.includes(brandName) ? title : `${title} | ${brandName}`)
+    : `ООО «KERAMIKA SINTEZ» — Научно-производственный портал`;
+
+  // 3. Calculate canonical URL (strictly unified format without trailing slash, except root '/')
+  const activePath = canonicalPath || location.pathname;
+  const cleanCanonicalPath = activePath.startsWith('/') ? activePath : `/${activePath}`;
+  const canonicalUrl = cleanCanonicalPath === '/'
+    ? `${origin}/`
+    : `${origin}${cleanCanonicalPath.replace(/\/+$/, '')}`;
+
+  // 4. Calculate alternate URLs (RU, EN, x-default)
+  const effectiveRuPath = ruPath !== undefined
+    ? ruPath
+    : (activePath.startsWith('/en') ? activePath.replace(/^\/en/, '') || '/' : activePath);
+  const effectiveEnPath = enPath !== undefined
+    ? enPath
+    : (activePath.startsWith('/en') ? activePath : `/en${activePath === '/' ? '' : activePath}`);
+
+  const ruUrl = effectiveRuPath === '/'
+    ? `${origin}/`
+    : `${origin}${effectiveRuPath.replace(/\/+$/, '')}`;
+  const enUrl = effectiveEnPath === '/' || effectiveEnPath === '/en'
+    ? `${origin}/en`
+    : `${origin}${effectiveEnPath.replace(/\/+$/, '')}`;
+
+  const robotsContent = robots || (noindex ? 'noindex, follow' : 'index, follow');
+  const absoluteImage = image.startsWith('http') ? image : `${origin}${image.startsWith('/') ? '' : '/'}${image}`;
+
+  // In SSR render pass, write synchronously into ssrMeta collector
+  if (ssrMeta) {
+    ssrMeta.title = fullTitle;
+    ssrMeta.description = description || '';
+    ssrMeta.canonicalUrl = canonicalUrl;
+    ssrMeta.ruUrl = ruUrl;
+    ssrMeta.enUrl = enUrl;
+    ssrMeta.lang = lang;
+    ssrMeta.robots = robotsContent;
+    ssrMeta.type = type;
+    ssrMeta.image = absoluteImage;
+    ssrMeta.article = article;
+  }
 
   useEffect(() => {
-    // 1. Determine site origin: use authoritative production domain for canonical and OG tags
-    const prodDomain = (import.meta.env.VITE_SITE_URL || 'https://www.infraks.uz').replace(/\/+$/, '');
-    const origin = prodDomain;
-
     // 2. Set document title
-    const brandName = 'KERAMIKA SINTEZ';
-    const fullTitle = title 
-      ? (title.includes(brandName) ? title : `${title} | ${brandName}`)
-      : `ООО «KERAMIKA SINTEZ» — Научно-производственный портал`;
     document.title = fullTitle;
 
     // Helper: update or create meta tag

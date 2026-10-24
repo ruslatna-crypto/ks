@@ -23,6 +23,7 @@ const DevelopmentPage = ({ pageId }) => {
   const { lang } = useLanguage();
   const t = translations[lang];
   const location = useLocation();
+  const otherDevelopments = relatedDevelopmentsList.filter(item => item.id !== pageId);
 
   const pageEntry = siteDataBilingual[pageId] || siteDataBilingual['sushka'];
   const pageData = pageEntry[lang] || pageEntry.ru;

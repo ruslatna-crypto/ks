@@ -3,6 +3,47 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const LanguageContext = createContext();
 
+export function getEquivalentRoute(currentPath, targetLang) {
+  if (!currentPath) return targetLang === 'en' ? '/en' : '/';
+
+  // Clean trailing slash for lookup if not root
+  const clean = currentPath === '/' ? '/' : currentPath.replace(/\/+$/, '');
+
+  const routePairs = {
+    '/hlopok': '/en/cotton',
+    '/cotton': '/en/cotton',
+    '/en/cotton': '/hlopok',
+    '/en/hlopok': '/hlopok',
+    '/lakokraska': '/en/paint',
+    '/kraska': '/en/paint',
+    '/paint': '/en/paint',
+    '/en/paint': '/paint',
+    '/en/lakokraska': '/paint',
+    '/en/kraska': '/paint',
+    '/clinical-cases': '/en/klinik',
+    '/en/clinical-cases': '/klinik',
+    '/klinik': '/en/klinik',
+    '/en/klinik': '/klinik',
+    '/gril': '/en/gril',
+    '/grili': '/en/gril',
+    '/en/gril': '/gril',
+    '/metod': '/en/metod',
+    '/en/metod': '/metod'
+  };
+
+  if (targetLang === 'en') {
+    if (routePairs[clean]) return routePairs[clean];
+    if (clean.startsWith('/en')) return clean;
+    return clean === '/' ? '/en' : `/en${clean}`;
+  } else {
+    if (routePairs[clean]) return routePairs[clean];
+    if (clean.startsWith('/en')) {
+      return clean.replace(/^\/en(\/|$)/, '/') || '/';
+    }
+    return clean;
+  }
+}
+
 export const LanguageProvider = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,54 +63,16 @@ export const LanguageProvider = ({ children }) => {
   const switchLanguage = (newLang) => {
     if (newLang === lang) return;
     setLang(newLang);
-
-    const currentPath = location.pathname;
-
-    const routePairs = {
-      '/hlopok': '/en/cotton',
-      '/cotton': '/en/cotton',
-      '/en/cotton': '/hlopok',
-      '/en/hlopok': '/hlopok',
-      '/lakokraska': '/en/paint',
-      '/kraska': '/en/paint',
-      '/paint': '/en/paint',
-      '/en/paint': '/paint',
-      '/en/lakokraska': '/lakokraska',
-      '/en/kraska': '/kraska',
-      '/clinical-cases': '/en/clinical-cases',
-      '/en/clinical-cases': '/clinical-cases',
-      '/klinik': '/en/klinik',
-      '/en/klinik': '/klinik',
-      '/gril': '/en/gril',
-      '/grili': '/en/gril',
-      '/en/gril': '/gril',
-      '/metod': '/en/metod',
-      '/en/metod': '/metod'
-    };
-
-    if (routePairs[currentPath]) {
-      navigate(routePairs[currentPath]);
-      return;
-    }
-
-    if (newLang === 'en') {
-      if (!currentPath.startsWith('/en')) {
-        const targetPath = currentPath === '/' ? '/en' : `/en${currentPath}`;
-        navigate(targetPath);
-      }
-    } else {
-      if (currentPath.startsWith('/en')) {
-        const targetPath = currentPath.replace(/^\/en(\/|$)/, '/') || '/';
-        navigate(targetPath);
-      }
-    }
+    const targetPath = getEquivalentRoute(location.pathname, newLang);
+    navigate(targetPath);
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, switchLanguage }}>
+    <LanguageContext.Provider value={{ lang, switchLanguage, getEquivalentRoute }}>
       {children}
     </LanguageContext.Provider>
   );
 };
+
 
 export const useLanguage = () => useContext(LanguageContext);

@@ -5,26 +5,57 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
-// Route-based lazy loading
-const HomePage = lazy(() => import('./pages/HomePage'));
-const DevelopmentPage = lazy(() => import('./pages/DevelopmentPage'));
-const SushkaPage = lazy(() => import('./pages/SushkaPage'));
-const PlenkaPage = lazy(() => import('./pages/PlenkaPage'));
-const SterilPage = lazy(() => import('./pages/SterilPage'));
-const GrilPage = lazy(() => import('./pages/GrilPage'));
-const MetodPage = lazy(() => import('./pages/MetodPage'));
-const LampPage = lazy(() => import('./pages/LampPage'));
-const CottonPage = lazy(() => import('./pages/CottonPage'));
-const PaintPage = lazy(() => import('./pages/PaintPage'));
-const LecturesPage = lazy(() => import('./pages/LecturesPage'));
-const ClinicalCasesPage = lazy(() => import('./pages/ClinicalCasesPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage'));
-const SearchPage = lazy(() => import('./pages/SearchPage'));
-const NewsPage = lazy(() => import('./pages/NewsPage'));
-const NewsDetailPage = lazy(() => import('./pages/NewsDetailPage'));
-const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
-const ArticleDetailPage = lazy(() => import('./pages/ArticleDetailPage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+import { lazyWithPreload } from './utils/lazyWithPreload';
+
+// Route-based lazy loading with preloading capability for hydration
+export const HomePage = lazyWithPreload(() => import('./pages/HomePage'));
+export const DevelopmentPage = lazyWithPreload(() => import('./pages/DevelopmentPage'));
+export const SushkaPage = lazyWithPreload(() => import('./pages/SushkaPage'));
+export const PlenkaPage = lazyWithPreload(() => import('./pages/PlenkaPage'));
+export const SterilPage = lazyWithPreload(() => import('./pages/SterilPage'));
+export const GrilPage = lazyWithPreload(() => import('./pages/GrilPage'));
+export const MetodPage = lazyWithPreload(() => import('./pages/MetodPage'));
+export const LampPage = lazyWithPreload(() => import('./pages/LampPage'));
+export const CottonPage = lazyWithPreload(() => import('./pages/CottonPage'));
+export const PaintPage = lazyWithPreload(() => import('./pages/PaintPage'));
+export const LecturesPage = lazyWithPreload(() => import('./pages/LecturesPage'));
+export const ClinicalCasesPage = lazyWithPreload(() => import('./pages/ClinicalCasesPage'));
+export const ContactPage = lazyWithPreload(() => import('./pages/ContactPage'));
+export const SearchPage = lazyWithPreload(() => import('./pages/SearchPage'));
+export const NewsPage = lazyWithPreload(() => import('./pages/NewsPage'));
+export const NewsDetailPage = lazyWithPreload(() => import('./pages/NewsDetailPage'));
+export const ArticlesPage = lazyWithPreload(() => import('./pages/ArticlesPage'));
+export const ArticleDetailPage = lazyWithPreload(() => import('./pages/ArticleDetailPage'));
+export const NotFoundPage = lazyWithPreload(() => import('./pages/NotFoundPage'));
+
+export function getPageComponentForPath(pathname) {
+  if (!pathname) return HomePage;
+  const path = pathname.replace(/\/+$/, '') || '/';
+  const clean = path.startsWith('/en') ? (path.replace(/^\/en/, '') || '/') : path;
+
+  if (clean === '/' || clean === '/main') return HomePage;
+  if (clean === '/sushka') return SushkaPage;
+  if (clean === '/sush-ustanovka' || clean === '/metodikasushka' || clean === '/virus') return DevelopmentPage;
+  if (clean === '/plenka') return PlenkaPage;
+  if (clean === '/steril' || clean === '/sterilizaciya') return SterilPage;
+  if (clean === '/gril' || clean === '/grili') return GrilPage;
+  if (clean === '/lamp' || clean === '/lechebnye-lampy') return LampPage;
+  if (clean === '/cotton' || clean === '/hlopok') return CottonPage;
+  if (clean === '/paint' || clean === '/lakokraska' || clean === '/kraska') return PaintPage;
+  if (clean === '/metod') return MetodPage;
+  if (clean === '/metodika' || clean === '/lekcii') return LecturesPage;
+  if (clean.startsWith('/klinik') || clean.startsWith('/clinical-cases')) return ClinicalCasesPage;
+  if (clean === '/contact' || clean === '/contacts') return ContactPage;
+  if (clean === '/search') return SearchPage;
+  if (clean.startsWith('/news/')) return NewsDetailPage;
+  if (clean === '/news') return NewsPage;
+  if (clean.startsWith('/articles/')) return ArticleDetailPage;
+  if (clean === '/articles') return ArticlesPage;
+  if (clean === '/404') return NotFoundPage;
+
+  return NotFoundPage;
+}
+
 
 // Scroll to top helper on route change
 const ScrollToTop = () => {

@@ -7,6 +7,8 @@ export const translations = {
       home: "Главная",
       developments: "Разработки",
       medicine: "Медицина",
+      articles: "Статьи",
+      news: "Новости",
       contact: "Контакт",
       searchPlaceholder: "Поиск по сайту...",
       searchBtn: "Поиск"
@@ -64,6 +66,8 @@ export const translations = {
       home: "Home",
       developments: "Developments",
       medicine: "Medicine",
+      articles: "Articles",
+      news: "News",
       contact: "Contact",
       searchPlaceholder: "Search site...",
       searchBtn: "Search"
