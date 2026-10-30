@@ -19,13 +19,7 @@ const CLINICAL_CASES_LASTMOD = getFileDate('src/data/clinicalCases/clinicalCases
 
 const CORE_PAGES = [
   { ru: '/', en: '/en', changefreq: 'weekly', priority: '1.0', file: 'src/pages/HomePage.jsx' },
-  { ru: '/news', en: '/en/news', changefreq: 'daily', priority: '0.9', file: 'src/pages/NewsPage.jsx' },
-  { ru: '/news/portal-update', en: '/en/news/portal-update', changefreq: 'monthly', priority: '0.8', file: 'content/ru/news/2026-09-26-portal-update.md' },
-  { ru: '/articles', en: '/en/articles', changefreq: 'weekly', priority: '0.9', file: 'src/pages/ArticlesPage.jsx' },
-  { ru: '/articles/functional-ceramics-principles', en: '/en/articles/functional-ceramics-principles', changefreq: 'monthly', priority: '0.8', file: 'content/ru/articles/2026-09-26-functional-ceramics-principles.md' },
   { ru: '/sushka', en: '/en/sushka', changefreq: 'monthly', priority: '0.85', file: 'src/pages/SushkaPage.jsx' },
-  { ru: '/sush-ustanovka', en: '/en/sush-ustanovka', changefreq: 'monthly', priority: '0.85', file: 'src/pages/DevelopmentPage.jsx' },
-  { ru: '/metodikasushka', en: '/en/metodikasushka', changefreq: 'monthly', priority: '0.85', file: 'src/pages/DevelopmentPage.jsx' },
   { ru: '/plenka', en: '/en/plenka', changefreq: 'monthly', priority: '0.85', file: 'src/pages/PlenkaPage.jsx' },
   { ru: '/steril', en: '/en/steril', changefreq: 'monthly', priority: '0.85', file: 'src/pages/SterilPage.jsx' },
   { ru: '/gril', en: '/en/gril', changefreq: 'monthly', priority: '0.85', file: 'src/pages/GrilPage.jsx' },
@@ -33,7 +27,6 @@ const CORE_PAGES = [
   { ru: '/hlopok', en: '/en/cotton', changefreq: 'monthly', priority: '0.85', file: 'src/pages/CottonPage.jsx' },
   { ru: '/paint', en: '/en/paint', changefreq: 'monthly', priority: '0.85', file: 'src/pages/PaintPage.jsx' },
   { ru: '/metod', en: '/en/metod', changefreq: 'monthly', priority: '0.9', file: 'src/pages/MetodPage.jsx' },
-  { ru: '/virus', en: '/en/virus', changefreq: 'monthly', priority: '0.85', file: 'src/pages/DevelopmentPage.jsx' },
   { ru: '/metodika', en: '/en/metodika', changefreq: 'monthly', priority: '0.85', file: 'src/pages/LecturesPage.jsx' },
   { ru: '/klinik', en: '/en/klinik', changefreq: 'weekly', priority: '0.9', file: 'src/pages/ClinicalCasesPage.jsx' },
   { ru: '/contact', en: '/en/contact', changefreq: 'monthly', priority: '0.8', file: 'src/pages/ContactPage.jsx' }

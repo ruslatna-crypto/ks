@@ -56,8 +56,6 @@ const Footer = () => {
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.875rem' }}>
               <li><Link to={getPath('/sushka')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.sushka}</Link></li>
-              <li><Link to={getPath('/sush-ustanovka')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.sushUstanovka || 'Сушильная установка'}</Link></li>
-              <li><Link to={getPath('/metodikasushka')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.metodikaSushka || 'Методика сушки'}</Link></li>
               <li><Link to={getPath('/plenka')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.plenka}</Link></li>
               <li><Link to={getPath('/steril')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.steril}</Link></li>
               <li><Link to={getPath('/gril')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.gril}</Link></li>
@@ -74,7 +72,6 @@ const Footer = () => {
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.875rem' }}>
               <li><Link to={getPath('/metod')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.metod}</Link></li>
-              <li><Link to={getPath('/virus')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.virus || 'Метод лечения от вирусов'}</Link></li>
               <li><Link to={getPath('/metodika')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.metodika}</Link></li>
               <li><Link to={getPath('/klinik')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.menu.klinik}</Link></li>
               <li>
@@ -85,14 +82,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Научные материалы и Навигация */}
+          {/* Column 4: Навигация и Компания */}
           <div>
             <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f8fafc', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '16px' }}>
-              {lang === 'en' ? 'Publications & Company' : 'Материалы и компания'}
+              {lang === 'en' ? 'Company & Navigation' : 'Компания и навигация'}
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.875rem' }}>
-              <li><Link to={getPath('/articles')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.header.articles}</Link></li>
-              <li><Link to={getPath('/news')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.header.news}</Link></li>
               <li><Link to={getPath('/contact')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.header.contact}</Link></li>
               <li><Link to={getPath('/search')} style={{ color: '#cbd5e1', textDecoration: 'none' }}>{t.header.searchBtn}</Link></li>
               <li><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8', textDecoration: 'none' }}>Sitemap XML</a></li>

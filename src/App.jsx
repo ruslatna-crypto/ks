@@ -22,10 +22,6 @@ export const LecturesPage = lazyWithPreload(() => import('./pages/LecturesPage')
 export const ClinicalCasesPage = lazyWithPreload(() => import('./pages/ClinicalCasesPage'));
 export const ContactPage = lazyWithPreload(() => import('./pages/ContactPage'));
 export const SearchPage = lazyWithPreload(() => import('./pages/SearchPage'));
-export const NewsPage = lazyWithPreload(() => import('./pages/NewsPage'));
-export const NewsDetailPage = lazyWithPreload(() => import('./pages/NewsDetailPage'));
-export const ArticlesPage = lazyWithPreload(() => import('./pages/ArticlesPage'));
-export const ArticleDetailPage = lazyWithPreload(() => import('./pages/ArticleDetailPage'));
 export const NotFoundPage = lazyWithPreload(() => import('./pages/NotFoundPage'));
 
 export function getPageComponentForPath(pathname) {
@@ -35,7 +31,6 @@ export function getPageComponentForPath(pathname) {
 
   if (clean === '/' || clean === '/main') return HomePage;
   if (clean === '/sushka') return SushkaPage;
-  if (clean === '/sush-ustanovka' || clean === '/metodikasushka' || clean === '/virus') return DevelopmentPage;
   if (clean === '/plenka') return PlenkaPage;
   if (clean === '/steril' || clean === '/sterilizaciya') return SterilPage;
   if (clean === '/gril' || clean === '/grili') return GrilPage;
@@ -47,10 +42,6 @@ export function getPageComponentForPath(pathname) {
   if (clean.startsWith('/klinik') || clean.startsWith('/clinical-cases')) return ClinicalCasesPage;
   if (clean === '/contact' || clean === '/contacts') return ContactPage;
   if (clean === '/search') return SearchPage;
-  if (clean.startsWith('/news/')) return NewsDetailPage;
-  if (clean === '/news') return NewsPage;
-  if (clean.startsWith('/articles/')) return ArticleDetailPage;
-  if (clean === '/articles') return ArticlesPage;
   if (clean === '/404') return NotFoundPage;
 
   return NotFoundPage;
@@ -104,12 +95,6 @@ function App() {
             <Route path="/sushka" element={<SushkaPage />} />
             <Route path="/en/sushka" element={<SushkaPage />} />
             
-            <Route path="/sush-ustanovka" element={<DevelopmentPage pageId="sush-ustanovka" />} />
-            <Route path="/en/sush-ustanovka" element={<DevelopmentPage pageId="sush-ustanovka" />} />
-            
-            <Route path="/metodikasushka" element={<DevelopmentPage pageId="metodikasushka" />} />
-            <Route path="/en/metodikasushka" element={<DevelopmentPage pageId="metodikasushka" />} />
-            
             <Route path="/plenka" element={<PlenkaPage />} />
             <Route path="/en/plenka" element={<PlenkaPage />} />
             
@@ -142,9 +127,6 @@ function App() {
             <Route path="/metod" element={<MetodPage />} />
             <Route path="/en/metod" element={<MetodPage />} />
             
-            <Route path="/virus" element={<DevelopmentPage pageId="virus" />} />
-            <Route path="/en/virus" element={<DevelopmentPage pageId="virus" />} />
-            
             <Route path="/metodika" element={<LecturesPage />} />
             <Route path="/lekcii" element={<LecturesPage />} />
             <Route path="/en/metodika" element={<LecturesPage />} />
@@ -166,18 +148,6 @@ function App() {
             {/* Поиск / Search */}
             <Route path="/search" element={<SearchPage />} />
             <Route path="/en/search" element={<SearchPage />} />
-
-            {/* Новости / News */}
-            <Route path="/news" element={<NewsPage />} />
-            <Route path="/news/:slug" element={<NewsDetailPage />} />
-            <Route path="/en/news" element={<NewsPage />} />
-            <Route path="/en/news/:slug" element={<NewsDetailPage />} />
-
-            {/* Статьи / Articles */}
-            <Route path="/articles" element={<ArticlesPage />} />
-            <Route path="/articles/:slug" element={<ArticleDetailPage />} />
-            <Route path="/en/articles" element={<ArticlesPage />} />
-            <Route path="/en/articles/:slug" element={<ArticleDetailPage />} />
 
             {/* Fallback 404 */}
             <Route path="*" element={<NotFoundPage />} />

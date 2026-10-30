@@ -3,7 +3,6 @@ import { useSearchParams, Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
 import siteData from '../data/siteContent';
-import { getNews, getArticles } from '../utils/contentLoader';
 import { Search, FileText, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -28,8 +27,11 @@ const SearchPage = () => {
 
     const q = searchTerm.toLowerCase();
     const hits = [];
+    const REMOVED_ROUTES = new Set(['/sush-ustanovka', '/metodikasushka', '/virus', '/articles', '/news']);
 
-    siteData.forEach((page) => {
+    siteData
+      .filter((page) => !REMOVED_ROUTES.has(page.route) && !REMOVED_ROUTES.has(`/${page.id}`))
+      .forEach((page) => {
       let score = 0;
       let matchedSnippets = [];
 
@@ -74,74 +76,6 @@ const SearchPage = () => {
       }
     });
 
-    // 2. Search dynamic News items
-    const newsItems = getNews(lang);
-    newsItems.forEach((item) => {
-      let score = 0;
-      let matchedSnippets = [];
-      if (item.title && item.title.toLowerCase().includes(q)) {
-        score += 20;
-      }
-      if (item.excerpt && item.excerpt.toLowerCase().includes(q)) {
-        score += 8;
-        matchedSnippets.push(item.excerpt);
-      }
-      if (item.content) {
-        const idx = item.content.toLowerCase().indexOf(q);
-        if (idx !== -1) {
-          score += 4;
-          const start = Math.max(0, idx - 60);
-          const end = Math.min(item.content.length, idx + 140);
-          matchedSnippets.push((start > 0 ? '...' : '') + item.content.substring(start, end) + (end < item.content.length ? '...' : ''));
-        }
-      }
-      if (score > 0) {
-        hits.push({
-          page: {
-            title: item.title,
-            route: lang === 'en' ? `/en/news/${item.slug}` : `/news/${item.slug}`,
-            menu_section: lang === 'en' ? 'News' : 'Новости'
-          },
-          score,
-          snippets: matchedSnippets.slice(0, 2)
-        });
-      }
-    });
-
-    // 3. Search dynamic Articles items
-    const articleItems = getArticles(lang);
-    articleItems.forEach((item) => {
-      let score = 0;
-      let matchedSnippets = [];
-      if (item.title && item.title.toLowerCase().includes(q)) {
-        score += 20;
-      }
-      if (item.excerpt && item.excerpt.toLowerCase().includes(q)) {
-        score += 8;
-        matchedSnippets.push(item.excerpt);
-      }
-      if (item.content) {
-        const idx = item.content.toLowerCase().indexOf(q);
-        if (idx !== -1) {
-          score += 4;
-          const start = Math.max(0, idx - 60);
-          const end = Math.min(item.content.length, idx + 140);
-          matchedSnippets.push((start > 0 ? '...' : '') + item.content.substring(start, end) + (end < item.content.length ? '...' : ''));
-        }
-      }
-      if (score > 0) {
-        hits.push({
-          page: {
-            title: item.title,
-            route: lang === 'en' ? `/en/articles/${item.slug}` : `/articles/${item.slug}`,
-            menu_section: lang === 'en' ? 'Articles' : 'Статьи'
-          },
-          score,
-          snippets: matchedSnippets.slice(0, 2)
-        });
-      }
-    });
-
     hits.sort((a, b) => b.score - a.score);
     setResults(hits);
   };
@@ -164,8 +98,8 @@ const SearchPage = () => {
       <SEO
         title={lang === 'en' ? 'Search Materials' : 'Поиск по материалам'}
         description={lang === 'en'
-          ? 'Search scientific developments, clinical lectures, publications and news across the KERAMIKA SINTEZ portal.'
-          : 'Поиск по научно-техническим разработкам, клиническим лекциям, публикациям и новостям портала KERAMIKA SINTEZ.'}
+          ? 'Search scientific developments and clinical lectures across the KERAMIKA SINTEZ portal.'
+          : 'Поиск по научно-техническим разработкам и клиническим лекциям портала KERAMIKA SINTEZ.'}
         canonicalPath={lang === 'en' ? '/en/search' : '/search'}
         ruPath="/search"
         enPath="/en/search"

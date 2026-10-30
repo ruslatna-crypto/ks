@@ -20,10 +20,6 @@ import LecturesPage from './pages/LecturesPage';
 import ClinicalCasesPage from './pages/ClinicalCasesPage';
 import ContactPage from './pages/ContactPage';
 import SearchPage from './pages/SearchPage';
-import NewsPage from './pages/NewsPage';
-import NewsDetailPage from './pages/NewsDetailPage';
-import ArticlesPage from './pages/ArticlesPage';
-import ArticleDetailPage from './pages/ArticleDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 const ScrollToTop = () => null;
@@ -66,12 +62,6 @@ export default function AppSSR() {
             <Route path="/sushka" element={<SushkaPage />} />
             <Route path="/en/sushka" element={<SushkaPage />} />
 
-            <Route path="/sush-ustanovka" element={<DevelopmentPage pageId="sush-ustanovka" />} />
-            <Route path="/en/sush-ustanovka" element={<DevelopmentPage pageId="sush-ustanovka" />} />
-
-            <Route path="/metodikasushka" element={<DevelopmentPage pageId="metodikasushka" />} />
-            <Route path="/en/metodikasushka" element={<DevelopmentPage pageId="metodikasushka" />} />
-
             <Route path="/plenka" element={<PlenkaPage />} />
             <Route path="/en/plenka" element={<PlenkaPage />} />
 
@@ -104,9 +94,6 @@ export default function AppSSR() {
             <Route path="/metod" element={<MetodPage />} />
             <Route path="/en/metod" element={<MetodPage />} />
 
-            <Route path="/virus" element={<DevelopmentPage pageId="virus" />} />
-            <Route path="/en/virus" element={<DevelopmentPage pageId="virus" />} />
-
             <Route path="/metodika" element={<LecturesPage />} />
             <Route path="/lekcii" element={<LecturesPage />} />
             <Route path="/en/metodika" element={<LecturesPage />} />
@@ -128,18 +115,6 @@ export default function AppSSR() {
             {/* Поиск / Search */}
             <Route path="/search" element={<SearchPage />} />
             <Route path="/en/search" element={<SearchPage />} />
-
-            {/* Новости / News */}
-            <Route path="/news" element={<NewsPage />} />
-            <Route path="/news/:slug" element={<NewsDetailPage />} />
-            <Route path="/en/news" element={<NewsPage />} />
-            <Route path="/en/news/:slug" element={<NewsDetailPage />} />
-
-            {/* Статьи / Articles */}
-            <Route path="/articles" element={<ArticlesPage />} />
-            <Route path="/articles/:slug" element={<ArticleDetailPage />} />
-            <Route path="/en/articles" element={<ArticlesPage />} />
-            <Route path="/en/articles/:slug" element={<ArticleDetailPage />} />
 
             {/* Fallback 404 */}
             <Route path="*" element={<NotFoundPage />} />

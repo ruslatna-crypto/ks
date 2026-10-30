@@ -132,12 +132,12 @@ const Header = () => {
   };
 
   const isDevActive = () => {
-    const devRoutes = ['/sushka', '/sush-ustanovka', '/metodikasushka', '/plenka', '/steril', '/gril', '/grili', '/lamp', '/cotton', '/hlopok', '/paint', '/lakokraska', '/kraska'];
+    const devRoutes = ['/sushka', '/plenka', '/steril', '/gril', '/grili', '/lamp', '/cotton', '/hlopok', '/paint', '/lakokraska', '/kraska'];
     return devRoutes.some(r => isCurrent(r));
   };
 
   const isMedActive = () => {
-    const medRoutes = ['/metod', '/klinik', '/clinical-cases', '/virus'];
+    const medRoutes = ['/metod', '/klinik', '/clinical-cases'];
     return medRoutes.some(r => isCurrent(r));
   };
 
@@ -233,12 +233,6 @@ const Header = () => {
                   <Link to={getPath('/sushka')} className="dropdown-item">
                     {t.menu.sushka}
                   </Link>
-                  <Link to={getPath('/sush-ustanovka')} className="dropdown-item">
-                    {t.menu.sushUstanovka || 'Сушильная установка «Узбекистан-3»'}
-                  </Link>
-                  <Link to={getPath('/metodikasushka')} className="dropdown-item">
-                    {t.menu.metodikaSushka || 'Методика сушки'}
-                  </Link>
                   <Link to={getPath('/plenka')} className="dropdown-item">
                     {t.menu.plenka}
                   </Link>
@@ -269,9 +263,6 @@ const Header = () => {
                   <Link to={getPath('/metod')} className="dropdown-item">
                     {t.menu.metod}
                   </Link>
-                  <Link to={getPath('/virus')} className="dropdown-item">
-                    {t.menu.virus || 'Метод лечения от вирусов'}
-                  </Link>
                   <Link to={getPath('/klinik')} className="dropdown-item">
                     {t.menu.klinik}
                   </Link>
@@ -285,20 +276,6 @@ const Header = () => {
                     <span>{t.menu.lectures}</span>
                   </a>
                 </div>
-              </li>
-
-              {/* Статьи / Articles */}
-              <li className="nav-item-wrap">
-                <Link to={getPath('/articles')} className={`nav-item-link ${isCurrent('/articles') ? 'active' : ''}`}>
-                  {t.header.articles}
-                </Link>
-              </li>
-
-              {/* Новости / News */}
-              <li className="nav-item-wrap">
-                <Link to={getPath('/news')} className={`nav-item-link ${isCurrent('/news') ? 'active' : ''}`}>
-                  {t.header.news}
-                </Link>
               </li>
 
               <li className="nav-item-wrap">
@@ -504,8 +481,6 @@ const Header = () => {
                 {devOpen && (
                   <div style={{ paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
                     <Link to={getPath('/sushka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.sushka}</Link>
-                    <Link to={getPath('/sush-ustanovka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.sushUstanovka || 'Сушильная установка'}</Link>
-                    <Link to={getPath('/metodikasushka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.metodikaSushka || 'Методика сушки'}</Link>
                     <Link to={getPath('/plenka')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.plenka}</Link>
                     <Link to={getPath('/steril')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.steril}</Link>
                     <Link to={getPath('/gril')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.gril}</Link>
@@ -523,25 +498,16 @@ const Header = () => {
                   style={{ width: '100%', justifyContent: 'space-between' }}
                 >
                   <span>{t.header.medicine}</span>
-                  <ChevronDown size={16} style={{ transform: medOpen ? 'rotate(180deg)' : 'none', transition: '0.2s' }} />
+                  <ChevronDown size={16} style={{ transform: devOpen ? 'rotate(180deg)' : 'none', transition: '0.2s' }} />
                 </button>
                 {medOpen && (
                   <div style={{ paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
                     <Link to={getPath('/metod')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.metod}</Link>
-                    <Link to={getPath('/virus')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.virus || 'Метод лечения от вирусов'}</Link>
                     <Link to={getPath('/klinik')} onClick={() => setIsMobileOpen(false)} className="dropdown-item">{t.menu.klinik}</Link>
                     <a href="https://www.youtube.com/@Rahimovrx" target="_blank" rel="noopener noreferrer" className="dropdown-item" style={{ color: '#dc2626' }}>{t.menu.lectures}</a>
                   </div>
                 )}
               </div>
-
-              <Link to={getPath('/articles')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
-                {t.header.articles}
-              </Link>
-
-              <Link to={getPath('/news')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
-                {t.header.news}
-              </Link>
 
               <Link to={getPath('/contact')} onClick={() => setIsMobileOpen(false)} className="nav-item-link">
                 {t.header.contact}

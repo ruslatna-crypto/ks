@@ -11,65 +11,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.infraks.uz/news</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/news" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/news" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/news/portal-update</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/news/portal-update" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/news/portal-update" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/news/portal-update" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/articles</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/articles" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/articles" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/articles" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/articles/functional-ceramics-principles</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/articles/functional-ceramics-principles" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/articles/functional-ceramics-principles" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/articles/functional-ceramics-principles" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.infraks.uz/sushka</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/sushka" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/sushka" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/sushka" />
     <lastmod>2026-09-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/sush-ustanovka</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/sush-ustanovka" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/sush-ustanovka" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/sush-ustanovka" />
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/metodikasushka</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/metodikasushka" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/metodikasushka" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/metodikasushka" />
-    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -137,15 +83,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.infraks.uz/virus</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/virus" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/virus" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/virus" />
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.infraks.uz/metodika</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/metodika" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/metodika" />
@@ -183,65 +120,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.infraks.uz/en/news</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/news" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/news" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/news" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/en/news/portal-update</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/news/portal-update" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/news/portal-update" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/news/portal-update" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/en/articles</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/articles" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/articles" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/articles" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/en/articles/functional-ceramics-principles</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/articles/functional-ceramics-principles" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/articles/functional-ceramics-principles" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/articles/functional-ceramics-principles" />
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.infraks.uz/en/sushka</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/sushka" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/sushka" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/sushka" />
     <lastmod>2026-09-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/en/sush-ustanovka</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/sush-ustanovka" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/sush-ustanovka" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/sush-ustanovka" />
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/en/metodikasushka</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/metodikasushka" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/metodikasushka" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/metodikasushka" />
-    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -307,15 +190,6 @@
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/en/virus</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/virus" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/virus" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/virus" />
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/metodika</loc>

@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 import { siteDataBilingual } from '../data/siteContentBilingual';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { ArrowRight, Layers, FileCheck, ZoomIn, Sparkles, Shield } from 'lucide-react';
+import { ArrowRight, ZoomIn, Sparkles, Shield } from 'lucide-react';
 
 const relatedDevelopmentsList = [
   { id: 'sushka', route: '/sushka', ru: 'Сушка овощей и фруктов', en: 'Drying of vegetables and fruits' },
@@ -92,31 +92,6 @@ const DevelopmentPage = ({ pageId }) => {
         <div style={{ marginBottom: 28 }}>
           <h1 className="page-title-heading">{pageData.title}</h1>
         </div>
-
-        {/* Sushka sub-navigation links */}
-        {pageId === 'sushka' && (
-          <div className="dev-subnav-grid">
-            <Link to={getPath('/sush-ustanovka')} className="dev-subnav-card">
-              <div className="dev-subnav-card-header">
-                <Layers size={20} color="var(--color-primary)" />
-                <span>{lang === 'en' ? 'Drying Installation' : 'Сушильная установка'}</span>
-              </div>
-              <p>
-                {lang === 'en' ? 'Models, industrial equipment and specifications' : 'Конструкция, модельный ряд и фото промышленных комплексов'}
-              </p>
-            </Link>
-
-            <Link to={getPath('/metodikasushka')} className="dev-subnav-card">
-              <div className="dev-subnav-card-header">
-                <FileCheck size={20} color="var(--color-primary)" />
-                <span>{lang === 'en' ? 'Drying Methodology' : 'Методика сушки фруктов и овощей'}</span>
-              </div>
-              <p>
-                {lang === 'en' ? 'Scientific principles, spectrum charts and cell structure preservation' : 'Спектральные графики, сохранение структуры клеток и компонентов'}
-              </p>
-            </Link>
-          </div>
-        )}
 
         {/* Special technological highlights for /plenka (Functional film) */}
         {pageId === 'plenka' && (

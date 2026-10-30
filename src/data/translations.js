@@ -7,16 +7,12 @@ export const translations = {
       home: "Главная",
       developments: "Разработки",
       medicine: "Медицина",
-      articles: "Статьи",
-      news: "Новости",
       contact: "Контакт",
       searchPlaceholder: "Поиск по сайту...",
       searchBtn: "Поиск"
     },
     menu: {
       sushka: "Сушка овощей и фруктов",
-      sushUstanovka: "Сушильная установка",
-      metodikaSushka: "Методика сушки",
       plenka: "Пленка для теплиц и парников",
       steril: "Стерилизация инструментов",
       gril: "Грили, выпечка",
@@ -24,7 +20,6 @@ export const translations = {
       cotton: "Сушка хлопка и стимуляция семян",
       paint: "Сушка краски и лаков",
       metod: "О методе Р. Рахимова",
-      virus: "Метод лечения от вирусов",
       lectures: "Лекции (YouTube) ↗",
       metodika: "Таблицы и методики",
       klinik: "Клинические случаи"
@@ -66,16 +61,12 @@ export const translations = {
       home: "Home",
       developments: "Developments",
       medicine: "Medicine",
-      articles: "Articles",
-      news: "News",
       contact: "Contact",
       searchPlaceholder: "Search site...",
       searchBtn: "Search"
     },
     menu: {
       sushka: "Drying of vegetables and fruits",
-      sushUstanovka: "Drying installation",
-      metodikaSushka: "Drying methodology",
       plenka: "Film for greenhouses and hothouses",
       steril: "Sterilization of instruments",
       gril: "Grills, baking",
@@ -83,7 +74,6 @@ export const translations = {
       cotton: "Cotton drying and seed stimulation",
       paint: "Drying of paint and varnishes",
       metod: "About the method of R. Rakhimov",
-      virus: "Method of treatment against viruses",
       lectures: "Lectures (YouTube) ↗",
       metodika: "Research tables and methodology",
       klinik: "Clinical cases"
