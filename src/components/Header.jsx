@@ -353,7 +353,9 @@ const Header = () => {
                 <div className="search-input-wrap">
                   <input
                     ref={searchInputRef}
+                    id="header-search-input"
                     type="text"
+                    aria-label={lang === 'ru' ? 'Поиск по сайту' : 'Site search'}
                     className="search-input-field"
                     placeholder={lang === 'ru' ? 'Поиск по научным материалам и разработкам...' : 'Search scientific developments and materials...'}
                     value={searchQuery}

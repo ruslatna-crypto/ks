@@ -11,7 +11,7 @@ const LecturesPage = () => {
   const pageEntry = siteDataBilingual['metodika'] || {};
   const pageData = pageEntry[lang] || pageEntry.ru || {};
   const tables = pageEntry.tables || [];
-  const images = pageEntry.images || [];
+  const images = (pageEntry.images || []).filter(img => img.url && !img.url.includes('90457139') && !img.url.includes('mc.yandex.ru'));
 
   const breadcrumbs = [
     { title: lang === 'en' ? 'Medicine' : 'Медицина' },
@@ -146,7 +146,7 @@ const LecturesPage = () => {
               <div className="photos-grid-layout">
                 {images.map((imgObj, idx) => (
                   <div key={idx} className="photo-card-item">
-                    <img src={imgObj.url} alt="Chart" loading="lazy" />
+                    <img src={imgObj.url} alt={imgObj.alt || (lang === 'en' ? 'Spectral diagram' : 'Спектральная диаграмма')} loading="lazy" />
                   </div>
                 ))}
               </div>

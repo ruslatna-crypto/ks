@@ -56,7 +56,7 @@ const slidesData = [
   },
   {
     id: 6,
-    route: '/cotton',
+    route: '/hlopok',
     mainImage: '/images/home/hlopok.png',
     position: 'top-left',
     ru: 'Сушка хлопка и стимуляция семян',
@@ -105,6 +105,9 @@ const HeroSlider = () => {
   };
 
   const getTargetRoute = (route) => {
+    if (route === '/cotton' || route === '/hlopok') {
+      return lang === 'en' ? '/en/cotton' : '/hlopok';
+    }
     return lang === 'en' ? `/en${route}` : route;
   };
 

@@ -186,7 +186,10 @@ const SearchPage = () => {
           <div style={{ display: 'flex', gap: 12 }}>
             <div style={{ position: 'relative', flexGrow: 1 }}>
               <input
+                id="search-page-input"
+                name="q"
                 type="text"
+                aria-label={lang === 'en' ? 'Search scientific materials' : 'Поиск по материалам сайта'}
                 className="search-input-field"
                 style={{ paddingLeft: 46, fontSize: '1.02rem', height: 48 }}
                 placeholder={lang === 'en' 

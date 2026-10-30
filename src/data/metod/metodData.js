@@ -674,14 +674,14 @@ export const METOD_DOCUMENTS = {
       descEn: 'Author\'s concept of the interaction of biochemical processes, cellular metabolism, internal organ functions, nervous system, and immune defense. Analysis of pathogenetic mechanisms and principles of differentiated ceramic IR emitter selection.',
       fileRu: {
         filename: 'ИНФРА.pdf',
-        url: '/pdf/metod/%D0%98%D0%9D%D0%A4%D0%A0%D0%90.pdf',
+        url: '/pdf/metod/infra_ru.pdf',
         size: '68 КБ',
         pages: '5 стр.',
         coverUrl: '/images/metod/infra_ru_cover.webp'
       },
       fileEn: {
         filename: 'ИНФРА_EN.pdf',
-        url: '/pdf/metod/%D0%98%D0%9D%D0%A4%D0%A0%D0%90_EN.pdf',
+        url: '/pdf/metod/infra_en.pdf',
         size: '62 KB',
         pages: '5 pages',
         coverUrl: '/images/metod/infra_en_cover.webp'
@@ -697,14 +697,14 @@ export const METOD_DOCUMENTS = {
       descEn: 'Fundamental scientific work by Professor R. Kh. Rakhimov: disease, immunity, and interrelationship of physiological processes in the organism. Detailed analysis of homeostasis, mitochondria, cellular respiration, and resonance IR action in pathologies.',
       fileRu: {
         filename: '0 ПОНЯТИЕ О БОЛЕЗНИ И ИММУНИТЕТЕ ИИ.pdf',
-        url: '/pdf/metod/0%20%D0%9F%D0%9E%D0%9D%D0%AF%D0%A2%D0%98%D0%95%20%D0%9E%20%D0%91%D0%9E%D0%9B%D0%95%D0%97%D0%9D%D0%98%20%D0%98%20%D0%98%D0%9C%D0%9C%D0%A3%D0%9D%D0%98%D0%A2%D0%95%D0%A2%D0%95%20%D0%98%D0%98.pdf',
+        url: '/pdf/metod/0_disease_and_immunity_ru.pdf',
         size: '938 КБ',
         pages: '30 стр.',
         coverUrl: '/images/metod/book0_ru_cover.webp'
       },
       fileEn: {
         filename: '0 ПОНЯТИЕ О БОЛЕЗНИ И ИММУНИТЕТЕ ИИ — Eng.pdf',
-        url: '/pdf/metod/0%20%D0%9F%D0%9E%D0%9D%D0%AF%D0%A2%D0%98%D0%95%20%D0%9E%20%D0%91%D0%9E%D0%9B%D0%95%D0%97%D0%9D%D0%98%20%D0%98%20%D0%98%D0%9C%D0%9C%D0%A3%D0%9D%D0%98%D0%A2%D0%95%D0%A2%D0%95%20%D0%98%D0%98%20%E2%80%94%20Eng.pdf',
+        url: '/pdf/metod/0_disease_and_immunity_en.pdf',
         size: '937 KB',
         pages: '29 pages',
         coverUrl: '/images/metod/book0_en_cover.webp'

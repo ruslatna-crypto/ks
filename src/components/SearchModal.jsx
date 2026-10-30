@@ -90,6 +90,7 @@ const SearchModal = ({ isOpen, onClose }) => {
           <input
             ref={inputRef}
             type="text"
+            aria-label="Поиск по сайту"
             className="search-input"
             placeholder="Введите запрос (например: сушка, лампа, спектр, вирус, эмаль)..."
             value={query}

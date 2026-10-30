@@ -426,12 +426,13 @@ const LampOrderForm = () => {
             <div className="lamp-order-form-grid">
               {/* Contact Name */}
               <div className="lamp-order-col-span-1">
-                <label className="lamp-order-label">
+                <label htmlFor="lamp-order-name" className="lamp-order-label">
                   <User size={15} />
                   <span>{isEn ? 'Contact Person / Name' : 'Ваше имя / Контактное лицо'}</span>
                   <span className="lamp-order-required">*</span>
                 </label>
                 <input
+                  id="lamp-order-name"
                   type="text"
                   name="name"
                   placeholder={isEn ? 'e.g. Dr. Robert Vance' : 'Например: Иванов Иван'}
@@ -445,12 +446,13 @@ const LampOrderForm = () => {
 
               {/* Phone */}
               <div className="lamp-order-col-span-1">
-                <label className="lamp-order-label">
+                <label htmlFor="lamp-order-phone" className="lamp-order-label">
                   <Phone size={15} />
                   <span>{isEn ? 'Phone Number' : 'Номер телефона'}</span>
                   <span className="lamp-order-required">*</span>
                 </label>
                 <input
+                  id="lamp-order-phone"
                   type="tel"
                   name="phone"
                   placeholder={isEn ? '+1 (555) 000-0000' : '+998 90 123-45-67'}
@@ -464,12 +466,13 @@ const LampOrderForm = () => {
 
               {/* Email (Required) */}
               <div className="lamp-order-col-span-1">
-                <label className="lamp-order-label">
+                <label htmlFor="lamp-order-email" className="lamp-order-label">
                   <Mail size={15} />
                   <span>Email</span>
                   <span className="lamp-order-required">*</span>
                 </label>
                 <input
+                  id="lamp-order-email"
                   type="email"
                   name="email"
                   placeholder="contact@company.com"
@@ -483,12 +486,13 @@ const LampOrderForm = () => {
 
               {/* City / Delivery location */}
               <div className="lamp-order-col-span-1">
-                <label className="lamp-order-label">
+                <label htmlFor="lamp-order-city" className="lamp-order-label">
                   <MapPin size={15} />
                   <span>{isEn ? 'City / Delivery Region' : 'Город / Регион доставки'}</span>
                   <span className="lamp-order-optional">({isEn ? 'optional' : 'необязательно'})</span>
                 </label>
                 <input
+                  id="lamp-order-city"
                   type="text"
                   name="city"
                   placeholder={isEn ? 'e.g. Tashkent, Moscow, Berlin' : 'Например: Ташкент, Москва, Алматы'}
@@ -501,12 +505,13 @@ const LampOrderForm = () => {
 
               {/* Comment / Questions */}
               <div className="lamp-order-col-span-2">
-                <label className="lamp-order-label">
+                <label htmlFor="lamp-order-comment" className="lamp-order-label">
                   <MessageSquare size={15} />
                   <span>{isEn ? 'Comment / Technical Requirements' : 'Комментарий или пожелания'}</span>
                   <span className="lamp-order-optional">({isEn ? 'optional' : 'необязательно'})</span>
                 </label>
                 <textarea
+                  id="lamp-order-comment"
                   name="comment"
                   rows={3}
                   placeholder={

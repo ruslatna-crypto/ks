@@ -68,7 +68,8 @@ const CORE_ROUTES = [
   '/en/contact',
   '/search',
   '/en/search',
-  '/404'
+  '/404',
+  '/en/404'
 ];
 
 // Add all 119 clinical cases in RU and EN

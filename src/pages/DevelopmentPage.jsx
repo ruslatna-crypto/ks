@@ -27,7 +27,7 @@ const DevelopmentPage = ({ pageId }) => {
 
   const pageEntry = siteDataBilingual[pageId] || siteDataBilingual['sushka'];
   const pageData = pageEntry[lang] || pageEntry.ru;
-  const images = pageEntry.images || [];
+  const images = (pageEntry.images || []).filter(img => img.url && !img.url.includes('90457139') && !img.url.includes('mc.yandex.ru'));
   const tables = pageEntry.tables || [];
 
   const galleryImages = pageId === 'lamp'
@@ -83,7 +83,7 @@ const DevelopmentPage = ({ pageId }) => {
         canonicalPath={lang === 'en' ? `/en/${pageId}` : `/${pageId}`}
         ruPath={`/${pageId}`}
         enPath={`/en/${pageId}`}
-        image={galleryImages?.[0]?.url || '/images/logo/logo1.svg'}
+        image={galleryImages?.[0]?.url || '/images/home/med.png'}
         lang={lang}
       />
       <div className="container">

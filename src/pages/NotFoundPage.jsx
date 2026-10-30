@@ -16,8 +16,11 @@ const NotFoundPage = () => {
         description={lang === 'en'
           ? 'The requested page has been moved, renamed, or is temporarily unavailable.'
           : 'Запрашиваемая страница перемещена, удалена или указан неверный адрес.'}
-        canonicalPath="/404"
+        canonicalPath={lang === 'en' ? '/en/404' : '/404'}
+        ruPath="/404"
+        enPath="/en/404"
         lang={lang}
+        noindex={true}
       />
       <div className="container" style={{ maxWidth: 620 }}>
         <div style={{

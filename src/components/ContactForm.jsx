@@ -103,10 +103,11 @@ const ContactForm = () => {
       </p>
 
       <div style={{ marginBottom: 18 }}>
-        <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
+        <label htmlFor="contact-name" style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
           {t.contactPage.nameLabel} <span style={{ color: 'var(--color-accent)' }}>*</span>
         </label>
         <input
+          id="contact-name"
           type="text"
           name="name"
           required
@@ -129,10 +130,11 @@ const ContactForm = () => {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginBottom: 18 }}>
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
+          <label htmlFor="contact-email" style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
             Email <span style={{ color: 'var(--color-accent)' }}>*</span>
           </label>
           <input
+            id="contact-email"
             type="email"
             name="email"
             required
@@ -153,10 +155,11 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
+          <label htmlFor="contact-phone" style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
             {t.contactPage.phoneFormLabel} <span style={{ color: 'var(--color-accent)' }}>*</span>
           </label>
           <input
+            id="contact-phone"
             type="tel"
             name="phone"
             required
@@ -178,10 +181,11 @@ const ContactForm = () => {
       </div>
 
       <div style={{ marginBottom: 22 }}>
-        <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
+        <label htmlFor="contact-message" style={{ display: 'block', fontSize: '0.86rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: 6 }}>
           {t.contactPage.messageLabel} <span style={{ color: 'var(--color-accent)' }}>*</span>
         </label>
         <textarea
+          id="contact-message"
           name="message"
           required
           rows={4}

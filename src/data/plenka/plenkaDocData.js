@@ -86,7 +86,7 @@ export const PLENKA_FIGURES = [
 export const PLENKA_CONTENT = {
   ru: {
     breadcrumbs: [
-      { title: 'Разработки', path: '/development' },
+      { title: 'Разработки', path: '/#developments-grid' },
       { title: 'Пленка для теплиц и парников' }
     ],
     title: 'Пленка для теплиц и парников',
@@ -288,7 +288,7 @@ export const PLENKA_CONTENT = {
   },
   en: {
     breadcrumbs: [
-      { title: 'Developments', path: '/en/development' },
+      { title: 'Developments', path: '/en#developments-grid' },
       { title: 'Film for greenhouses and hothouses' }
     ],
     title: 'Film for greenhouses and hothouses',

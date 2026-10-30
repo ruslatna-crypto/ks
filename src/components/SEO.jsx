@@ -12,7 +12,7 @@ export default function SEO({
   canonicalPath,
   ruPath,
   enPath,
-  image = '/images/logo/logo1.svg',
+  image = '/images/home/med.png',
   type = 'website',
   article = null,
   lang = 'ru',
