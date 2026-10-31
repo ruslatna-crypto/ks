@@ -21,7 +21,6 @@ export const translations = {
       paint: "Сушка краски и лаков",
       metod: "О методе Р. Рахимова",
       lectures: "Лекции (YouTube) ↗",
-      metodika: "Таблицы и методики",
       klinik: "Клинические случаи"
     },
     home: {
@@ -75,7 +74,6 @@ export const translations = {
       paint: "Drying of paint and varnishes",
       metod: "About the method of R. Rakhimov",
       lectures: "Lectures (YouTube) ↗",
-      metodika: "Research tables and methodology",
       klinik: "Clinical cases"
     },
     home: {

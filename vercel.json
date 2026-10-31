@@ -16,7 +16,6 @@
     { "source": "/kraska", "destination": "/paint", "permanent": true },
     { "source": "/en/lakokraska", "destination": "/en/paint", "permanent": true },
     { "source": "/en/kraska", "destination": "/en/paint", "permanent": true },
-    { "source": "/lekcii", "destination": "/metodika", "permanent": true },
     { "source": "/contacts", "destination": "/contact", "permanent": true },
     { "source": "/clinical-cases", "destination": "/klinik", "permanent": true },
     { "source": "/clinical-cases/:id", "destination": "/klinik/:id", "permanent": true },

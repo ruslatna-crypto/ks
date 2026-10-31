@@ -46,8 +46,6 @@ const CORE_ROUTES = [
   '/en/paint',
   '/metod',
   '/en/metod',
-  '/metodika',
-  '/en/metodika',
   '/klinik',
   '/en/klinik',
   '/contact',

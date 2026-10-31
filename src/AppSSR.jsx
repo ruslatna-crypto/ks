@@ -16,7 +16,6 @@ import MetodPage from './pages/MetodPage';
 import LampPage from './pages/LampPage';
 import CottonPage from './pages/CottonPage';
 import PaintPage from './pages/PaintPage';
-import LecturesPage from './pages/LecturesPage';
 import ClinicalCasesPage from './pages/ClinicalCasesPage';
 import ContactPage from './pages/ContactPage';
 import SearchPage from './pages/SearchPage';
@@ -93,10 +92,6 @@ export default function AppSSR() {
             {/* Медицина / Medicine */}
             <Route path="/metod" element={<MetodPage />} />
             <Route path="/en/metod" element={<MetodPage />} />
-
-            <Route path="/metodika" element={<LecturesPage />} />
-            <Route path="/lekcii" element={<LecturesPage />} />
-            <Route path="/en/metodika" element={<LecturesPage />} />
 
             <Route path="/klinik" element={<ClinicalCasesPage />} />
             <Route path="/klinik/:id" element={<ClinicalCasesPage />} />

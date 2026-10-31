@@ -27,7 +27,6 @@ const CORE_PAGES = [
   { ru: '/hlopok', en: '/en/cotton', changefreq: 'monthly', priority: '0.85', file: 'src/pages/CottonPage.jsx' },
   { ru: '/paint', en: '/en/paint', changefreq: 'monthly', priority: '0.85', file: 'src/pages/PaintPage.jsx' },
   { ru: '/metod', en: '/en/metod', changefreq: 'monthly', priority: '0.9', file: 'src/pages/MetodPage.jsx' },
-  { ru: '/metodika', en: '/en/metodika', changefreq: 'monthly', priority: '0.85', file: 'src/pages/LecturesPage.jsx' },
   { ru: '/klinik', en: '/en/klinik', changefreq: 'weekly', priority: '0.9', file: 'src/pages/ClinicalCasesPage.jsx' },
   { ru: '/contact', en: '/en/contact', changefreq: 'monthly', priority: '0.8', file: 'src/pages/ContactPage.jsx' }
 ];

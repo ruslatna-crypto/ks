@@ -18,7 +18,6 @@ export const MetodPage = lazyWithPreload(() => import('./pages/MetodPage'));
 export const LampPage = lazyWithPreload(() => import('./pages/LampPage'));
 export const CottonPage = lazyWithPreload(() => import('./pages/CottonPage'));
 export const PaintPage = lazyWithPreload(() => import('./pages/PaintPage'));
-export const LecturesPage = lazyWithPreload(() => import('./pages/LecturesPage'));
 export const ClinicalCasesPage = lazyWithPreload(() => import('./pages/ClinicalCasesPage'));
 export const ContactPage = lazyWithPreload(() => import('./pages/ContactPage'));
 export const SearchPage = lazyWithPreload(() => import('./pages/SearchPage'));
@@ -38,7 +37,6 @@ export function getPageComponentForPath(pathname) {
   if (clean === '/cotton' || clean === '/hlopok') return CottonPage;
   if (clean === '/paint' || clean === '/lakokraska' || clean === '/kraska') return PaintPage;
   if (clean === '/metod') return MetodPage;
-  if (clean === '/metodika' || clean === '/lekcii') return LecturesPage;
   if (clean.startsWith('/klinik') || clean.startsWith('/clinical-cases')) return ClinicalCasesPage;
   if (clean === '/contact' || clean === '/contacts') return ContactPage;
   if (clean === '/search') return SearchPage;
@@ -126,10 +124,6 @@ function App() {
             {/* Медицина / Medicine */}
             <Route path="/metod" element={<MetodPage />} />
             <Route path="/en/metod" element={<MetodPage />} />
-            
-            <Route path="/metodika" element={<LecturesPage />} />
-            <Route path="/lekcii" element={<LecturesPage />} />
-            <Route path="/en/metodika" element={<LecturesPage />} />
             
             <Route path="/klinik" element={<ClinicalCasesPage />} />
             <Route path="/klinik/:id" element={<ClinicalCasesPage />} />

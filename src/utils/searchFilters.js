@@ -6,8 +6,8 @@
  * - SearchPage.jsx (Full search page)
  */
 
-import siteData from '../data/siteContent';
-import { siteDataBilingual } from '../data/siteContentBilingual';
+import siteData from '../data/siteContent.js';
+import { siteDataBilingual } from '../data/siteContentBilingual.js';
 
 export const EXCLUDED_SEARCH_ROUTES = new Set([
   '/sush-ustanovka',
@@ -15,11 +15,15 @@ export const EXCLUDED_SEARCH_ROUTES = new Set([
   '/virus',
   '/articles',
   '/news',
+  '/metodika',
+  '/lekcii',
   '/en/sush-ustanovka',
   '/en/metodikasushka',
   '/en/virus',
   '/en/articles',
-  '/en/news'
+  '/en/news',
+  '/en/metodika',
+  '/en/lekcii'
 ]);
 
 export const EXCLUDED_SEARCH_IDS = new Set([
@@ -27,7 +31,9 @@ export const EXCLUDED_SEARCH_IDS = new Set([
   'metodikasushka',
   'virus',
   'articles',
-  'news'
+  'news',
+  'metodika',
+  'lekcii'
 ]);
 
 /**

@@ -83,15 +83,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.infraks.uz/metodika</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/metodika" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/metodika" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/metodika" />
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://www.infraks.uz/klinik</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/klinik" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/klinik" />
@@ -190,15 +181,6 @@
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.infraks.uz/en/metodika</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.infraks.uz/metodika" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.infraks.uz/en/metodika" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.infraks.uz/metodika" />
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.infraks.uz/en/klinik</loc>

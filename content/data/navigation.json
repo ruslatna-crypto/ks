@@ -31,7 +31,6 @@
       "label_en": "Medicine",
       "children": [
         { "id": "metod", "route": "/metod", "label_ru": "Метод профессора Р. Рахимова", "label_en": "Prof. Rakhimov Method" },
-        { "id": "metodika", "route": "/metodika", "label_ru": "Курс лекций и основы методики", "label_en": "Course of lectures & methodology" },
         { "id": "klinik", "route": "/klinik", "label_ru": "Клинические протоколы и наблюдения", "label_en": "Clinical protocols & trials" }
       ]
     },
