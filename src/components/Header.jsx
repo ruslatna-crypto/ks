@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 import { Search, Menu, X, ChevronDown, Phone, Mail, FileText, ExternalLink, ArrowRight, Youtube } from 'lucide-react';
+import { isSearchRouteAllowed, getQueryStems, normalizeSearchText } from '../utils/searchFilters';
 
 const VkIcon = ({ size = 15 }) => (
   <svg
@@ -55,31 +56,42 @@ const Header = () => {
       return;
     }
 
-    const q = searchQuery.toLowerCase();
+    const stems = getQueryStems(searchQuery);
     const hits = [];
 
-    searchData.forEach((page) => {
+    searchData
+      .filter(isSearchRouteAllowed)
+      .forEach((page) => {
       let score = 0;
       let snippet = '';
 
-      if (page.title.toLowerCase().includes(q)) {
-        score += 10;
-        snippet = page.title;
+      const normTitle = normalizeSearchText(page.title);
+      for (const stem of stems) {
+        if (normTitle.includes(stem)) {
+          score += stem === stems[0] ? 15 : 10;
+          if (!snippet) snippet = page.title;
+        }
       }
 
       for (const sec of page.sections || []) {
-        if (sec.title && sec.title.toLowerCase().includes(q)) {
-          score += 5;
-          if (!snippet) snippet = sec.title;
+        const normSecTitle = normalizeSearchText(sec.title);
+        for (const stem of stems) {
+          if (normSecTitle.includes(stem)) {
+            score += 6;
+            if (!snippet) snippet = sec.title;
+          }
         }
         for (const p of sec.paragraphs || []) {
-          const idx = p.toLowerCase().indexOf(q);
-          if (idx !== -1) {
-            score += 2;
-            if (!snippet) {
-              const start = Math.max(0, idx - 40);
-              const end = Math.min(p.length, idx + 80);
-              snippet = (start > 0 ? '...' : '') + p.substring(start, end) + (end < p.length ? '...' : '');
+          const normP = normalizeSearchText(p);
+          for (const stem of stems) {
+            const idx = normP.indexOf(stem);
+            if (idx !== -1) {
+              score += 3;
+              if (!snippet) {
+                const start = Math.max(0, idx - 40);
+                const end = Math.min(p.length, idx + 80);
+                snippet = (start > 0 ? '...' : '') + p.substring(start, end) + (end < p.length ? '...' : '');
+              }
             }
           }
         }
@@ -88,9 +100,12 @@ const Header = () => {
       for (const tbl of page.tables || []) {
         for (const row of tbl) {
           for (const cell of row) {
-            if (cell.toLowerCase().includes(q)) {
-              score += 2;
-              if (!snippet) snippet = cell;
+            const normCell = normalizeSearchText(cell);
+            for (const stem of stems) {
+              if (normCell.includes(stem)) {
+                score += 2;
+                if (!snippet) snippet = cell;
+              }
             }
           }
         }

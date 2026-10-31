@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
-import siteData from '../data/siteContent';
 import { Search, FileText, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { getSearchDataset, normalizeSearchText, getQueryStems } from '../utils/searchFilters';
 
 const SearchPage = () => {
   const { lang } = useLanguage();
@@ -17,7 +17,7 @@ const SearchPage = () => {
     const qParam = searchParams.get('q') || '';
     setQuery(qParam);
     performSearch(qParam);
-  }, [searchParams]);
+  }, [searchParams, lang]);
 
   const performSearch = (searchTerm) => {
     if (!searchTerm.trim()) {
@@ -25,33 +25,40 @@ const SearchPage = () => {
       return;
     }
 
-    const q = searchTerm.toLowerCase();
+    const stems = getQueryStems(searchTerm);
     const hits = [];
-    const REMOVED_ROUTES = new Set(['/sush-ustanovka', '/metodikasushka', '/virus', '/articles', '/news']);
+    const dataset = getSearchDataset(lang);
 
-    siteData
-      .filter((page) => !REMOVED_ROUTES.has(page.route) && !REMOVED_ROUTES.has(`/${page.id}`))
-      .forEach((page) => {
+    dataset.forEach((page) => {
       let score = 0;
       let matchedSnippets = [];
 
-      if (page.title.toLowerCase().includes(q)) {
-        score += 15;
+      const normTitle = normalizeSearchText(page.title);
+      for (const stem of stems) {
+        if (normTitle.includes(stem)) {
+          score += stem === stems[0] ? 15 : 10;
+        }
       }
 
       for (const sec of page.sections || []) {
-        if (sec.title && sec.title.toLowerCase().includes(q)) {
-          score += 6;
-          matchedSnippets.push(sec.title);
+        const normSecTitle = normalizeSearchText(sec.title);
+        for (const stem of stems) {
+          if (normSecTitle.includes(stem)) {
+            score += 6;
+            matchedSnippets.push(sec.title);
+          }
         }
         for (const p of sec.paragraphs || []) {
-          const idx = p.toLowerCase().indexOf(q);
-          if (idx !== -1) {
-            score += 3;
-            const start = Math.max(0, idx - 60);
-            const end = Math.min(p.length, idx + 140);
-            const snip = (start > 0 ? '...' : '') + p.substring(start, end) + (end < p.length ? '...' : '');
-            matchedSnippets.push(snip);
+          const normP = normalizeSearchText(p);
+          for (const stem of stems) {
+            const idx = normP.indexOf(stem);
+            if (idx !== -1) {
+              score += 3;
+              const start = Math.max(0, idx - 60);
+              const end = Math.min(p.length, idx + 140);
+              const snip = (start > 0 ? '...' : '') + p.substring(start, end) + (end < p.length ? '...' : '');
+              matchedSnippets.push(snip);
+            }
           }
         }
       }
@@ -59,9 +66,12 @@ const SearchPage = () => {
       for (const tbl of page.tables || []) {
         for (const row of tbl) {
           for (const cell of row) {
-            if (cell.toLowerCase().includes(q)) {
-              score += 2;
-              matchedSnippets.push(`${lang === 'en' ? 'In table:' : 'В таблице:'} ${cell}`);
+            const normCell = normalizeSearchText(cell);
+            for (const stem of stems) {
+              if (normCell.includes(stem)) {
+                score += 2;
+                matchedSnippets.push(`${lang === 'en' ? 'In table:' : 'В таблице:'} ${cell}`);
+              }
             }
           }
         }
@@ -90,7 +100,11 @@ const SearchPage = () => {
   ];
 
   const getTargetRoute = (route) => {
-    return lang === 'en' ? `/en${route}` : route;
+    if (lang === 'en') {
+      if (route === '/cotton' || route === '/hlopok') return '/en/cotton';
+      return route.startsWith('/en') ? route : `/en${route}`;
+    }
+    return route;
   };
 
   return (
@@ -128,7 +142,7 @@ const SearchPage = () => {
                 style={{ paddingLeft: 46, fontSize: '1.02rem', height: 48 }}
                 placeholder={lang === 'en' 
                   ? 'Enter keywords (e.g., drying, film, lamp, spectrum, sterilization)...' 
-                  : 'Введите ключевые слова (например: сушка, плёнка, лампа, спектр, полимеризация)...'}
+                  : 'Введите ключевые слова (например: сушка, плёнка, лампа, спектр, стерилизация)...'}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -171,30 +185,46 @@ const SearchPage = () => {
                 </Link>
               </div>
 
-              <h2 style={{ fontSize: '20px', fontWeight: 700, margin: '6px 0 10px', color: 'var(--color-dark)' }}>
-                <Link to={getTargetRoute(page.route)} style={{ color: 'inherit' }}>
+              <h2 style={{ fontSize: '1.25rem', marginBottom: 12 }}>
+                <Link to={getTargetRoute(page.route)} style={{ color: 'var(--color-text-heading)', textDecoration: 'none' }}>
                   {page.title}
                 </Link>
               </h2>
 
-              {snippets.map((snip, sIdx) => (
-                <p key={sIdx} style={{ fontSize: '14px', color: 'var(--color-text-secondary)', lineHeight: 1.6, marginBottom: 6 }}>
-                  {snip}
-                </p>
-              ))}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {snippets.map((snip, sIdx) => (
+                  <p key={sIdx} style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, margin: 0 }}>
+                    {snip}
+                  </p>
+                ))}
+              </div>
+
+              <div style={{ marginTop: 14, fontSize: '0.82rem', color: 'var(--color-primary)' }}>
+                {page.route}
+              </div>
             </div>
           ))}
 
           {query && results.length === 0 && (
-            <div style={{ padding: '60px 20px', textAlign: 'center', background: 'var(--color-background-alt)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
-              <FileText size={46} color="var(--color-text-muted)" style={{ margin: '0 auto 16px' }} />
-              <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: 8, color: 'var(--color-dark)' }}>
-                {lang === 'en' ? 'Nothing found' : 'Ничего не найдено'}
-              </h3>
-              <p style={{ color: 'var(--color-text-secondary)', maxWidth: 440, margin: '0 auto', fontSize: '14px' }}>
+            <div 
+              style={{
+                background: '#ffffff',
+                border: '1px solid var(--color-border)',
+                borderRadius: 'var(--radius-md)',
+                padding: '44px 20px',
+                textAlign: 'center',
+                color: 'var(--color-text-secondary)'
+              }}
+            >
+              <p style={{ fontSize: '1.05rem', marginBottom: 8 }}>
                 {lang === 'en'
-                  ? 'Try changing the wording, checking the spelling, or using broader terms (e.g., drying, lamp, film).'
-                  : 'Попробуйте изменить формулировку, проверить написание или использовать более общие термины (например: сушка, лампа, плёнка).'}
+                  ? `No results found for query «${query}».`
+                  : `По запросу «${query}» ничего не найдено.`}
+              </p>
+              <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
+                {lang === 'en'
+                  ? 'Try checking the spelling or using broader search terms (e.g., drying, ceramics, spectrum, sterilization).'
+                  : 'Попробуйте изменить формулировку или использовать более общие слова (например: сушка, керамика, спектр, стерилизация).'}
               </p>
             </div>
           )}
