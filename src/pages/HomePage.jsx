@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
-import MapWidget from '../components/MapWidget';
 import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { Phone, Mail, MapPin } from 'lucide-react';
 
 const cardsData = [
   {
@@ -184,55 +182,6 @@ const HomePage = () => {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Contact & Map Section (Clean Corporate Layout) */}
-      <section className="home-contact-section">
-        <div className="container">
-          <div className="home-contact-grid">
-            <div className="contact-text-box">
-              <div>
-                <h3 style={{ marginBottom: 18 }}>{t.home.companyName}</h3>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
-                    <MapPin size={19} color="var(--color-primary)" style={{ flexShrink: 0, marginTop: 3 }} />
-                    <span style={{ fontSize: '0.94rem', color: 'var(--color-text)', lineHeight: 1.5 }}>
-                      {t.home.addressFull}
-                    </span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <Phone size={18} color="var(--color-primary)" style={{ flexShrink: 0 }} />
-                    <a href="tel:+998998336783" style={{ fontSize: '1.02rem', fontWeight: 700, color: 'var(--color-primary)' }}>
-                      +998 99 8336783
-                    </a>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <Mail size={18} color="var(--color-primary)" style={{ flexShrink: 0 }} />
-                    <a href="mailto:ruslat@yandex.ru" style={{ fontSize: '0.94rem', color: 'var(--color-text)' }}>
-                      ruslat@yandex.ru
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social media links */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 24, paddingTop: 18, borderTop: '1px solid var(--color-border)' }}>
-                <a href="https://wa.me/998998336783" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="WhatsApp">
-                  <img src="/images/icons/whatsapp.svg" alt="WhatsApp" />
-                </a>
-                <a href="https://t.me/Rus_Lat" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="Telegram">
-                  <img src="/images/icons/telegram.svg" alt="Telegram" />
-                </a>
-                <a href="https://max.ru/u/+998998336783" target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="MAX: +998 99 8336783">
-                  <img src="/images/icons/max.svg" alt="MAX" />
-                </a>
-              </div>
-            </div>
-
-            <MapWidget />
           </div>
         </div>
       </section>
