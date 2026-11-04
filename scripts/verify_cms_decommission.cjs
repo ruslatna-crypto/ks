@@ -49,6 +49,66 @@ check('package.json has no cms script', () => {
   assert(pkg.scripts.dev === 'vite', 'package.json scripts.dev must be preserved');
 });
 
+// Helper: Safely extract hostnames from CSP header using standard URL parser
+function extractHostnamesFromCsp(cspValue) {
+  if (typeof cspValue !== 'string') return [];
+
+  const directives = cspValue.split(';');
+  const hostnames = new Set();
+
+  for (const directive of directives) {
+    const tokens = directive.trim().split(/\s+/).filter(Boolean);
+    if (tokens.length <= 1) continue;
+
+    // Sources following directive name
+    const sources = tokens.slice(1);
+
+    for (const source of sources) {
+      // Ignore CSP keywords, nonces, hashes
+      if (source.startsWith("'") && source.endsWith("'")) continue;
+
+      // Ignore pure wildcards
+      if (source === '*') continue;
+
+      // Ignore standalone schemes (data:, blob:, etc.)
+      if (/^[a-zA-Z][a-zA-Z0-9+.-]*:$/.test(source)) continue;
+
+      let candidate = source;
+
+      // Strip wildcard prefix (*.domain.com -> domain.com)
+      if (candidate.includes('*.')) {
+        candidate = candidate.replace(/\*\./g, '');
+      }
+
+      // Prepend scheme if missing for standard URL parsing
+      if (!/^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//.test(candidate)) {
+        candidate = 'https://' + candidate;
+      }
+
+      try {
+        const parsed = new URL(candidate);
+        const cleanedHost = parsed.hostname ? parsed.hostname.toLowerCase().replace(/\.+$/, '') : '';
+        if (cleanedHost) {
+          hostnames.add(cleanedHost);
+        }
+      } catch {
+        // Discard malformed tokens
+      }
+    }
+  }
+
+  return Array.from(hostnames);
+}
+
+function cspContainsHost(cspValue, targetDomain) {
+  if (!targetDomain || typeof targetDomain !== 'string') return false;
+  const target = targetDomain.toLowerCase().replace(/\.+$/, '');
+  if (!target) return false;
+  const hosts = extractHostnamesFromCsp(cspValue);
+
+  return hosts.some(host => host === target || host.endsWith('.' + target));
+}
+
 // 3. Verification of vercel.json
 check('vercel.json is valid and free of /admin headers, redirects, and regex', () => {
   const vercel = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'vercel.json'), 'utf8'));
@@ -62,8 +122,8 @@ check('vercel.json is valid and free of /admin headers, redirects, and regex', (
   assert(rootHeader, 'Root security headers must be preserved');
   const csp = rootHeader.headers.find(h => h.key === 'Content-Security-Policy' || h.key === 'Content-Security-Policy-Report-Only');
   assert(csp, 'CSP header must be present');
-  assert(!csp.value.includes('unpkg.com'), 'Root CSP must not contain unpkg.com');
-  assert(!csp.value.includes('api.github.com'), 'Root CSP must not contain api.github.com');
+  assert(!cspContainsHost(csp.value, 'unpkg.com'), 'Root CSP must not contain unpkg.com');
+  assert(!cspContainsHost(csp.value, 'api.github.com'), 'Root CSP must not contain api.github.com');
 
   // Redirects check
   const adminRedirect = vercel.redirects && vercel.redirects.find(r => r.source === '/admin');
